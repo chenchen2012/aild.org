@@ -14,6 +14,7 @@ Production hosting:
 
 - Cloudflare Pages for build + hosting
 - Cloudflare DNS/proxy for the `aild.org` domain
+- Redirect-only Cloudflare Pages project for `www.aild.org`
 
 Cloudflare Pages compatibility files live in:
 
@@ -27,7 +28,8 @@ These are the production redirect/header rules for Pages.
 1. Make changes in this repo.
 2. Commit and push to `origin/main`.
 3. GitHub Actions workflow `Deploy To Cloudflare Pages` builds the site and deploys `dist` to the `aild-org` Pages project.
-4. Cloudflare serves production on `aild.org` and `www.aild.org`.
+4. Cloudflare serves production on `aild.org`.
+5. `www.aild.org` is handled by a separate redirect-only Pages project and 301 redirects to `https://aild.org/`.
 
 ## Commands
 
