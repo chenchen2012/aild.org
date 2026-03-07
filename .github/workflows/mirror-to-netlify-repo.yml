@@ -18,11 +18,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Push to Netlify-linked repo
         env:
           MIRROR_GH_TOKEN: ${{ secrets.MIRROR_GH_TOKEN }}
         run: |
+          if [ -z "${MIRROR_GH_TOKEN}" ]; then
+            echo "MIRROR_GH_TOKEN is missing."
+            exit 1
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote add netlify-mirror "https://x-access-token:${MIRROR_GH_TOKEN}@github.com/chenchen2012/AILD.git"
