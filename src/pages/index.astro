@@ -2,15 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const docs = (await getCollection('docs')).sort(
-  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
-);
-const featuredDocs = docs.slice(0, 3);
+const docs = await getCollection('docs');
+const docsBySlug = new Map(docs.map((doc) => [doc.slug, doc]));
+const featuredDocSlugs = [
+  'ai-decision-intelligence-stack-executives',
+  'trust-vs-override-framework',
+  'ai-leadership-maturity-model',
+];
+const featuredDocs = featuredDocSlugs
+  .map((slug) => docsBySlug.get(slug))
+  .filter((doc): doc is NonNullable<typeof doc> => Boolean(doc));
 ---
 
 <Layout
-  title="AI Leadership and Development (AILD)"
-  description="AILD (AI Leadership and Development): Build decision intelligence, AI-augmented leadership workflows, and measurable execution outcomes."
+  title="AI Leadership Frameworks, Governance, and Executive Decision-Making | AILD"
+  description="Executive AI leadership frameworks for decision-making, AI governance, operating models, and management workflows. Learn how leaders use AI without losing accountability."
   canonical="https://aild.org/"
   active="home"
   alternates={[
@@ -24,11 +30,9 @@ const featuredDocs = docs.slice(0, 3);
     <div class="home-hero-grid">
       <div>
         <p class="eyebrow">Leadership in the decision intelligence era</p>
-        <h1>AI Leadership and Development (AILD)</h1>
+        <h1>AI leadership frameworks for executive decision-making and governance</h1>
         <p class="lead">
-          AILD helps leadership teams turn AI from scattered output into a governed
-          decision system. Use it to define where AI assists, where leaders decide,
-          and how execution gets measured every week.
+          AILD helps CEOs, strategy leaders, and transformation teams build an AI operating model for management. Learn how to use AI in executive decision-making, set governance rules, define trust vs override boundaries, and run repeatable leadership workflows.
         </p>
         <div class="home-proofline">
           <span>For CEOs and executive teams</span>
@@ -42,11 +46,11 @@ const featuredDocs = docs.slice(0, 3);
       </div>
       <aside class="signal-panel">
         <p class="eyebrow">What you get</p>
-        <h2>Move from AI experimentation to leadership operating discipline</h2>
+        <h2>Move from AI pilots to a real executive AI operating model</h2>
         <ul class="signal-list">
-          <li><strong>Decision frameworks:</strong> clarify rights, ownership, and evidence thresholds.</li>
-          <li><strong>Trust controls:</strong> define when AI assists and when humans override.</li>
-          <li><strong>Execution cadence:</strong> convert signal into action, review, and measured outcomes.</li>
+          <li><strong>AI decision-making frameworks:</strong> clarify rights, ownership, and evidence thresholds.</li>
+          <li><strong>AI governance rules:</strong> define when AI assists and when humans override.</li>
+          <li><strong>Executive operating cadence:</strong> convert signal into action, review, and measured outcomes.</li>
         </ul>
         <div class="signal-callout">
           <strong>Best first click:</strong>
@@ -65,20 +69,20 @@ const featuredDocs = docs.slice(0, 3);
     <div class="home-path-grid">
       <article class="home-path-card panel">
         <p class="eyebrow">If you are setting strategy</p>
-        <h2>Start with the leadership model</h2>
-        <p>Understand the decision stack, trust boundaries, and governance logic before choosing tools.</p>
+        <h2>Start with the AI leadership model</h2>
+        <p>Understand the executive decision stack, trust boundaries, and governance logic before choosing AI tools.</p>
         <a class="text-link" href="/learn/ai-decision-intelligence-stack-executives/">Read the executive framework</a>
       </article>
       <article class="home-path-card panel">
         <p class="eyebrow">If you are running execution</p>
-        <h2>Start with playbooks and templates</h2>
-        <p>Install repeatable operating rhythm, meeting protocols, scorecards, and decision briefs.</p>
+        <h2>Start with management playbooks and templates</h2>
+        <p>Install repeatable operating rhythm, meeting protocols, scorecards, and decision briefs for AI-assisted execution.</p>
         <a class="text-link" href="/playbooks/">Open implementation playbooks</a>
       </article>
       <article class="home-path-card panel">
         <p class="eyebrow">If you need proof</p>
-        <h2>Start with evidence and cases</h2>
-        <p>Use research references and case structures to justify the operating model internally.</p>
+        <h2>Start with AI governance evidence and cases</h2>
+        <p>Use research references and case structures to justify the operating model internally and support leadership buy-in.</p>
         <a class="text-link" href="/research/">Review evidence base</a>
       </article>
     </div>
@@ -87,11 +91,9 @@ const featuredDocs = docs.slice(0, 3);
   <section class="section home-proof">
     <article class="panel">
       <p class="eyebrow">Leadership gap</p>
-      <h2>Why many AI programs stall before strategic value appears</h2>
+      <h2>Why many enterprise AI programs stall before strategic value appears</h2>
       <p>
-        Teams buy tools fast, but leadership systems lag behind. Without a
-        decision architecture, AI output remains tactical. AILD closes this gap
-        with practical frameworks for executive judgment and execution.
+        Teams buy AI tools fast, but leadership systems lag behind. Without an executive decision architecture, AI output remains tactical. AILD closes this gap with practical frameworks for executive judgment, AI governance, and operating discipline.
       </p>
       <div class="kpi-strip">
         <div class="kpi"><strong>Week 1</strong>Decision map + risk tiers</div>
@@ -117,10 +119,10 @@ const featuredDocs = docs.slice(0, 3);
     <div class="section-heading">
       <div>
         <p class="eyebrow">Start here</p>
-        <h2>Flagship leadership guides</h2>
+        <h2>Best AI leadership and governance guides to read first</h2>
       </div>
       <p class="lead">
-        Begin with the core pieces leaders usually need first, then expand into the full library of {docs.length} practical guides.
+        Begin with the core pages leaders usually need first, then expand into the full library of {docs.length} practical guides on AI leadership, governance, and executive workflows.
       </p>
     </div>
     <div class="article-list section home-featured-grid">
