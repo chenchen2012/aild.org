@@ -40,3 +40,4 @@ Build output is in `dist/`.
 - Previous static version is preserved in `legacy-static/`.
 - Add new knowledge articles by creating Markdown files in `src/content/docs/`.
 - This project no longer uses a CMS admin panel; Git-backed content files are the source of truth.
+- Production hosting is Cloudflare Pages with DNS on Cloudflare.

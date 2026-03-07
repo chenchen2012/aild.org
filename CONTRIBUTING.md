@@ -2,21 +2,15 @@
 
 ## Repo layout
 
-This project currently has two GitHub repos:
-
-- Primary working repo: `chenchen2012/aild.org`
-- Legacy Netlify-connected repo: `chenchen2012/AILD`
-
-Local remotes are configured as:
+This project's source of truth is:
 
 - `origin` -> `git@github.com:chenchen2012/aild.org.git`
-- `netlify-origin` -> `git@github.com:chenchen2012/AILD.git`
 
-## Hosting direction
+## Hosting
 
 The site no longer depends on Netlify CMS or `/admin`.
 
-Recommended hosting target:
+Production hosting:
 
 - Cloudflare Pages for build + hosting
 - Cloudflare DNS/proxy for the `aild.org` domain
@@ -26,24 +20,14 @@ Cloudflare Pages compatibility files live in:
 - `public/_redirects`
 - `public/_headers`
 
-These mirror the redirect/header behavior that previously lived in `netlify.toml`.
+These are the production redirect/header rules for Pages.
 
-## Current workflow
+## Deploy workflow
 
 1. Make changes in this repo.
 2. Commit and push to `origin/main`.
-3. Until the Pages cutover is complete, the GitHub Actions workflow `Mirror To Netlify Repo` in `chenchen2012/aild.org` mirrors `main` to `chenchen2012/AILD`.
-4. Netlify watches `chenchen2012/AILD` and deploys production from that mirrored commit.
-
-## Planned cutover
-
-After Cloudflare Pages is connected:
-
-1. Point the Pages project at `chenchen2012/aild.org`.
-2. Use build command `npm run build`.
-3. Use build output directory `dist`.
-4. Move the `aild.org` custom domain from Netlify to Pages.
-5. Remove the legacy mirror workflow and `netlify-origin` remote.
+3. GitHub Actions workflow `Deploy To Cloudflare Pages` builds the site and deploys `dist` to the `aild-org` Pages project.
+4. Cloudflare serves production on `aild.org` and `www.aild.org`.
 
 ## Commands
 
