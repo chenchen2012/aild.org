@@ -20,6 +20,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Regression checks
+        run: npm run test:weekly-brief
+
       - name: Generate weekly EN+ZH brief
         env:
           AI_PROVIDER: deepseek
@@ -28,7 +34,7 @@ jobs:
         run: node scripts/auto-weekly-brief.mjs
 
       - name: Build check
-        run: npm ci && npm run build
+        run: npm run build
 
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v5
