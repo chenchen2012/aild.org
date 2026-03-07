@@ -14,15 +14,21 @@ outcomes:
 
 ## What changed this week
 
-- AI-generated data ownership presents new enterprise risks requiring governance frameworks.\n- Federal rollbacks of AI transparency rules increase stakes for organizational governance, particularly in regulated sectors like healthcare.\n- Supply chain leaders face urgency to adopt AI-native planning as an operating model shift that can no longer be delayed.
+- AI-generated data ownership presents new enterprise risks requiring governance frameworks.
+- Federal rollbacks of AI transparency rules increase stakes for organizational governance, particularly in regulated sectors like healthcare.
+- Supply chain leaders face urgency to adopt AI-native planning as an operating model shift that can no longer be delayed.
 
 ## Leadership implications
 
-- CEO-CFO alignment is critical for enterprise resilience in navigating AI investments and risks.\n- Human-led, AI-powered leadership models emphasize the need for leaders to embrace 'thinking mode' with AI to enhance decision-making.\n- Analytics leadership mastermind groups are emerging to solve the 'last mile' of AI implementation, bridging strategy and execution.
+- CEO-CFO alignment is critical for enterprise resilience in navigating AI investments and risks.
+- Human-led, AI-powered leadership models emphasize the need for leaders to embrace 'thinking mode' with AI to enhance decision-making.
+- Analytics leadership mastermind groups are emerging to solve the 'last mile' of AI implementation, bridging strategy and execution.
 
 ## Decisions for the next 7 days
 
-- Review and strengthen AI governance frameworks to address data ownership risks and compliance requirements.\n- Initiate discussions on optimizing enterprise IT infrastructure for AI to support scalable and secure operations.\n- Assess the readiness for shifting to AI-native planning in key operational areas, starting with supply chain if applicable.
+- Review and strengthen AI governance frameworks to address data ownership risks and compliance requirements.
+- Initiate discussions on optimizing enterprise IT infrastructure for AI to support scalable and secure operations.
+- Assess the readiness for shifting to AI-native planning in key operational areas, starting with supply chain if applicable.
 
 ## Source links
 

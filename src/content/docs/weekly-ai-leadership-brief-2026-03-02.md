@@ -14,15 +14,21 @@ outcomes:
 
 ## What changed this week
 
-- Research indicates senior leaders are struggling with AI adoption, highlighting implementation challenges.\n- AI governance and guardrails are being defined for 2026, emphasizing policy and risk ownership.\n- New partnerships like IBM Consulting and Microsoft are advancing Agentic AI capabilities for enterprises.
+- Research indicates senior leaders are struggling with AI adoption, highlighting implementation challenges.
+- AI governance and guardrails are being defined for 2026, emphasizing policy and risk ownership.
+- New partnerships like IBM Consulting and Microsoft are advancing Agentic AI capabilities for enterprises.
 
 ## Leadership implications
 
-- Governance—not just adoption—will determine which companies succeed with AI, requiring clear policy frameworks.\n- CIOs must actively shape AI governance policies and set guardrails to ensure responsible scaling.\n- AI success depends more on strategy than tools, necessitating alignment between leadership vision and execution.
+- Governance—not just adoption—will determine which companies succeed with AI, requiring clear policy frameworks.
+- CIOs must actively shape AI governance policies and set guardrails to ensure responsible scaling.
+- AI success depends more on strategy than tools, necessitating alignment between leadership vision and execution.
 
 ## Decisions for the next 7 days
 
-- Review current AI governance policies and assign clear risk ownership to address 2026 standards.\n- Assess talent readiness and hiring strategies for AI roles, focusing on pay and skill gaps.\n- Evaluate strategic partnerships and operating models to enhance AI value delivery and compliance integration.
+- Review current AI governance policies and assign clear risk ownership to address 2026 standards.
+- Assess talent readiness and hiring strategies for AI roles, focusing on pay and skill gaps.
+- Evaluate strategic partnerships and operating models to enhance AI value delivery and compliance integration.
 
 ## Source links
 

@@ -14,15 +14,21 @@ outcomes:
 
 ## What changed this week
 
-- EC-Council expanded its AI certification portfolio to strengthen U.S. AI workforce readiness and security.\n- A new report found that governance—not adoption—will determine which companies succeed with AI.\n- Enterprise leaders continue to struggle with implementing responsible AI frameworks effectively.
+- EC-Council expanded its AI certification portfolio to strengthen U.S. AI workforce readiness and security.
+- A new report found that governance—not adoption—will determine which companies succeed with AI.
+- Enterprise leaders continue to struggle with implementing responsible AI frameworks effectively.
 
 ## Leadership implications
 
-- AI success depends more on strategy and governance than on tools alone.\n- Companies must develop self-aware enterprises that understand their own capabilities before AI transformation.\n- Human-led, AI-powered leadership models are emerging as critical for scaling AI without losing control.
+- AI success depends more on strategy and governance than on tools alone.
+- Companies must develop self-aware enterprises that understand their own capabilities before AI transformation.
+- Human-led, AI-powered leadership models are emerging as critical for scaling AI without losing control.
 
 ## Decisions for the next 7 days
 
-- Assess current AI governance frameworks against 2026 enterprise standards.\n- Review talent acquisition and certification strategies to address AI workforce gaps.\n- Initiate a review of responsible AI implementation based on post-summit insights.
+- Assess current AI governance frameworks against 2026 enterprise standards.
+- Review talent acquisition and certification strategies to address AI workforce gaps.
+- Initiate a review of responsible AI implementation based on post-summit insights.
 
 ## Source links
 

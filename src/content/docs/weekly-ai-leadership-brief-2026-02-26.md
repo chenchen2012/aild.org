@@ -14,15 +14,21 @@ outcomes:
 
 ## What changed this week
 
-- EC-Council expanded AI certification programs to strengthen U.S. AI workforce readiness and security.\n- Agiloft established a dedicated AI Operations function as human-centered AI becomes core to enterprise decision-making.\n- Windward appointed Stuart Strachan as Chairman to scale maritime intelligence for global enterprise and government organizations.
+- EC-Council expanded AI certification programs to strengthen U.S. AI workforce readiness and security.
+- Agiloft established a dedicated AI Operations function as human-centered AI becomes core to enterprise decision-making.
+- Windward appointed Stuart Strachan as Chairman to scale maritime intelligence for global enterprise and government organizations.
 
 ## Leadership implications
 
-- AI governance must balance scaling innovation with maintaining control, requiring clear frameworks for 2026 enterprise readiness.\n- Talent acquisition and certification are critical for building secure, compliant AI systems amid changing intellectual property landscapes.\n- Enterprise transformation depends on self-awareness—understanding internal processes and data to effectively implement AI-powered operations.
+- AI governance must balance scaling innovation with maintaining control, requiring clear frameworks for 2026 enterprise readiness.
+- Talent acquisition and certification are critical for building secure, compliant AI systems amid changing intellectual property landscapes.
+- Enterprise transformation depends on self-awareness—understanding internal processes and data to effectively implement AI-powered operations.
 
 ## Decisions for the next 7 days
 
-- Assess current AI governance structures against 2026 scaling requirements and identify control gaps.\n- Review workforce AI certification needs and align with security and compliance training programs.\n- Evaluate internal data and process maturity to determine readiness for human-centered AI decision-making integration.
+- Assess current AI governance structures against 2026 scaling requirements and identify control gaps.
+- Review workforce AI certification needs and align with security and compliance training programs.
+- Evaluate internal data and process maturity to determine readiness for human-centered AI decision-making integration.
 
 ## Source links
 
