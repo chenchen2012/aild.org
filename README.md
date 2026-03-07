@@ -39,24 +39,4 @@ Build output is in `dist/`.
 
 - Previous static version is preserved in `legacy-static/`.
 - Add new knowledge articles by creating Markdown files in `src/content/docs/`.
-
-## Decap CMS (Auto Publish)
-
-Decap is configured at `/admin` with Git-based publishing.
-
-Files:
-- `public/admin/index.html`
-- `public/admin/config.yml`
-- `netlify.toml`
-
-Netlify setup required:
-1. Connect this repo to Netlify.
-2. In Netlify: `Site configuration -> Identity`, enable Identity.
-3. In Netlify Identity: enable `Git Gateway`.
-4. Invite your editor account(s).
-5. Open `https://your-site/admin/` and publish content.
-
-For local CMS testing:
-1. Run `npx decap-server` in one terminal.
-2. Run `npm run dev` in another terminal.
-3. Open `http://localhost:4321/admin/`.
+- This project no longer uses a CMS admin panel; Git-backed content files are the source of truth.

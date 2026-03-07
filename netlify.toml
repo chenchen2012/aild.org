@@ -50,11 +50,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -77,8 +72,3 @@
   for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
-
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
