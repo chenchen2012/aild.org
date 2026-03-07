@@ -45,6 +45,8 @@ const zhPath = chineseDefaultPath;
 const brandFullName = 'AI Leadership and Development';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
+const isLanguageRoot =
+  pathname === '/' || pathname === '/zh/' || pathname === '/zh' || pathname === '/learn/' || pathname === '/zh/learn/';
 
 const autoAlternates =
   alternates.length > 0
@@ -123,51 +125,55 @@ const nav = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     {allJsonLd.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
-    <script is:inline>
-      (() => {
-        const ua = (navigator.userAgent || '').toLowerCase();
-        if (/(bot|crawl|spider|slurp|bingpreview|googlebot|baiduspider|yandex)/.test(ua)) return;
+    {
+      isLanguageRoot && (
+        <script is:inline>
+          (() => {
+            const ua = (navigator.userAgent || '').toLowerCase();
+            if (/(bot|crawl|spider|slurp|bingpreview|googlebot|baiduspider|yandex)/.test(ua)) return;
 
-        const path = window.location.pathname;
-        const skip =
-          path.startsWith('/admin') ||
-          path.startsWith('/uploads') ||
-          path.endsWith('.xml') ||
-          path.endsWith('.txt') ||
-          path.endsWith('.ico') ||
-          path.endsWith('.svg');
-        if (skip) return;
+            const path = window.location.pathname;
+            const skip =
+              path.startsWith('/admin') ||
+              path.startsWith('/uploads') ||
+              path.endsWith('.xml') ||
+              path.endsWith('.txt') ||
+              path.endsWith('.ico') ||
+              path.endsWith('.svg');
+            if (skip) return;
 
-        const saved = localStorage.getItem('aild_lang_pref');
-        const autoDone = localStorage.getItem('aild_lang_auto_done');
-        const isZhPath = path === '/zh' || path.startsWith('/zh/');
-        const enPath = isZhPath ? (path.replace(/^\/zh/, '') || '/') : path;
-        const zhPath = isZhPath ? path : path === '/' ? '/zh/' : `/zh${path}`;
+            const saved = localStorage.getItem('aild_lang_pref');
+            const autoDone = localStorage.getItem('aild_lang_auto_done');
+            const isZhPath = path === '/zh' || path.startsWith('/zh/');
+            const enPath = isZhPath ? (path.replace(/^\/zh/, '') || '/') : path;
+            const zhPath = isZhPath ? path : path === '/' ? '/zh/' : `/zh${path}`;
 
-        if (saved === 'zh' && !isZhPath) {
-          window.location.replace(zhPath);
-          return;
-        }
-        if (saved === 'en' && isZhPath) {
-          window.location.replace(enPath);
-          return;
-        }
+            if (saved === 'zh' && !isZhPath) {
+              window.location.replace(zhPath);
+              return;
+            }
+            if (saved === 'en' && isZhPath) {
+              window.location.replace(enPath);
+              return;
+            }
 
-        if (autoDone === '1') return;
-        const lang = (navigator.language || '').toLowerCase();
-        if (lang.startsWith('zh') && !isZhPath) {
-          localStorage.setItem('aild_lang_auto_done', '1');
-          window.location.replace(zhPath);
-          return;
-        }
-        if (!lang.startsWith('zh') && isZhPath) {
-          localStorage.setItem('aild_lang_auto_done', '1');
-          window.location.replace(enPath);
-          return;
-        }
-        localStorage.setItem('aild_lang_auto_done', '1');
-      })();
-    </script>
+            if (autoDone === '1') return;
+            const lang = (navigator.language || '').toLowerCase();
+            if (lang.startsWith('zh') && !isZhPath) {
+              localStorage.setItem('aild_lang_auto_done', '1');
+              window.location.replace(zhPath);
+              return;
+            }
+            if (!lang.startsWith('zh') && isZhPath) {
+              localStorage.setItem('aild_lang_auto_done', '1');
+              window.location.replace(enPath);
+              return;
+            }
+            localStorage.setItem('aild_lang_auto_done', '1');
+          })();
+        </script>
+      )
+    }
   </head>
   <body>
     <header class="site-header">
