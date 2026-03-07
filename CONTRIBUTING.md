@@ -44,3 +44,13 @@ npm run build
 The generator lives in `scripts/auto-weekly-brief.mjs`.
 
 It includes normalization logic to prevent escaped newlines like `\\n-` from leaking into rendered bullet lists. Keep `npm run test:weekly-brief` passing when editing that script.
+
+## Astro cache note
+
+If Astro reports duplicate content IDs for files that only exist once, the cause may be stale local cache in `.astro/` rather than a real duplicate file.
+
+Safe recovery:
+
+1. Move `.astro/` out of the repo root instead of deleting it outright.
+2. Re-run `npm run build`.
+3. If the warning disappears, the cache backup can be removed later.
