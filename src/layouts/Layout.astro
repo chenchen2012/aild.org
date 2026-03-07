@@ -11,6 +11,7 @@ interface Props {
   alternates?: { hreflang: string; href: string }[];
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
   ogType?: string;
+  ogImage?: string;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   alternates = [],
   jsonLd,
   ogType = 'website',
+  ogImage = 'https://aild.org/og-default.svg',
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -112,9 +114,12 @@ const nav = [
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="AILD social preview" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     {allJsonLd.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
