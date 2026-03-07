@@ -124,7 +124,7 @@ const nav = [
     <meta name="twitter:image" content={ogImage} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    {allJsonLd.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
+    <script type="application/ld+json" set:html={JSON.stringify(allJsonLd.length === 1 ? allJsonLd[0] : allJsonLd)} />
     {
       isLanguageRoot && (
         <script is:inline>
