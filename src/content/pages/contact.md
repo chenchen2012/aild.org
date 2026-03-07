@@ -17,7 +17,3 @@ sections:
       - Current constraints such as data, compliance, and tooling
       - Decision quality and speed goals for the next 30-90 days
 ---
-
-Primary email: [chenchen2012@hotmail.com](mailto:chenchen2012@hotmail.com)
-
-Helpful links: [Template Hub](/templates/) and [Playbooks](/playbooks/).

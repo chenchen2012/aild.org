@@ -1,11 +1,9 @@
 ---
 import { getEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import { render } from 'astro:content';
 
 const entry = await getEntry('pages', 'contact');
 if (!entry) throw new Error('Missing pages/contact.md');
-const { Content } = await render(entry);
 const sections = entry.data.sections ?? [];
 ---
 
@@ -50,10 +48,7 @@ const sections = entry.data.sections ?? [];
 
   <section class="section panel">
     <h2>Send your request</h2>
-    <p>
-      Fill out the form below and your message will go straight to our inbox. If you prefer, you can still
-      email <a href="mailto:chenchen2012@hotmail.com">chenchen2012@hotmail.com</a>.
-    </p>
+    <p>Fill out the form below and your message will go straight to our inbox.</p>
     <form
       id="contact-form"
       name="aild-contact"
@@ -92,9 +87,5 @@ const sections = entry.data.sections ?? [];
         <button type="submit" class="btn btn-primary">Submit inquiry</button>
       </div>
     </form>
-  </section>
-
-  <section class="section panel">
-    <Content />
   </section>
 </Layout>
