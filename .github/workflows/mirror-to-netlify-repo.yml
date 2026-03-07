@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Push to Netlify-linked repo
+      - name: Push site snapshot to Netlify-linked repo
         env:
           MIRROR_GH_TOKEN: ${{ secrets.MIRROR_GH_TOKEN }}
         run: |
@@ -28,12 +28,16 @@ jobs:
             echo "MIRROR_GH_TOKEN is missing."
             exit 1
           fi
+          mirror_dir="$(mktemp -d)"
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude '.github/workflows/' \
+            ./ "${mirror_dir}/"
+          cd "${mirror_dir}"
+          git init -b main
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote add netlify-mirror "https://x-access-token:${MIRROR_GH_TOKEN}@github.com/chenchen2012/AILD.git"
-          rm -rf .github/workflows
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "Mirror ${GITHUB_SHA} (exclude workflow files)"
-          fi
-          git push --force netlify-mirror HEAD:main
+          git add .
+          git commit -m "Mirror from chenchen2012/aild.org@${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${MIRROR_GH_TOKEN}@github.com/chenchen2012/AILD.git"
+          git push --force origin main
