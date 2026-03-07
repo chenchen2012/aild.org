@@ -7,6 +7,10 @@ tags: ['Leadership', 'Assessment', 'Decision']
 related: ['ai-decision-intelligence-stack-executives', 'ai-augmented-executive-workflow', 'trust-vs-override-framework']
 audience: Executive teams and transformation leaders
 readingTime: 11 min
+keyTakeaways:
+  - Leadership maturity with AI is different from tool adoption; a company can run many pilots and still have weak governance.
+  - The four maturity stages help management teams see whether AI is still ad hoc, embedded in workflows, used in decisions, or integrated as a full operating system.
+  - The best next move is to upgrade one stage at a time with clearer workflows, decision logs, governance rules, and review cadence.
 outcomes:
   - Diagnose current leadership maturity in AI usage
   - Set realistic next-stage priorities

@@ -7,6 +7,10 @@ tags: ['领导力', '风险', '决策']
 related: ['ai-decision-intelligence-stack-executives', 'ai-policy-template-smb', '5-minute-ai-quality-check']
 audience: 管理团队与决策负责人
 readingTime: 10分钟
+keyTakeaways:
+  - 信任AI必须依赖预先设定的阈值和分级，而不是临场感觉。
+  - 高风险决策必须保留人工复核、人工接管和可追踪的接管记录。
+  - 好的AI治理不是一味保守，而是在可信边界内实现更稳健的采用。
 outcomes:
   - 建立明确的AI信任阈值
   - 降低盲目信任与过度否定两类风险

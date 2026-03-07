@@ -7,6 +7,10 @@ tags: ['领导力', '评估', '决策']
 related: ['ai-decision-intelligence-stack-executives', 'ai-augmented-executive-workflow', 'trust-vs-override-framework']
 audience: 管理团队与变革负责人
 readingTime: 11分钟
+keyTakeaways:
+  - AI领导力成熟度衡量的是管理系统能力，而不只是工具使用频率。
+  - 四阶段模型可以帮助组织判断自己仍在试用、已进入流程、已进入决策，还是已经形成系统化治理。
+  - 最有效的升级方法是一次推进一个阶段，并同步补齐流程、日志、治理和复盘机制。
 outcomes:
   - 识别当前AI领导力成熟阶段
   - 明确下一阶段优先动作

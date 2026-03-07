@@ -7,6 +7,10 @@ tags: ['Leadership', 'Decision']
 related: ['trust-vs-override-framework', 'cognitive-augmentation-for-leaders', 'ai-augmented-executive-workflow']
 audience: CEOs, COOs, department heads
 readingTime: 12 min
+keyTakeaways:
+  - Executive AI decision-making improves when evidence, options, judgment, and execution are separated into a clear operating stack.
+  - AI should support framing and scenario analysis, while leaders retain final accountability for high-impact decisions.
+  - A reusable decision brief, evidence standard, and weekly review cadence turn AI from a tool into a leadership system.
 outcomes:
   - Build a repeatable decision stack for leadership teams
   - Clarify where AI assists and where leaders retain full control

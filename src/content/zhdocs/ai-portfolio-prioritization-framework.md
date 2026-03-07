@@ -1,17 +1,25 @@
 ---
 title: AI项目组合优先级框架（管理层版）
-description: 用战略价值、执行可行性与治理风险三轴，为AI项目组合做优先级决策。
+description: 用战略价值、执行可行性与治理风险三轴，为AI项目组合做优先级决策，避免资源被低价值试点占用。
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['领导力', '战略', '决策']
 related: ['ai-decision-intelligence-stack-executives', 'ai-leadership-maturity-model', 'board-ai-governance-briefing']
 audience: CEO、战略负责人、PMO
 readingTime: 9分钟
+keyTakeaways:
+  - AI项目优先级不能只看技术热度，必须同时看战略价值、执行可行性和治理风险。
+  - 项目组合视角可以帮助管理层避免把注意力浪费在低价值试点上。
+  - 每季度重评分一次，比一次性立项更适合AI项目管理。
 outcomes:
   - 用统一标准排序AI项目
   - 避免“热闹但低价值”的试点
   - 平衡增长机会与治理边界
 ---
+
+## 什么是AI项目组合优先级管理？
+
+AI项目组合优先级管理，是指管理层在有限资源下，判断哪些AI项目值得扩展、哪些应受控试点、哪些应暂缓。
 
 ## 核心问题
 
@@ -34,3 +42,10 @@ AI想法通常多于管理层注意力。没有组合管理方法，组织会把
 - 每季度复盘前10个项目。
 - 按最新证据重新评分。
 - 对无实质进展项目及时退出。
+
+## 适用场景
+
+- 年度规划
+- PMO治理评审
+- AI转型 steering meeting
+- 高管资源分配讨论

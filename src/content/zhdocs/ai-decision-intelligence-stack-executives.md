@@ -7,6 +7,10 @@ tags: ['领导力', '决策']
 related: ['trust-vs-override-framework', 'cognitive-augmentation-for-leaders', 'ai-augmented-executive-workflow']
 audience: CEO、COO、业务负责人
 readingTime: 12分钟
+keyTakeaways:
+  - 管理层AI决策能力的核心，不是让AI替代判断，而是把证据、方案、判断和执行拆成清晰架构。
+  - AI适合辅助问题定义、信息整理和方案比较，高影响决策的最终责任仍然属于管理层。
+  - 统一的决策简报、证据标准和每周复盘节奏，才能把AI从工具变成领导系统。
 outcomes:
   - 建立可复用的管理层决策体系
   - 明确AI辅助边界与人类最终责任

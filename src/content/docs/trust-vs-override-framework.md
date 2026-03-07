@@ -7,6 +7,10 @@ tags: ['Leadership', 'Risk', 'Decision']
 related: ['ai-decision-intelligence-stack-executives', 'ai-policy-template-smb', '5-minute-ai-quality-check']
 audience: Leadership teams and decision owners
 readingTime: 10 min
+keyTakeaways:
+  - AI trust should be governed by predefined tiers, not by gut feeling after a model produces an answer.
+  - High-risk decisions need named human reviewers, override rules, and logged rationale.
+  - "The goal of a trust-vs-override model is balanced adoption: neither blind trust nor blanket skepticism."
 outcomes:
   - Apply clear trust thresholds for AI-assisted decisions
   - Reduce risky over-reliance and unnecessary rejection

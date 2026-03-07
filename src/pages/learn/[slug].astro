@@ -67,14 +67,14 @@ const breadcrumbJsonLd = {
 
     <div class="article-shell section">
       <div class="panel article-main">
-        <section class="takeaways">
-          <h3>Key Takeaways</h3>
-          <ul>
-            <li>Implement AI as a workflow system, not isolated prompting.</li>
-            <li>Enforce policy and QA checkpoints before scale.</li>
-            <li>Track weekly performance metrics to prove ROI.</li>
-          </ul>
-        </section>
+        {entry.data.keyTakeaways.length > 0 && (
+          <section class="takeaways">
+            <h3>Key Takeaways</h3>
+            <ul>
+              {entry.data.keyTakeaways.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+        )}
         {entry.data.outcomes.length > 0 && (
           <section class="takeaways">
             <h3>What You Will Get</h3>

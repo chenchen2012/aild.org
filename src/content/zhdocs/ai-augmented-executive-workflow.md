@@ -1,17 +1,25 @@
 ---
 title: AI增强高管工作流
-description: 把高管日常决策与执行节奏重构为AI增强流程，提升速度、质量与组织对齐。
+description: 建立面向高管的AI工作流，把日常简报、优先级判断、会议决策和执行跟进连成闭环。
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['领导力', '执行', '工作流']
 related: ['ai-decision-intelligence-stack-executives', 'ai-assisted-strategic-review-playbook', '30-day-ai-rollout']
 audience: CEO、COO、业务线负责人
 readingTime: 10分钟
+keyTakeaways:
+  - 高管AI工作流的目标是缩短判断和跟进链路，而不是单纯提高汇报产出。
+  - 最有效的模式是围绕每周节奏，把AI简报、优先级判断、决策日志和执行复盘连成闭环。
+  - Chief of Staff 与业务负责人可以运营流程，但管理层责任必须保持明确。
 outcomes:
   - 建立AI增强的周节奏管理系统
   - 提升跨部门信息同步效率
   - 将决策直接映射为可跟踪行动
 ---
+
+## 什么是高管AI工作流？
+
+高管AI工作流，是把AI嵌入管理层每周判断与执行节奏的一套操作方式。目标不是“自动化更多事务”，而是让高管把注意力放在真正重要的信号、选择和跟进上。
 
 ## 为什么高管需要专属AI工作流
 
@@ -35,3 +43,10 @@ outcomes:
 - 明确每周固定决策节奏
 - 统一简报和决策记录模板
 - 设定AI参与边界与审查标准
+
+## 典型适用场景
+
+- 高管周会
+- 经营复盘会议
+- 跨部门优先级调整
+- 重点风险跟踪

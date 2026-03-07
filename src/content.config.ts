@@ -11,6 +11,7 @@ const docs = defineCollection({
     related: z.array(z.string()).default([]),
     audience: z.string().optional(),
     readingTime: z.string().optional(),
+    keyTakeaways: z.array(z.string()).default([]),
     outcomes: z.array(z.string()).default([]),
   }),
 });
@@ -26,6 +27,7 @@ const zhdocs = defineCollection({
     related: z.array(z.string()).default([]),
     audience: z.string().optional(),
     readingTime: z.string().optional(),
+    keyTakeaways: z.array(z.string()).default([]),
     outcomes: z.array(z.string()).default([]),
   }),
 });

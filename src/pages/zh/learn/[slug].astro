@@ -75,6 +75,14 @@ const breadcrumbJsonLd = {
             </ul>
           </section>
         )}
+        {entry.data.keyTakeaways.length > 0 && (
+          <section class="takeaways">
+            <h3>关键要点</h3>
+            <ul>
+              {entry.data.keyTakeaways.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+        )}
         <Content />
       </div>
       <aside class="article-aside">
