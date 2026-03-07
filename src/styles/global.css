@@ -170,6 +170,55 @@ a {
   overflow: clip;
 }
 
+.contact-form {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #29453b;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #c5d8d1;
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid rgba(10, 143, 99, 0.18);
+  outline-offset: 0;
+  border-color: var(--brand);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.hidden-field {
+  position: absolute;
+  left: -5000px;
+}
+
 .home-hero {
   padding: 2rem;
 }

@@ -8,7 +8,64 @@ import Layout from '../../layouts/Layout.astro';
     <h1>预约AI领导力咨询</h1>
     <p class="lead">请发送团队规模、关键决策场景和目标结果，我们会给出30天执行路径。</p>
     <div class="stack">
-      <a class="btn btn-primary" href="mailto:chenchen2012@hotmail.com?subject=AILD%20中文咨询">发送邮件</a>
+      <a class="btn btn-primary" href="#contact-form">提交咨询表单</a>
+      <a class="btn btn-secondary" href="/zh/templates/">先看模板</a>
     </div>
+  </section>
+
+  <section class="section panel">
+    <h2>建议填写这些信息</h2>
+    <ul>
+      <li>团队规模与主要职能</li>
+      <li>当前最想改善的关键决策场景</li>
+      <li>数据、合规、工具等现实约束</li>
+      <li>未来30到90天希望达成的结果</li>
+    </ul>
+  </section>
+
+  <section class="section panel">
+    <h2>提交咨询</h2>
+    <p>
+      请填写下面表单，信息会直接发送到我们的邮箱。若你更习惯邮件，也可以直接联系
+      <a href="mailto:chenchen2012@hotmail.com">chenchen2012@hotmail.com</a>。
+    </p>
+    <form
+      id="contact-form"
+      name="aild-contact-zh"
+      method="POST"
+      action="https://formsubmit.co/chenchen2012@hotmail.com"
+      class="contact-form"
+    >
+      <input type="hidden" name="_next" value="https://aild.org/zh/contact-success/" />
+      <input type="hidden" name="_subject" value="AILD 中文咨询" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
+
+      <label>
+        姓名
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <label>
+        邮箱
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label>
+        团队或机构
+        <input type="text" name="organization" autocomplete="organization" />
+      </label>
+      <label>
+        留言内容
+        <textarea
+          name="message"
+          placeholder="请说明团队背景、决策场景，以及你希望在未来30到90天达成的目标。"
+          required
+        ></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">提交信息</button>
+      </div>
+    </form>
   </section>
 </Layout>

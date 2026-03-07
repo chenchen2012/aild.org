@@ -1,9 +1,100 @@
 ---
 import { getEntry } from 'astro:content';
-import ManagedPage from '../components/ManagedPage.astro';
+import Layout from '../layouts/Layout.astro';
+import { render } from 'astro:content';
 
 const entry = await getEntry('pages', 'contact');
 if (!entry) throw new Error('Missing pages/contact.md');
+const { Content } = await render(entry);
+const sections = entry.data.sections ?? [];
 ---
 
-<ManagedPage entry={entry} active="contact" canonical="https://aild.org/contact/" />
+<Layout
+  title={entry.data.title}
+  description={entry.data.description}
+  canonical="https://aild.org/contact/"
+  active="contact"
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: entry.data.title,
+    url: 'https://aild.org/contact/',
+    inLanguage: 'en',
+  }}
+>
+  <section class="hero">
+    <p class="eyebrow">{entry.data.heroEyebrow}</p>
+    <h1>{entry.data.heroTitle}</h1>
+    <p class="lead">{entry.data.heroLead}</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#contact-form">Send message</a>
+      <a class="btn btn-secondary" href="/templates/">Start with templates</a>
+    </div>
+  </section>
+
+  {
+    sections.map((section) => (
+      <section class="section panel">
+        <h2>{section.heading}</h2>
+        {section.text && <p>{section.text}</p>}
+        {section.bullets && section.bullets.length > 0 && (
+          <ul>
+            {section.bullets.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ))
+  }
+
+  <section class="section panel">
+    <h2>Send your request</h2>
+    <p>
+      Fill out the form below and your message will go straight to our inbox. If you prefer, you can still
+      email <a href="mailto:chenchen2012@hotmail.com">chenchen2012@hotmail.com</a>.
+    </p>
+    <form
+      id="contact-form"
+      name="aild-contact"
+      method="POST"
+      action="https://formsubmit.co/chenchen2012@hotmail.com"
+      class="contact-form"
+    >
+      <input type="hidden" name="_next" value="https://aild.org/contact-success/" />
+      <input type="hidden" name="_subject" value="AILD advisory inquiry" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off" />
+
+      <label>
+        Name
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label>
+        Team or organization
+        <input type="text" name="organization" autocomplete="organization" />
+      </label>
+      <label>
+        Message
+        <textarea
+          name="message"
+          placeholder="Share your decision context, team size, and what outcome you want in the next 30-90 days."
+          required
+        ></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Submit inquiry</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section panel">
+    <Content />
+  </section>
+</Layout>
