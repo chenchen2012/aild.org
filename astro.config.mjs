@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const siteUrl = 'https://aild.org';
+const pageLastmod = JSON.parse(fs.readFileSync(path.join(rootDir, 'src/data/page-lastmod.json'), 'utf8'));
 
 function readCollectionDates(collectionDir, urlPrefix) {
   const dir = path.join(rootDir, collectionDir);
@@ -37,11 +38,17 @@ function readCollectionDates(collectionDir, urlPrefix) {
 
 const englishDocs = readCollectionDates('src/content/docs', '/learn/');
 const chineseDocs = readCollectionDates('src/content/zhdocs', '/zh/learn/');
+const managedPages = readCollectionDates('src/content/pages', '/');
 
 const sitemapLastmod = new Map([
   ...englishDocs.map,
   ...chineseDocs.map,
+  ...managedPages.map,
 ]);
+
+for (const [pagePath, lastmod] of Object.entries(pageLastmod)) {
+  sitemapLastmod.set(`${siteUrl}${pagePath}`, lastmod);
+}
 
 if (englishDocs.latest) {
   sitemapLastmod.set(`${siteUrl}/`, englishDocs.latest);

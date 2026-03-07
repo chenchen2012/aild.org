@@ -1,6 +1,7 @@
 ---
 title: AI Leadership Cases and Benchmarks | AILD.org
 description: Benchmark-style AI leadership cases focused on decision quality, execution speed, and governance outcomes.
+updatedDate: '2026-03-07'
 heroEyebrow: Case intelligence
 heroTitle: Measurable proof of AI leadership execution
 heroLead: "Each case uses the same method: baseline problem, leadership intervention, control model, and measurable results."

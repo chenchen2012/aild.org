@@ -1,6 +1,7 @@
 ---
 title: About AILD | AI Leadership and Development
 description: AI Leadership and Development (AILD) helps organizations build leadership capacity, governance, and decision discipline in the AI era.
+updatedDate: '2026-03-07'
 heroEyebrow: About
 heroTitle: About AILD
 heroLead: AI is reshaping how organizations compete and how leaders lead.

@@ -1,6 +1,7 @@
 ---
 title: Contact AILD | AI Leadership Advisory
 description: Contact AILD for leadership decision frameworks, governance setup, and AI-augmented executive workflow support.
+updatedDate: '2026-03-07'
 heroEyebrow: Advisory
 heroTitle: Book an AI leadership advisory call.
 heroLead: Share your decision context and we will propose a practical execution path with clear control points.
