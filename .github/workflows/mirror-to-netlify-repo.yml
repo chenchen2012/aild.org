@@ -31,4 +31,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote add netlify-mirror "https://x-access-token:${MIRROR_GH_TOKEN}@github.com/chenchen2012/AILD.git"
-          git push netlify-mirror HEAD:main
+          rm -rf .github/workflows
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Mirror ${GITHUB_SHA} (exclude workflow files)"
+          fi
+          git push --force netlify-mirror HEAD:main
