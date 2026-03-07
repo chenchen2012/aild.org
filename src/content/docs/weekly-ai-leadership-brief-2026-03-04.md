@@ -14,15 +14,24 @@ outcomes:
 
 ## What changed this week
 
-- Deloitte launched an Enterprise AI Navigator tool to help organizations transition AI from a cost center to a value driver.\n- Research indicates senior leaders are struggling with AI adoption, highlighting gaps in implementation.\n- A new report finds that governance, not just adoption, will determine which companies succeed with AI.\n- New IT roles are emerging specifically to tackle AI evaluation and implementation challenges.
+- Deloitte launched an Enterprise AI Navigator tool to help organizations transition AI from a cost center to a value driver.
+- Research indicates senior leaders are struggling with AI adoption, highlighting gaps in implementation.
+- A new report finds that governance, not just adoption, will determine which companies succeed with AI.
+- New IT roles are emerging specifically to tackle AI evaluation and implementation challenges.
 
 ## Leadership implications
 
-- AI success depends more on strategy and governance than on specific tools or algorithms.\n- CEO-CFO alignment is becoming critical for enterprise resilience in AI-driven transformations.\n- Organizations must move beyond viewing AI as a technical project to embedding it in strategic decision-making processes.\n- Regulatory changes, such as potential rollbacks of AI transparency rules, could increase governance stakes in regulated sectors like healthcare.
+- AI success depends more on strategy and governance than on specific tools or algorithms.
+- CEO-CFO alignment is becoming critical for enterprise resilience in AI-driven transformations.
+- Organizations must move beyond viewing AI as a technical project to embedding it in strategic decision-making processes.
+- Regulatory changes, such as potential rollbacks of AI transparency rules, could increase governance stakes in regulated sectors like healthcare.
 
 ## Decisions for the next 7 days
 
-- Assess current AI governance frameworks and identify gaps in accountability and oversight.\n- Review AI strategy alignment between executive leadership (CEO/CFO) and operational teams.\n- Evaluate the need for new roles focused on AI evaluation, security, and compliance integration.\n- Prioritize initiatives that shift AI from cost to value, using tools like navigators for strategic planning.
+- Assess current AI governance frameworks and identify gaps in accountability and oversight.
+- Review AI strategy alignment between executive leadership (CEO/CFO) and operational teams.
+- Evaluate the need for new roles focused on AI evaluation, security, and compliance integration.
+- Prioritize initiatives that shift AI from cost to value, using tools like navigators for strategic planning.
 
 ## Source links
 
