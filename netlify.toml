@@ -3,6 +3,30 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zh/en"
+  to = "/zh/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zh/en/"
+  to = "/zh/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200

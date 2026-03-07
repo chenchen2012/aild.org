@@ -7,8 +7,10 @@ interface Props {
   canonical?: string;
   active?: string;
   lang?: string;
+  robots?: string;
   alternates?: { hreflang: string; href: string }[];
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
+  ogType?: string;
 }
 
 const {
@@ -17,8 +19,10 @@ const {
   canonical,
   active = '',
   lang = 'en',
+  robots = 'index,follow',
   alternates = [],
   jsonLd,
+  ogType = 'website',
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -30,8 +34,12 @@ const makeLocalizedPath = (basePath: string) => {
   if (basePath === '/') return '/zh/';
   return `/zh${basePath}`;
 };
-const enPath = isZh ? pathname.replace(/^\/zh/, '') || '/' : pathname;
-const zhPath = isZh ? pathname : pathname === '/' ? '/zh/' : `/zh${pathname}`;
+const englishDefaultPath =
+  pathname === '/en' || pathname === '/en/' ? '/' : isZh ? pathname.replace(/^\/zh/, '') || '/' : pathname;
+const chineseDefaultPath =
+  isLanguageLanding ? '/zh/' : isZh ? pathname : pathname === '/' ? '/zh/' : `/zh${pathname}`;
+const enPath = englishDefaultPath;
+const zhPath = chineseDefaultPath;
 const brandFullName = 'AI Leadership and Development';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
@@ -96,13 +104,17 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content={robots} />
     {canonical && <link rel="canonical" href={canonical} />}
     {autoAlternates.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
+    <meta property="og:site_name" content="AILD" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     {allJsonLd.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}
