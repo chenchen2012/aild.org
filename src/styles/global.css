@@ -1166,6 +1166,21 @@ li {
   font-size: 0.93rem;
 }
 
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.footer a:hover {
+  color: var(--ink);
+}
+
 @media (max-width: 1020px) {
   .cases-grid,
   .case-kpi-row,
