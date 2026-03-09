@@ -45,6 +45,7 @@ const zhPath = chineseDefaultPath;
 const brandFullName = 'AI Leadership and Development';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || 'G-WKLPXSSB6Z';
 const autoAlternates =
   alternates.length > 0
     ? alternates
@@ -162,5 +163,72 @@ const nav = [
         }
       </div>
     </footer>
+    {
+      gaMeasurementId && (
+        <script is:inline define:vars={{ gaMeasurementId }}>
+          (() => {
+            const GA_ID = gaMeasurementId;
+            const LOAD_DELAY_MS = 8000;
+            const POST_LOAD_DELAY_MS = 1200;
+            const IDLE_TIMEOUT_MS = 12000;
+
+            if (typeof window === 'undefined' || typeof document === 'undefined' || !GA_ID) return;
+            if (window.__aildGaLazyInitialized) return;
+            window.__aildGaLazyInitialized = true;
+
+            window.dataLayer = window.dataLayer || [];
+            if (typeof window.gtag !== 'function') {
+              window.gtag = function gtag() {
+                window.dataLayer.push(arguments);
+              };
+            }
+
+            if (!window.__aildGaConfigured) {
+              window.__aildGaConfigured = true;
+              window.gtag('js', new Date());
+              window.gtag('config', GA_ID, {
+                anonymize_ip: true,
+              });
+            }
+
+            let started = false;
+
+            const loadAnalytics = () => {
+              if (started) return;
+              started = true;
+
+              const script = document.createElement('script');
+              script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+              script.async = true;
+              document.head.appendChild(script);
+            };
+
+            const scheduleDeferredLoad = () => {
+              window.setTimeout(() => {
+                if ('requestIdleCallback' in window) {
+                  window.requestIdleCallback(() => {
+                    loadAnalytics();
+                  }, { timeout: IDLE_TIMEOUT_MS });
+                  return;
+                }
+                loadAnalytics();
+              }, LOAD_DELAY_MS);
+            };
+
+            if (document.readyState === 'complete') {
+              window.setTimeout(scheduleDeferredLoad, POST_LOAD_DELAY_MS);
+            } else {
+              window.addEventListener('load', () => {
+                window.setTimeout(scheduleDeferredLoad, POST_LOAD_DELAY_MS);
+              }, { once: true });
+            }
+
+            ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach((eventName) => {
+              window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+            });
+          })();
+        </script>
+      )
+    }
   </body>
 </html>

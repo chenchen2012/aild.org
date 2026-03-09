@@ -35,6 +35,13 @@ npm run build
 
 Build output is in `dist/`.
 
+## Analytics
+
+- GA4 is wired for lazy-load at the shared layout level.
+- Default AILD GA4 Measurement ID is `G-WKLPXSSB6Z`.
+- Optionally set `PUBLIC_GA_MEASUREMENT_ID` in the local environment or Cloudflare Pages to override it.
+- The loader waits for first interaction or a deferred idle window before requesting `gtag.js`.
+
 ## Notes
 
 - Previous static version is preserved in `legacy-static/`.
