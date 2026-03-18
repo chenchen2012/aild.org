@@ -1,9 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 import { getCollection } from 'astro:content';
 
 const docs = await getCollection('docs');
 const docsBySlug = new Map(docs.map((doc) => [doc.slug, doc]));
+const weeklyBriefs = docs
+  .filter((doc) => doc.data.tags.includes('weekly-brief'))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 2);
 const featuredDocSlugs = [
   'ai-decision-intelligence-stack-executives',
   'trust-vs-override-framework',
@@ -29,96 +34,248 @@ const featuredDocs = featuredDocSlugs
   <section class="hero home-hero">
     <div class="home-hero-grid">
       <div>
-        <p class="eyebrow">Leadership in the decision intelligence era</p>
-        <h1>AI leadership frameworks for executive decision-making and governance</h1>
+        <p class="eyebrow">Executive AI for strategy and transformation owners</p>
+        <h1>Make AI credible at the leadership level before you scale it</h1>
         <p class="lead">
-          AILD helps CEOs, strategy leaders, and transformation teams build an AI operating model for management. Learn how to use AI in executive decision-making, set governance rules, define trust vs override boundaries, and run repeatable leadership workflows.
+          AILD helps strategy leaders, transformation owners, and nontechnical executive teams build an AI operating
+          model for management. Use AILD to improve decision quality, set governance boundaries, package executive
+          tools, and move from scattered pilots to a repeatable leadership system.
         </p>
         <div class="home-proofline">
-          <span>For CEOs and executive teams</span>
-          <span>For strategy and ops leads</span>
-          <span>For AI transformation owners</span>
+          <span>Built for strategy and transformation leaders</span>
+          <span>{docs.length} practical guides and executive tools</span>
+          <span>Weekly executive brief + cases + templates</span>
         </div>
         <div class="stack">
-          <a class="btn btn-primary" href="/learn/ai-decision-intelligence-stack-executives/">Start with Decision Intelligence</a>
-          <a class="btn btn-secondary" href="/playbooks/">See operating playbooks</a>
+          <a class="btn btn-primary" href="/ai-leadership-readiness-checklist/">Get the readiness checklist</a>
+          <a class="btn btn-secondary" href="/weekly-brief/">Read the Weekly Brief</a>
         </div>
+        <p class="signal-note">Best first move: use the checklist if you need a diagnostic, or the Weekly Brief if you need a current executive signal feed.</p>
       </div>
-      <aside class="signal-panel">
-        <p class="eyebrow">What you get</p>
-        <h2>Move from AI pilots to a real executive AI operating model</h2>
-        <ul class="signal-list">
-          <li><strong>AI decision-making frameworks:</strong> clarify rights, ownership, and evidence thresholds.</li>
-          <li><strong>AI governance rules:</strong> define when AI assists and when humans override.</li>
-          <li><strong>Executive operating cadence:</strong> convert signal into action, review, and measured outcomes.</li>
-        </ul>
-        <div class="signal-callout">
-          <strong>Best first click:</strong>
-          <a href="/learn/ai-decision-intelligence-stack-executives/"> AI Decision Intelligence Stack</a>
-        </div>
-      </aside>
+      <LeadCaptureForm
+        compact={true}
+        eyebrow="Join the executive brief"
+        title="Get AILD's weekly brief and flagship tools"
+        lead="Use this when you want executive briefings, readiness tools, and new governance resources in one place."
+        buttonLabel="Join the list"
+        subject="AILD homepage brief signup"
+        nextUrl="https://aild.org/brief-subscribe-success/"
+        source="homepage-hero"
+        interest="AILD Weekly Brief and executive tools"
+        proofItems={['37+ guides', 'Weekly executive brief', 'Board + transformation use cases']}
+      />
     </div>
     <div class="metrics home-metrics">
-      <div class="metric"><strong>Faster cycles</strong><span>Shorten strategic review-to-decision time</span></div>
-      <div class="metric"><strong>Higher quality</strong><span>Improve decision consistency with clear frameworks</span></div>
-      <div class="metric"><strong>Better control</strong><span>Define when to trust AI vs override it</span></div>
+      <div class="metric"><strong>37+</strong><span>practical guides, playbooks, templates, and cases</span></div>
+      <div class="metric"><strong>Weekly</strong><span>editorial brief for leaders who need signal and action</span></div>
+      <div class="metric"><strong>3 core offers</strong><span>briefings, tools, and advisory formats for executive teams</span></div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="home-path-grid">
-      <article class="home-path-card panel">
-        <p class="eyebrow">If you are setting strategy</p>
-        <h2>Start with the AI leadership model</h2>
-        <p>Understand the executive decision stack, trust boundaries, and governance logic before choosing AI tools.</p>
-        <a class="text-link" href="/learn/ai-decision-intelligence-stack-executives/">Read the executive framework</a>
-      </article>
-      <article class="home-path-card panel">
-        <p class="eyebrow">If you are running execution</p>
-        <h2>Start with management playbooks and templates</h2>
-        <p>Install repeatable operating rhythm, meeting protocols, scorecards, and decision briefs for AI-assisted execution.</p>
-        <a class="text-link" href="/playbooks/">Open implementation playbooks</a>
-      </article>
-      <article class="home-path-card panel">
-        <p class="eyebrow">If you need proof</p>
-        <h2>Start with AI governance evidence and cases</h2>
-        <p>Use research references and case structures to justify the operating model internally and support leadership buy-in.</p>
-        <a class="text-link" href="/research/">Review evidence base</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="section home-proof">
+  <section class="section trust-grid">
     <article class="panel">
-      <p class="eyebrow">Leadership gap</p>
-      <h2>Why many enterprise AI programs stall before strategic value appears</h2>
-      <p>
-        Teams buy AI tools fast, but leadership systems lag behind. Without an executive decision architecture, AI output remains tactical. AILD closes this gap with practical frameworks for executive judgment, AI governance, and operating discipline.
-      </p>
-      <div class="kpi-strip">
-        <div class="kpi"><strong>Week 1</strong>Decision map + risk tiers</div>
-        <div class="kpi"><strong>Week 2</strong>Trust-vs-override rules + logs</div>
-        <div class="kpi"><strong>Week 3-4</strong>Executive workflow + outcome review cadence</div>
+      <p class="eyebrow">Who this is for</p>
+      <h2>One core audience for this phase</h2>
+      <p>AILD is now centered on strategy leaders, transformation owners, and nontechnical executives who own AI rollout outcomes but do not want a tool-first lens.</p>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">What problems this solves</p>
+      <h2>Where AI programs usually get stuck</h2>
+      <p>Pilot sprawl, weak decision rights, unclear governance, low board confidence, shallow ROI measurement, and too much operational activity without leadership discipline.</p>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Why trust AILD</p>
+      <h2>Editorial and advisory, not hype-driven</h2>
+      <p>AILD combines a maintained knowledge library, recurring Weekly Brief, structured case formats, and executive tools that are designed to be used in workshops, steering reviews, and board prep.</p>
+    </article>
+  </section>
+
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Why now</p>
+        <h2>The cost of delay is already showing up in governance, ROI, and decision quality</h2>
       </div>
-    </article>
-    <article class="story-note">
-      <p class="eyebrow">What world-class teams do differently</p>
-      <ul>
-        <li>Treat decision quality as the primary AI KPI</li>
-        <li>Separate AI analysis from human accountability</li>
-        <li>Run weekly decision reviews to calibrate judgment</li>
-      </ul>
-      <p>
-        See implementation proofs on <a href="/cases/">Cases</a> and
-        evidence basis on <a href="/research/">Research</a>.
-      </p>
-    </article>
+      <p class="lead">Executives do not have a “someday” problem anymore. They have a this-quarter problem: adoption is rising faster than leadership readiness.</p>
+    </div>
+    <div class="urgency-strip">
+      <article class="urgency-card">
+        <strong>Governance risk</strong>
+        <span>AI use expands before review rights and accountability are clear.</span>
+      </article>
+      <article class="urgency-card">
+        <strong>ROI leakage</strong>
+        <span>Teams automate activity but fail to improve decision quality or execution speed.</span>
+      </article>
+      <article class="urgency-card">
+        <strong>Bad rollout risk</strong>
+        <span>Leaders scale tools before measuring where AI actually fits the operating model.</span>
+      </article>
+      <article class="urgency-card">
+        <strong>Board pressure</strong>
+        <span>Oversight questions get sharper as AI exposure grows across functions.</span>
+      </article>
+    </div>
   </section>
 
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Start here</p>
+        <p class="eyebrow">Start here by role</p>
+        <h2>Choose the path that matches your job</h2>
+      </div>
+      <p class="lead">Busy leaders should not have to decode the whole site. Start with the path that fits your role, then go deeper into tools and proof.</p>
+    </div>
+    <div class="role-journey">
+      <article class="home-path-card panel">
+        <p class="eyebrow">If you are a CEO or GM</p>
+        <h2>Start with the leadership model and board framing</h2>
+        <p>Use AILD to clarify where AI creates value, what needs oversight, and what should remain under explicit human judgment.</p>
+        <a class="text-link" href="/learn/board-ai-governance-briefing/">Open the board briefing path</a>
+      </article>
+      <article class="home-path-card panel">
+        <p class="eyebrow">If you own transformation</p>
+        <h2>Start with readiness, operating rhythm, and playbooks</h2>
+        <p>Use the checklist, playbooks, and templates to turn AI activity into an executive operating system with repeatable cadence.</p>
+        <a class="text-link" href="/ai-leadership-readiness-checklist/">Open the transformation path</a>
+      </article>
+      <article class="home-path-card panel">
+        <p class="eyebrow">If you lead governance or risk</p>
+        <h2>Start with trust boundaries, cases, and evidence</h2>
+        <p>Use governance frameworks, case structures, and research to tighten control posture without stalling useful adoption.</p>
+        <a class="text-link" href="/cases/">Review governance-proof cases</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">Signature product</p>
+      <h2>Turn the Weekly Brief into your leadership signal layer</h2>
+      <p>
+        The Weekly Brief is becoming AILD's signature product: one recurring executive format that explains what changed,
+        why it matters, and what leaders should do next.
+      </p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/weekly-brief/">View the Weekly Brief</a>
+        <a class="btn btn-secondary" href="/advisory/">See workshop and advisory formats</a>
+      </div>
+    </div>
+    <div class="article-list brief-preview-list">
+      {weeklyBriefs.map((brief) => (
+        <article class="article-item">
+          <p class="tag">Weekly brief | {brief.data.pubDate}</p>
+          <h3><a href={`/learn/${brief.slug}/`}>{brief.data.title}</a></h3>
+          <p>{brief.data.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">Lead magnet</p>
+      <h2>Start with a concrete executive tool, not a generic article</h2>
+      <p>
+        AILD now offers a flagship AI leadership readiness checklist for strategy leaders and transformation owners. Use it
+        to structure executive reviews, steering meetings, and early board conversations.
+      </p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/ai-leadership-readiness-checklist/">Open the checklist page</a>
+        <a class="btn btn-secondary" href="/downloads/ai-leadership-readiness-checklist.html" download>Preview the printable version</a>
+      </div>
+    </div>
+    <LeadCaptureForm
+      eyebrow="Get the checklist"
+      title="Request the flagship executive tool"
+      lead="This is the fastest way to start using AILD in a real leadership setting."
+      buttonLabel="Get the checklist"
+      subject="AILD homepage checklist request"
+      nextUrl="https://aild.org/checklist-success/"
+      source="homepage-checklist"
+      interest="AI leadership readiness checklist"
+      proofItems={['Board-ready prompts', '90-day action plan', 'Printable executive format']}
+    />
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Proof</p>
+        <h2>Case formats that show how leadership systems actually work</h2>
+      </div>
+      <p class="lead">AILD's cases now emphasize the structure executives care about: problem, leadership challenge, AI use, governance issue, decision design, result, and lesson.</p>
+    </div>
+    <div class="article-list home-case-grid">
+      <article class="article-item">
+        <p class="tag">B2B services leadership team</p>
+        <h3>Executive reporting decision redesign</h3>
+        <p class="case-preview-line"><strong>Problem:</strong> reporting cycles were slow and inconsistent.</p>
+        <p class="case-preview-line"><strong>Governance issue:</strong> AI summaries lacked explicit review ownership.</p>
+        <p class="case-preview-line"><strong>Result:</strong> KPI prep time fell 69 percent with fewer clarification loops.</p>
+      </article>
+      <article class="article-item">
+        <p class="tag">Retail headquarters</p>
+        <h3>Weekly AI-augmented executive workflow</h3>
+        <p class="case-preview-line"><strong>Problem:</strong> cross-functional actions lagged behind leadership decisions.</p>
+        <p class="case-preview-line"><strong>Decision structure:</strong> weekly brief, action board, and Friday review loop.</p>
+        <p class="case-preview-line"><strong>Result:</strong> decision-to-action delay dropped 33 percent.</p>
+      </article>
+      <article class="article-item">
+        <p class="tag">Healthcare operations</p>
+        <h3>Clinical operations escalation governance</h3>
+        <p class="case-preview-line"><strong>Problem:</strong> approvals varied by site and risk level.</p>
+        <p class="case-preview-line"><strong>Governance issue:</strong> high-risk cases needed mandatory human override.</p>
+        <p class="case-preview-line"><strong>Result:</strong> approval cycle improved 29 percent and policy deviations fell 38 percent.</p>
+      </article>
+    </div>
+    <div class="stack">
+      <a class="btn btn-primary" href="/cases/">Open the full cases section</a>
+      <a class="btn btn-secondary" href="/research/">See the evidence layer</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Navigate by format</p>
+        <h2>Every part of AILD has a specific job</h2>
+      </div>
+      <p class="lead">The navigation is strongest when each section does one clear thing for a first-time visitor.</p>
+    </div>
+    <div class="format-grid">
+      <article class="panel">
+        <p class="eyebrow">Learn</p>
+        <h2>Concepts and models</h2>
+        <p>Use Learn for the core ideas behind executive AI decision-making, governance, and operating design.</p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">Playbooks</p>
+        <h2>Step-by-step operating guides</h2>
+        <p>Use Playbooks when you need an implementation sequence, management rhythm, or rollout path.</p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">Templates</p>
+        <h2>Ready-to-use documents</h2>
+        <p>Use Templates for decision briefs, logs, dashboards, and meeting structures you can adapt quickly.</p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">Cases</p>
+        <h2>Implementation proof</h2>
+        <p>Use Cases to show what changed, how governance was handled, and what outcomes improved.</p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">Research</p>
+        <h2>Evidence base</h2>
+        <p>Use Research to ground executive decisions in standards, field data, and decision science.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Cornerstone pages</p>
         <h2>Best AI leadership and governance guides to read first</h2>
       </div>
       <p class="lead">
@@ -143,7 +300,26 @@ const featuredDocs = featuredDocSlugs
     </div>
     <div class="stack">
       <a class="btn btn-primary" href="/learn/">Browse full leadership knowledge library</a>
-      <a class="btn btn-secondary" href="/zh/">View Chinese homepage</a>
+      <a class="btn btn-secondary" href="/advisory/">See executive workshop formats</a>
     </div>
+  </section>
+
+  <section class="section split-callout home-cta-band">
+    <div>
+      <p class="eyebrow">Stay close to the signal</p>
+      <h2>Get the Weekly Brief, flagship tools, and new AILD releases</h2>
+      <p>The homepage is now designed to turn AILD into a returning executive resource, not a one-time article read.</p>
+    </div>
+    <LeadCaptureForm
+      eyebrow="Bottom of funnel"
+      title="Join the AILD executive list"
+      lead="Request the weekly brief and future leadership tools."
+      buttonLabel="Join the list"
+      subject="AILD homepage bottom signup"
+      nextUrl="https://aild.org/brief-subscribe-success/"
+      source="homepage-bottom"
+      interest="AILD Weekly Brief and executive tools"
+      proofItems={['Weekly brief', 'New tools', 'Executive-only relevance']}
+    />
   </section>
 </Layout>

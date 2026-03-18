@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LeadCaptureForm from '../../components/LeadCaptureForm.astro';
+
+const offers = [
+  {
+    tag: '工作坊',
+    title: '高管 AI 工作坊',
+    summary: '帮助管理层围绕AI机会、治理边界和决策权快速形成共识。',
+    format: '90-120分钟 | 高管团队 / 转型办公室',
+    outcome: '形成统一优先级、治理问题清单与下一季度动作',
+  },
+  {
+    tag: '董事会',
+    title: '董事会 AI 准备度简报',
+    summary: '面向董事会和治理委员会的高密度简报格式，聚焦价值、风险和监督质量。',
+    format: '60-90分钟 | 董事会 / CEO / 治理委员会',
+    outcome: '形成董事会讨论提纲和后续议程',
+  },
+  {
+    tag: '咨询冲刺',
+    title: 'AI 治理咨询冲刺',
+    summary: '围绕决策流、信任边界和复盘机制开展短周期治理设计。',
+    format: '2-4周 | 业务负责人 + 工作团队',
+    outcome: '形成决策地图、风险分层、会议节奏和推进建议',
+  },
+];
+---
+
+<Layout
+  title="高管AI工作坊与治理咨询 | AILD"
+  description="AILD 提供高管 AI 工作坊、董事会准备度简报和治理咨询冲刺。"
+  canonical="https://aild.org/zh/advisory/"
+  active=""
+  lang="zh-CN"
+>
+  <section class="hero home-hero">
+    <div class="home-hero-grid">
+      <div>
+        <p class="eyebrow">商业化服务</p>
+        <h1>高管 AI 工作坊、董事会简报与治理咨询</h1>
+        <p class="lead">
+          AILD 帮助战略负责人和转型负责人把AI从分散试点，升级为真正可管理、可治理、可复盘的管理系统。
+        </p>
+        <div class="badge-row">
+          <span class="badge">高管工作坊</span>
+          <span class="badge">董事会AI准备度</span>
+          <span class="badge">治理咨询冲刺</span>
+        </div>
+      </div>
+      <LeadCaptureForm
+        eyebrow="预约沟通"
+        title="申请咨询沟通"
+        lead="告诉我们你的角色和当前情境，AILD会建议最合适的服务形式。"
+        buttonLabel="申请服务信息"
+        subject="AILD 咨询申请"
+        nextUrl="https://aild.org/zh/contact-success/"
+        source="zh-advisory-page"
+        interest="AILD 咨询服务"
+        lang="zh"
+      />
+    </div>
+  </section>
+
+  <section class="section article-list advisory-offers">
+    {offers.map((offer) => (
+      <article class="article-item">
+        <p class="tag">{offer.tag}</p>
+        <h2>{offer.title}</h2>
+        <p>{offer.summary}</p>
+        <p class="kb-meta">{offer.format}</p>
+        <p class="impact-pill">{offer.outcome}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">典型使用场景</p>
+      <h2>哪些团队会来找AILD</h2>
+      <ul>
+        <li>组织里已经有AI动作，但管理层没有真正对齐。</li>
+        <li>知道要治理，但不知道谁负责、何时复盘、何时接管。</li>
+        <li>需要给董事会一个关于价值、风险和节奏的清晰叙事。</li>
+        <li>转型负责人需要更清楚的30-90天推进方案。</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">服务产出</p>
+      <h2>输出可执行，不是泛泛讨论</h2>
+      <ul>
+        <li>领导层决策地图和信任分层</li>
+        <li>更清晰的责任、治理节点和升级逻辑</li>
+        <li>管理层会议节奏与复盘机制</li>
+        <li>下一季度的优先动作清单</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">建议第一步</p>
+      <h2>先用一次短沟通判断服务形式</h2>
+      <p>有些团队需要董事会简报，有些需要管理层工作坊，有些更适合治理冲刺。AILD 会根据你的情境推荐最窄、最实用的服务形式。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/contact/">打开联系页</a>
+        <a class="btn btn-secondary" href="/zh/cases/">查看案例结构</a>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">适合对象</p>
+      <ul>
+        <li>战略负责人和转型负责人</li>
+        <li>跨部门推进AI的非技术高管团队</li>
+        <li>面临董事会治理审视的风险与治理负责人</li>
+        <li>需要管理系统而不是工具演示的组织</li>
+      </ul>
+    </div>
+  </section>
+</Layout>

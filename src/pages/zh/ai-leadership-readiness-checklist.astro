@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LeadCaptureForm from '../../components/LeadCaptureForm.astro';
+---
+
+<Layout
+  title="AI领导力准备度清单 | AILD"
+  description="一份面向管理层的AI准备度清单，帮助团队从战略、治理、决策权和执行节奏四个方面判断AI readiness。"
+  canonical="https://aild.org/zh/ai-leadership-readiness-checklist/"
+  active=""
+  lang="zh-CN"
+>
+  <section class="hero home-hero">
+    <div class="home-hero-grid">
+      <div>
+        <p class="eyebrow">旗舰工具</p>
+        <h1>AI领导力准备度清单</h1>
+        <p class="lead">
+          这是一份给战略负责人、转型负责人和非技术高管团队使用的管理工具，用来判断组织是否已经准备好把AI从试点推进到真正的管理系统。
+        </p>
+        <div class="badge-row">
+          <span class="badge">董事会问题清单</span>
+          <span class="badge">治理与决策权检查</span>
+          <span class="badge">90天行动提示</span>
+        </div>
+        <div class="stack">
+          <a class="btn btn-secondary" href="/downloads/ai-leadership-readiness-checklist-zh.html" download>预览清单</a>
+          <a class="btn btn-primary" href="#checklist-form">申请下载</a>
+        </div>
+      </div>
+      <LeadCaptureForm
+        eyebrow="获取资源"
+        title="申请下载可打印清单"
+        lead="提交信息后将直接跳转到下载页面。"
+        buttonLabel="获取清单"
+        subject="AILD 准备度清单申请"
+        nextUrl="https://aild.org/zh/checklist-success/"
+        source="zh-checklist-page"
+        interest="AI领导力准备度清单"
+        lang="zh"
+        proofItems={['董事会准备', '高管工作坊', '季度 readiness review']}
+      />
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">它覆盖什么</p>
+      <h2>管理层在AI扩展前必须回答的六个问题</h2>
+      <ul>
+        <li>哪些决策适合由AI辅助，哪些不适合？</li>
+        <li>治理角色、升级路径和人工接管规则是否明确？</li>
+        <li>我们是否有基线指标，而不是只有试点热情？</li>
+        <li>管理层是否真正知道本季度AI优先级是什么？</li>
+        <li>董事会和高管层是否同时看到价值与控制？</li>
+        <li>我们是否已有30到90天的推进节奏？</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">最佳场景</p>
+      <h2>适合在工作坊、治理会或董事会汇报前使用</h2>
+      <ul>
+        <li>转型办公室 readiness review</li>
+        <li>高管团队战略会议</li>
+        <li>董事会AI治理讨论</li>
+        <li>业务单元的前期诊断与咨询</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">你会下载到什么</p>
+      <h2>不是普通问卷，而是一份管理层工具</h2>
+      <p>这份清单整合了准备度评分、风险提示、董事会提问框架和90天行动计划，来自AILD现有的评估、治理和运营模型内容。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/learn/ai-literacy-baseline-assessment/">查看准备度评估指南</a>
+        <a class="btn btn-secondary" href="/zh/learn/board-ai-governance-briefing/">查看董事会简报框架</a>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">包含内容</p>
+      <ul>
+        <li>管理层准备度评分卡</li>
+        <li>决策权与治理检查项</li>
+        <li>证据与KPI提示</li>
+        <li>董事会讨论问题</li>
+        <li>前90天行动重点</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section panel" id="checklist-form">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">申请下载</p>
+        <h2>把这份清单带进下一次管理层会议</h2>
+      </div>
+      <p class="lead">如果你正在评估本季度的AI readiness，这会是最快、最实用的AILD入门工具。</p>
+    </div>
+    <LeadCaptureForm
+      title="获取AI领导力准备度清单"
+      lead="提交后会直接跳转到下载页面。"
+      buttonLabel="获取清单"
+      subject="AILD 准备度清单申请"
+      nextUrl="https://aild.org/zh/checklist-success/"
+      source="zh-checklist-bottom"
+      interest="AI领导力准备度清单"
+      lang="zh"
+      note="提交后将进入AILD下载页，并可立即获取可打印版本。"
+      proofItems={['可打印版本', '提交后直达下载', '适合管理层使用']}
+    />
+  </section>
+</Layout>

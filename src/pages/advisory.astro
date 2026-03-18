@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+
+const offers = [
+  {
+    tag: 'Workshop',
+    title: 'Executive AI workshop',
+    summary: 'A focused leadership session to align the executive team on AI opportunity, risk posture, and decision rights.',
+    format: '90-120 minutes | executive team or transformation office',
+    outcome: 'Shared leadership priorities, governance questions, and next-quarter actions',
+  },
+  {
+    tag: 'Board',
+    title: 'Board AI readiness session',
+    summary: 'A concise board-level briefing format for oversight, control posture, and strategic value questions.',
+    format: '60-90 minutes | board, CEO, governance committee',
+    outcome: 'Board-ready discussion pack and follow-up agenda',
+  },
+  {
+    tag: 'Advisory sprint',
+    title: 'AI governance advisory sprint',
+    summary: 'A short engagement to map decision streams, trust boundaries, and review discipline before wider rollout.',
+    format: '2-4 weeks | leadership sponsor plus working team',
+    outcome: 'Decision map, risk tiers, meeting rhythm, and rollout recommendations',
+  },
+];
+---
+
+<Layout
+  title="Executive AI Workshops and Governance Advisory | AILD"
+  description="Executive AI workshop, board AI readiness, and governance advisory offers from AILD."
+  canonical="https://aild.org/advisory/"
+  active=""
+>
+  <section class="hero home-hero">
+    <div class="home-hero-grid">
+      <div>
+        <p class="eyebrow">Commercial offer</p>
+        <h1>Executive AI workshops, board briefings, and governance advisory</h1>
+        <p class="lead">
+          AILD helps strategy leaders and transformation owners turn AI from scattered pilots into an executive operating
+          system with clearer governance, decision quality, and measurable follow-through.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Executive workshops</span>
+          <span class="badge">Board AI readiness sessions</span>
+          <span class="badge">Governance advisory sprints</span>
+        </div>
+      </div>
+      <LeadCaptureForm
+        eyebrow="Book a conversation"
+        title="Request an advisory conversation"
+        lead="Share your role and situation, and AILD will suggest the best session format."
+        buttonLabel="Request advisory details"
+        subject="AILD advisory request"
+        nextUrl="https://aild.org/contact-success/"
+        source="advisory-page"
+        interest="AILD advisory services"
+      />
+    </div>
+  </section>
+
+  <section class="section article-list advisory-offers">
+    {offers.map((offer) => (
+      <article class="article-item">
+        <p class="tag">{offer.tag}</p>
+        <h2>{offer.title}</h2>
+        <p>{offer.summary}</p>
+        <p class="kb-meta">{offer.format}</p>
+        <p class="impact-pill">{offer.outcome}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">Typical problems</p>
+      <h2>When teams bring AILD in</h2>
+      <ul>
+        <li>The organization has AI activity but weak executive alignment.</li>
+        <li>Governance expectations exist, but decision rights and review cadence do not.</li>
+        <li>Leaders want a board-ready narrative on value, risk, and operating discipline.</li>
+        <li>Transformation owners need a sharper 30-90 day operating plan.</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">What a session produces</p>
+      <h2>Useful outputs, not generic inspiration</h2>
+      <ul>
+        <li>Leadership decision map and trust tiers</li>
+        <li>Clearer ownership, governance checkpoints, and escalation logic</li>
+        <li>Executive meeting rhythm for AI signals, decisions, and follow-through</li>
+        <li>Prioritized next steps for the next quarter</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">Best first step</p>
+      <h2>Use a short call to choose the right format</h2>
+      <p>
+        Some teams need a board briefing, others need a leadership workshop, and others need a governance sprint.
+        Contact AILD with your context and we will recommend the narrowest useful engagement.
+      </p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/contact/">Open the contact page</a>
+        <a class="btn btn-secondary" href="/cases/">Review case formats</a>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Good fit</p>
+      <ul>
+        <li>Strategy leaders and transformation owners</li>
+        <li>Nontechnical executive teams adopting AI across functions</li>
+        <li>Governance and risk leaders preparing for board scrutiny</li>
+        <li>Organizations that need practical leadership systems, not tool demos</li>
+      </ul>
+    </div>
+  </section>
+</Layout>

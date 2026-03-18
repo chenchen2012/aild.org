@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AILD AI领导力准备度清单</title>
+    <style>
+      :root {
+        --ink: #102a23;
+        --muted: #4a635b;
+        --line: #d1e1db;
+        --brand: #0a8f63;
+        --paper: #ffffff;
+        --bg: #eef5f3;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.72;
+      }
+
+      .sheet {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 20px 50px rgba(10, 46, 34, 0.08);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--brand);
+        margin: 0;
+      }
+
+      h1, h2, h3 { margin: 0; line-height: 1.2; }
+      h1 { margin-top: 10px; font-size: 38px; }
+      h2 { margin-top: 28px; font-size: 24px; }
+      h3 { font-size: 17px; }
+      p, li { color: var(--muted); }
+
+      .top-grid,
+      .score-grid,
+      .action-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .top-grid { grid-template-columns: 1.2fr 0.8fr; margin-top: 24px; }
+      .score-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; }
+      .action-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+        background: linear-gradient(180deg, #ffffff, #f7fbf9);
+      }
+
+      .tag {
+        display: inline-block;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #1a493d;
+        background: #eff8f4;
+        margin: 6px 8px 0 0;
+      }
+
+      ol, ul { padding-left: 20px; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+        font-size: 14px;
+      }
+
+      th, td {
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        vertical-align: top;
+      }
+
+      th {
+        text-align: left;
+        background: #f3faf7;
+        color: #173d32;
+      }
+
+      .footer-note {
+        margin-top: 28px;
+        font-size: 13px;
+      }
+
+      @media print {
+        body { background: #fff; }
+        .sheet { padding: 0; max-width: none; }
+        .card { box-shadow: none; border-radius: 0; border: 0; padding: 0; }
+      }
+
+      @media (max-width: 760px) {
+        h1 { font-size: 30px; }
+        .top-grid,
+        .score-grid,
+        .action-grid { grid-template-columns: 1fr; }
+        .card { padding: 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <article class="card">
+        <p class="eyebrow">AILD 管理工具</p>
+        <h1>AI领导力准备度清单</h1>
+        <p>在组织大规模扩展AI之前，先用这份清单判断领导层、治理机制和执行节奏是否已经准备好。</p>
+
+        <div class="top-grid">
+          <section class="panel">
+            <h3>适合谁使用</h3>
+            <ul>
+              <li>战略负责人</li>
+              <li>转型负责人</li>
+              <li>非技术高管团队</li>
+              <li>董事会和治理审查方</li>
+            </ul>
+          </section>
+          <section class="panel">
+            <h3>如何评分</h3>
+            <ul>
+              <li>1 = 很弱或不清楚</li>
+              <li>3 = 部分具备</li>
+              <li>5 = 明确且可重复</li>
+            </ul>
+            <p>每项打分后，写下最需要优先修补的管理动作。</p>
+          </section>
+        </div>
+
+        <h2>1. 管理层准备度评分卡</h2>
+        <div class="score-grid">
+          <section class="panel">
+            <h3>战略与优先级</h3>
+            <p>管理层是否已经就本季度AI价值点和不应自动化的领域形成一致判断？</p>
+          </section>
+          <section class="panel">
+            <h3>决策权结构</h3>
+            <p>哪些决策可由AI辅助，哪些必须审批，谁拥有最终接管权，是否清楚？</p>
+          </section>
+          <section class="panel">
+            <h3>治理与控制</h3>
+            <p>对高风险场景，政策规则、升级路径和复核节点是否明确？</p>
+          </section>
+          <section class="panel">
+            <h3>执行节奏</h3>
+            <p>是否已有每周或每月的管理层机制，用于看信号、做决策、追动作、做校准？</p>
+          </section>
+          <section class="panel">
+            <h3>衡量与证据</h3>
+            <p>在宣布成功前，团队是否记录了效率、质量、风险和决策结果的基线？</p>
+          </section>
+          <section class="panel">
+            <h3>能力与信任</h3>
+            <p>管理者是否真正理解AI擅长什么、会在哪些地方失真、何时必须人工介入？</p>
+          </section>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>维度</th>
+              <th>分数 (1-5)</th>
+              <th>你看到的缺口</th>
+              <th>第一步动作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>战略与优先级</td><td></td><td></td><td></td></tr>
+            <tr><td>决策权结构</td><td></td><td></td><td></td></tr>
+            <tr><td>治理与控制</td><td></td><td></td><td></td></tr>
+            <tr><td>执行节奏</td><td></td><td></td><td></td></tr>
+            <tr><td>衡量与证据</td><td></td><td></td><td></td></tr>
+            <tr><td>能力与信任</td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <h2>2. 董事会与管理层应问的问题</h2>
+        <ul>
+          <li>今天AI究竟在哪些地方创造了可衡量的业务价值？</li>
+          <li>哪些流程仍然缺乏明确的人工责任？</li>
+          <li>哪些高风险决策必须保留人工批准？</li>
+          <li>哪些指标能证明AI提升的是决策质量，而不是活动量？</li>
+          <li>在扩展到更多部门之前，领导层最该先修补什么？</li>
+        </ul>
+
+        <h2>3. 前90天行动计划</h2>
+        <div class="action-grid">
+          <section class="panel">
+            <h3>第1-30天</h3>
+            <ul>
+              <li>选定一个优先决策流</li>
+              <li>记录基线周期和质量</li>
+              <li>定义信任与接管规则</li>
+            </ul>
+          </section>
+          <section class="panel">
+            <h3>第31-60天</h3>
+            <ul>
+              <li>进行受控试点并每周复盘</li>
+              <li>记录异常、接管和经验</li>
+              <li>迭代KPI和升级逻辑</li>
+            </ul>
+          </section>
+          <section class="panel">
+            <h3>第61-90天</h3>
+            <ul>
+              <li>决定扩展、暂停还是重构</li>
+              <li>准备董事会或管理层更新材料</li>
+              <li>把节奏机制固定下来</li>
+            </ul>
+          </section>
+        </div>
+
+        <h2>4. 好信号与警报信号</h2>
+        <p>
+          <span class="tag">好信号</span> 管理层能说清楚优先场景、责任人、复核节点和业务指标。
+          <span class="tag">警报信号</span> 组织里AI动作很多，但没人说得清决策质量、控制状态和业务影响。
+        </p>
+
+        <p class="footer-note">框架来源：AILD.org。建议搭配 AI领导力成熟度模型、信任与接管框架、董事会AI治理简报框架一起使用。</p>
+      </article>
+    </main>
+  </body>
+</html>

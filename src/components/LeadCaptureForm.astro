@@ -1,0 +1,120 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead: string;
+  buttonLabel?: string;
+  subject: string;
+  nextUrl: string;
+  source: string;
+  lang?: 'en' | 'zh';
+  compact?: boolean;
+  note?: string;
+  interest?: string;
+  proofItems?: string[];
+}
+
+const {
+  eyebrow,
+  title,
+  lead,
+  buttonLabel,
+  subject,
+  nextUrl,
+  source,
+  lang = 'en',
+  compact = false,
+  note,
+  interest = title,
+  proofItems = [],
+} = Astro.props;
+
+const configuredAction = import.meta.env.PUBLIC_AILD_LEAD_FORM_ACTION?.trim();
+const configuredMethod = import.meta.env.PUBLIC_AILD_LEAD_FORM_METHOD?.trim().toUpperCase() || 'POST';
+const configuredEmailField = import.meta.env.PUBLIC_AILD_LEAD_EMAIL_FIELD?.trim() || 'email';
+const configuredOrganizationField = import.meta.env.PUBLIC_AILD_LEAD_ORGANIZATION_FIELD?.trim() || 'organization';
+const fallbackInbox = 'chenchen2012@hotmail.com';
+const formAction = configuredAction || `https://formsubmit.co/${fallbackInbox}`;
+const isFallbackFormsubmit = !configuredAction;
+
+const labels =
+  lang === 'zh'
+    ? {
+        name: '姓名',
+        email: '邮箱',
+        organization: '职位或机构',
+        emailPlaceholder: 'name@company.com',
+        organizationPlaceholder: '例如：战略负责人 / 转型办公室',
+        defaultNote: '面向管理层的资源申请与简报入口。',
+      }
+    : {
+        name: 'Name',
+        email: 'Email',
+        organization: 'Role or organization',
+        emailPlaceholder: 'name@company.com',
+        organizationPlaceholder: 'e.g. Strategy lead / Transformation office',
+        defaultNote: 'Executive resource request and briefing access.',
+      };
+---
+
+<aside class={`capture-card ${compact ? 'capture-card-compact' : ''}`}>
+  {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <h2>{title}</h2>
+  <p>{lead}</p>
+  {
+    proofItems.length > 0 && (
+      <div class="capture-proof">
+        {proofItems.map((item) => (
+          <span>{item}</span>
+        ))}
+      </div>
+    )
+  }
+  <form
+    name={`aild-${source}`}
+    method={configuredMethod}
+    action={formAction}
+    class={`lead-capture-form ${compact ? 'compact' : ''}`}
+  >
+    {isFallbackFormsubmit && <input type="hidden" name="_next" value={nextUrl} />}
+    {isFallbackFormsubmit && <input type="hidden" name="_subject" value={subject} />}
+    {isFallbackFormsubmit && <input type="hidden" name="_captcha" value="false" />}
+    {isFallbackFormsubmit && <input type="hidden" name="_template" value="table" />}
+    {isFallbackFormsubmit && <input type="hidden" name="_autoresponse" value={lang === 'zh' ? '我们已收到你的申请，AILD会尽快跟进。' : 'Your request has been received by AILD. We will follow up soon.'} />}
+    <input type="hidden" name="_honey" />
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="interest" value={interest} />
+    <input type="hidden" name="form_type" value="lead_capture" />
+
+    {!compact && (
+      <label>
+        {labels.name}
+        <input type="text" name="name" autocomplete="name" />
+      </label>
+    )}
+
+    <label>
+      {labels.email}
+      <input
+        type="email"
+        name={configuredEmailField}
+        autocomplete="email"
+        placeholder={labels.emailPlaceholder}
+        required
+      />
+    </label>
+
+    <label>
+      {labels.organization}
+      <input
+        type="text"
+        name={configuredOrganizationField}
+        autocomplete="organization"
+        placeholder={labels.organizationPlaceholder}
+      />
+    </label>
+
+    <button type="submit" class="btn btn-primary">{buttonLabel ?? (lang === 'zh' ? '提交' : 'Request access')}</button>
+  </form>
+  <p class="capture-note">{note ?? labels.defaultNote}</p>
+</aside>

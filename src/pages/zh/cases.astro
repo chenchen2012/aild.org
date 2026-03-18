@@ -1,71 +1,138 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const caseStudies = [
+  {
+    tag: 'B2B服务管理层 | 42位管理者',
+    title: '高管报告决策链路重构',
+    result: '-69% 指标准备时长 | -27% 澄清往返',
+    problem: '每周 KPI 叙事准备耗时长，而且不同管理者口径不一致。',
+    challenge: '团队希望提升速度，但不能让 AI 生成内容直接变成未经核验的事实。',
+    aiUse: 'AI 决策简报和 KPI 叙事草稿生成。',
+    governance: '最终签字仍由业务负责人和财务负责人承担。',
+    structure: '基线梳理 -> AI 草稿 -> 责任人复核 -> 管理层记录。',
+    lesson: 'AI 能提高高管报告效率，但前提是复核责任和证据门槛都明确。',
+  },
+  {
+    tag: '区域零售总部 | 11名负责人',
+    title: 'AI增强高管周节奏',
+    result: '-33% 决策到行动延迟',
+    problem: '跨部门事项在管理层讨论后，迟迟无法进入执行。',
+    challenge: '团队有很多更新，但没有把更新转成行动的共享节奏。',
+    aiUse: '每周 AI 简报、优先级看板和行动摘要。',
+    governance: '每项行动必须绑定责任人、截止时间和周五复盘节点。',
+    structure: '信号简报 -> 管理层决策会 -> 行动看板 -> 每周校准。',
+    lesson: '真正的增量来自节奏机制，而不是多生成几份内容。',
+  },
+  {
+    tag: '医疗服务运营 | 24位管理者',
+    title: '临床运营升级审批治理',
+    result: '-29% 审批周期 | -38% 政策偏差',
+    problem: '不同站点的升级审批标准不一致，周期长且偏差大。',
+    challenge: '团队希望加快分诊和审批，但不能牺牲高风险决策的稳健性。',
+    aiUse: 'AI 辅助分诊建议和升级摘要。',
+    governance: '高风险案例必须保留人工接管和复核记录。',
+    structure: '风险分层 -> AI 分诊建议 -> 人工批准 -> 偏差复盘。',
+    lesson: '治理质量之所以提升，是因为人工接管在设计之初就被写进流程里。',
+  },
+  {
+    tag: '全球采购管理层 | 14位品类负责人',
+    title: '供应商风险评审决策协议',
+    result: '-38% 评审周期 | 审计可追踪性提升',
+    problem: '供应商风险评审依赖零散信息，材料质量也不稳定。',
+    challenge: '领导层希望提升速度，但又不能削弱审计可追踪性。',
+    aiUse: 'AI 风险简报和标准决策备忘录草稿。',
+    governance: '品类负责人保留最终决策权并记录例外。',
+    structure: '证据收集 -> AI 草稿 -> 负责人复核 -> 审计记录。',
+    lesson: '在高审计压力场景中，模板和日志纪律与模型质量同样重要。',
+  },
+  {
+    tag: '电商管理团队 | 16位决策负责人',
+    title: '营销优先级决策与发布治理',
+    result: '-38% 发布准备时长 | +19个百分点 合规通过率',
+    problem: '活动方案从想法到上线准备周期长，品牌规范问题常在后期暴露。',
+    challenge: '团队想要 AI 带来的速度，但不能弱化品牌与政策控制。',
+    aiUse: 'AI 场景比较和发布材料草稿。',
+    governance: '在审批和发布前加入信任/接管检查点。',
+    structure: '方案生成 -> 风险复核 -> 人工审批 -> 发布材料定稿。',
+    lesson: 'AI 的商业价值来自提前设计治理，而不是等出错后再补救。',
+  },
+];
 ---
 
 <Layout title="AI案例与指标 | AILD" description="真实可复用的AI领导力案例结构：基线、决策动作、结果。" canonical="https://aild.org/zh/cases/" active="cases" lang="zh-CN">
   <section class="hero">
     <p class="eyebrow">案例库</p>
-    <h1>用可量化结果验证 AI 领导力价值</h1>
-    <p class="lead">每个案例均按同一方法呈现：基线问题、决策动作、控制机制、结果指标。</p>
+    <h1>用结构化案例证明 AI 领导力价值</h1>
+    <p class="lead">每个案例都按相同格式呈现：问题、领导挑战、AI 使用方式、治理问题、决策结构、结果和经验教训。</p>
     <div class="badge-row">
-      <span class="badge">统一评估口径</span>
-      <span class="badge">管理层可复盘</span>
-      <span class="badge">可迁移到同类组织</span>
+      <span class="badge">统一案例方法</span>
+      <span class="badge">包含治理与决策结构</span>
+      <span class="badge">为管理层证明而设计</span>
     </div>
   </section>
   <section class="section case-kpi-row">
     <article class="case-kpi"><strong>20%-40%</strong><span>决策周期缩短区间</span></article>
     <article class="case-kpi"><strong>15%-35%</strong><span>政策遵循改善区间</span></article>
-    <article class="case-kpi"><strong>10%-25%</strong><span>跨部门行动完成率提升</span></article>
+    <article class="case-kpi"><strong>5个案例格式</strong><span>帮助管理层比较模式，而不是只看故事</span></article>
   </section>
 
-  <section class="section cases-grid">
-    <article class="article-item case-card"><p class="tag">B2B服务管理层 | 42人</p><h2>高管报告决策链路重构</h2><p>管理者每周指标叙事准备由6.1小时降至1.9小时，追问澄清次数下降27%。</p><p class="impact-pill case-impact">-69% 准备时长 | -27% 澄清往返</p></article>
-    <article class="article-item case-card"><p class="tag">电商管理团队 | 16人</p><h2>营销优先级决策与发布治理</h2><p>活动准备中位时长由9.4天降至5.8天，品牌规范通过率从74%提升至93%。</p><p class="impact-pill case-impact">-38% 准备周期 | +19个百分点 规范通过率</p></article>
-    <article class="article-item case-card"><p class="tag">SaaS客服管理 | 28人</p><h2>分诊与升级决策体系</h2><p>首次响应中位时长由11.6小时降至8.9小时，可避免升级工单下降21%。</p><p class="impact-pill case-impact">-23% 首次响应时长 | -21% 可避免升级</p></article>
-    <article class="article-item case-card"><p class="tag">区域零售总部 | 11名负责人</p><h2>AI增强高管周节奏</h2><p>跨部门事项“决策到行动”延迟下降33%，周复盘可执行率显著提升。</p><p class="impact-pill case-impact">-33% 决策到行动延迟</p></article>
-    <article class="article-item case-card"><p class="tag">医疗服务运营管理 | 24名管理者</p><h2>临床运营升级审批治理</h2><p>引入AI辅助分诊与高风险人工接管后，审批周期缩短29%，政策偏差下降38%。</p><p class="impact-pill case-impact">-29% 审批周期 | -38% 政策偏差</p></article>
-    <article class="article-item case-card"><p class="tag">全球采购管理层 | 14名品类负责人</p><h2>供应商风险评审决策协议</h2><p>采用AI风险简报和标准决策备忘录后，评审周期由12.3天降至7.6天，审计可追踪性明显提升。</p><p class="impact-pill case-impact">-38% 评审周期 | 审计可追踪性提升</p></article>
+  <section class="section article-list">
+    {caseStudies.map((item) => (
+      <article class="article-item case-card-detailed">
+        <p class="tag">{item.tag}</p>
+        <h2>{item.title}</h2>
+        <p class="impact-pill case-impact">{item.result}</p>
+        <div class="case-structure-grid">
+          <div class="case-field"><strong>问题</strong><span>{item.problem}</span></div>
+          <div class="case-field"><strong>领导挑战</strong><span>{item.challenge}</span></div>
+          <div class="case-field"><strong>AI 使用方式</strong><span>{item.aiUse}</span></div>
+          <div class="case-field"><strong>治理问题</strong><span>{item.governance}</span></div>
+          <div class="case-field"><strong>决策结构</strong><span>{item.structure}</span></div>
+          <div class="case-field"><strong>经验教训</strong><span>{item.lesson}</span></div>
+        </div>
+      </article>
+    ))}
   </section>
-  <section class="section case-method-grid">
-    <article class="panel case-method-card">
-      <h2>为何这些案例可信</h2>
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">AILD 如何做案例</p>
+      <h2>先有方法，再有故事</h2>
       <ul>
-        <li>全部有干预前基线，而非单点结果截图</li>
-        <li>按周追踪，不只看一次性“成功故事”</li>
-        <li>包含人工责任与质量门槛，不是纯自动生成</li>
-        <li>指标绑定流程与责任人，可复盘可审计</li>
+        <li>先定义干预前的问题和基线，再谈 AI 变化。</li>
+        <li>描述领导动作和治理动作，而不只是用了什么工具。</li>
+        <li>按周或按月追踪结果，而不是只看一次性的成功截图。</li>
+        <li>把经验教训写出来，方便迁移到其他组织场景。</li>
       </ul>
     </article>
-    <article class="panel case-method-card">
-      <h2>AILD核心衡量指标</h2>
+    <article class="panel">
+      <p class="eyebrow">这页怎么用</p>
+      <h2>最适合内部说服和方案设计</h2>
       <ul>
-        <li>决策周期缩短比例</li>
-        <li>执行前质量通过率</li>
-        <li>行动完成率与责任清晰度</li>
-        <li>返工率与可避免错误下降</li>
-        <li>管理层采用深度（而非仅注册使用）</li>
-      </ul>
-      <p>关联阅读：<a href="/zh/learn/ai-decision-intelligence-stack-executives/">决策智能框架</a>、<a href="/zh/learn/trust-vs-override-framework/">信任与接管框架</a>、<a href="/zh/learn/ai-augmented-executive-workflow/">高管工作流</a>。</p>
-    </article>
-    <article class="panel case-method-card">
-      <h2>30天构建方法</h2>
-      <ul>
-        <li>第1-5天：基线采集与决策流映射</li>
-        <li>第6-10天：控制模型与信任分层设计</li>
-        <li>第11-20天：受控试点与周复盘</li>
-        <li>第21-30天：结果评估与扩展判断</li>
+        <li>支持董事会或高管讨论 AI 治理选择。</li>
+        <li>向内部展示“好的决策结构”应该长什么样。</li>
+        <li>为试点设计提供结果区间和实施参考。</li>
+        <li>与模板、研究页一起构成更强的 rollout 论证。</li>
       </ul>
     </article>
-    <article class="panel case-method-card">
-      <h2>复制清单</h2>
+  </section>
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">需要把这些模式带进真实会议？</p>
+      <h2>AILD 也把这些案例模式打包成工作坊与咨询形式</h2>
+      <p>你可以先用案例页做证明，再用工作坊或治理冲刺把同样的逻辑落到自己的决策流里。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/advisory/">查看服务形式</a>
+        <a class="btn btn-secondary" href="/zh/contact/">联系 AILD</a>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">推荐搭配页面</p>
       <ul>
-        <li>明确一个优先决策流</li>
-        <li>指定一个管理责任人</li>
-        <li>建立一张信任与接管规则图</li>
-        <li>固定每周复盘与日志节奏</li>
-        <li>建立业务结果导向的指标看板</li>
+        <li><a href="/zh/learn/ai-decision-intelligence-stack-executives/">决策智能框架</a></li>
+        <li><a href="/zh/learn/trust-vs-override-framework/">信任与接管框架</a></li>
+        <li><a href="/zh/research/">研究依据库</a></li>
       </ul>
-    </article>
+    </div>
   </section>
 </Layout>

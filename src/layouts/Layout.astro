@@ -45,6 +45,13 @@ const zhPath = chineseDefaultPath;
 const brandFullName = 'AI Leadership and Development';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
+const weeklyBriefLabel = isZh ? '每周简报' : 'Weekly Brief';
+const footerLinks = [
+  { href: '/weekly-brief/', en: 'Weekly Brief', zh: '每周简报' },
+  { href: '/ai-leadership-readiness-checklist/', en: 'Checklist', zh: '准备度清单' },
+  { href: '/advisory/', en: 'Advisory', zh: '咨询服务' },
+  { href: '/contact/', en: 'Contact', zh: '联系' },
+];
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || 'G-WKLPXSSB6Z';
 const autoAlternates =
   alternates.length > 0
@@ -141,9 +148,12 @@ const nav = [
             ))
           }
         </nav>
-        <div class="lang-switch" aria-label="Language switcher">
-          <a class={!isZh ? 'active' : ''} href={enPath}>EN</a>
-          <a class={isZh ? 'active' : ''} href={zhPath}>中文</a>
+        <div class="header-actions">
+          <a class="header-cta" href={makeLocalizedPath('/weekly-brief/')}>{weeklyBriefLabel}</a>
+          <div class="lang-switch" aria-label="Language switcher">
+            <a class={!isZh ? 'active' : ''} href={enPath}>EN</a>
+            <a class={isZh ? 'active' : ''} href={zhPath}>中文</a>
+          </div>
         </div>
       </div>
     </header>
@@ -152,7 +162,15 @@ const nav = [
     </main>
     <footer class="footer">
       <div class="wrapper footer-inner">
-        <span>© {new Date().getFullYear()} AILD.org | AI Leadership and Development</span>
+        <div class="footer-brand">
+          <span>© {new Date().getFullYear()} AILD.org | AI Leadership and Development</span>
+          <span>{isZh ? '面向管理层的AI领导力、治理与执行平台' : 'Executive AI leadership, governance, and operating model platform'}</span>
+        </div>
+        <div class="footer-links">
+          {footerLinks.map((item) => (
+            <a href={makeLocalizedPath(item.href)}>{isZh ? item.zh : item.en}</a>
+          ))}
+        </div>
       </div>
     </footer>
     {

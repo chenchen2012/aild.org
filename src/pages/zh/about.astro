@@ -1,17 +1,74 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LeadCaptureForm from '../../components/LeadCaptureForm.astro';
 ---
 
 <Layout title="关于AILD" description="AILD专注AI领导力与发展，帮助管理者建立决策智能与组织执行体系。" canonical="https://aild.org/zh/about/" active="about" lang="zh-CN">
   <section class="hero">
-    <h1>关于 AILD</h1>
-    <p class="lead">AI正在快速进入企业的核心业务场景。真正的挑战，已经不再是“要不要用 AI”，而是——如何用对、用稳、用出长期价值。</p>
+    <p class="eyebrow">关于</p>
+    <h1>AILD 的存在，是为了缩小“AI采用速度”与“领导层准备度”之间的差距</h1>
+    <p class="lead">AI 正在快速进入企业核心流程，但真正跟不上的往往不是技术，而是管理系统、治理机制和决策权结构。</p>
+    <div class="badge-row">
+      <span class="badge">独立编辑平台</span>
+      <span class="badge">管理层工具与每周简报</span>
+      <span class="badge">工作坊与咨询形式</span>
+    </div>
   </section>
-  <section class="section panel">
-    <p>越来越多的企业投入大量资源部署 AI 工具，但实践中却常常遇到相似问题：项目推进缓慢、组织协同受阻、治理机制缺位、风险边界不清。</p>
-    <p>问题往往不在技术本身，而在领导体系。</p>
-    <p>AILD 是一个专注于人工智能时代领导力与组织发展的研究与咨询平台，致力于帮助企业构建真正可持续的 AI 战略能力。</p>
+
+  <section class="section about-grid">
+    <article class="panel">
+      <p class="eyebrow">AILD 是什么</p>
+      <h2>一个面向管理层的 AI 领导力平台</h2>
+      <p>AILD 提供框架、每周简报、模板、案例和研究内容，帮助管理层做出更清晰的AI判断。</p>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">主要服务谁</p>
+      <h2>优先服务战略与转型负责人</h2>
+      <p>尤其适合需要把AI从工具试点升级为组织管理系统的战略负责人、转型负责人和非技术高管团队。</p>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">核心产出</p>
+      <h2>能进入真实场景的管理工具</h2>
+      <p>AILD 的内容不是只为“阅读”，而是为工作坊、董事会准备、治理设计和执行节奏服务。</p>
+    </article>
   </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">创始/编辑说明</p>
+      <h2>关于创始编辑</h2>
+      <p><strong>Chen Chen</strong> 是 AILD 背后的创始编辑。其长期工作横跨编辑、媒体制作、网站建设、独立出版和中英文内容体系建设。</p>
+      <p>本地项目资料显示，他已有二十多年编辑与传播工作经验，包括在昆山杜克大学的高级编辑工作，以及 Robot.tv 等独立平台的创建经验。AILD 是这些经验在 AI 领导力领域的延伸。</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">编辑方法</p>
+      <h2>AILD 如何判断什么值得发布</h2>
+      <ul>
+        <li>优先选择能帮助管理层做出实际判断的议题。</li>
+        <li>把理论内容转化为模板、案例结构和操作路径。</li>
+        <li>通过每周简报保持内容的新鲜度和连续性。</li>
+        <li>比起“工具噱头”，更关注治理、决策质量和执行结果。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section founder-cred-grid">
+    <article class="panel">
+      <p class="eyebrow">可信度基础</p>
+      <h2>为什么这个视角值得参考</h2>
+      <ul>
+        <li>长期中英文编辑与出版经验。</li>
+        <li>做过网站、内容系统与管理层传播工作。</li>
+        <li>有独立媒体和知识平台的创建经验。</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">这对 AILD 意味着什么</p>
+      <h2>不是泛泛的 AI 评论，而是更实操的编辑判断</h2>
+      <p>AILD 的内容视角来自一个长期处在编辑、机构传播、网站平台和知识产品交叉点的人，而不是普通的“AI 趋势号”。</p>
+    </article>
+  </section>
+
   <section class="section panel">
     <p>我们关注的核心问题包括：</p>
     <ul>
@@ -40,5 +97,27 @@ import Layout from '../../layouts/Layout.astro';
       真正具备竞争力的企业，不是部署 AI 最快的企业，而是建立起 AI 时代领导体系的企业。
     </p>
     <p>AILD 致力于帮助企业在不确定性中建立秩序，在快速变化中保持方向。</p>
+  </section>
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">如何使用 AILD</p>
+      <h2>可以阅读、订阅，也可以带入真实会议和工作坊</h2>
+      <p>AILD 既可以作为每周信息输入和工具库使用，也可以进一步进入管理层工作坊、治理咨询和董事会准备场景。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/weekly-brief/">打开每周简报</a>
+        <a class="btn btn-secondary" href="/zh/advisory/">查看服务形式</a>
+      </div>
+    </div>
+    <LeadCaptureForm
+      eyebrow="保持联系"
+      title="申请简报或介绍"
+      lead="如果你想获取每周简报、管理工具，或想介绍你的管理情境，可以在这里留下信息。"
+      buttonLabel="发送申请"
+      subject="AILD 关于页联系"
+      nextUrl="https://aild.org/zh/brief-subscribe-success/"
+      source="zh-about-page"
+      interest="AILD 介绍"
+      lang="zh"
+    />
   </section>
 </Layout>

@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+---
+
+<Layout
+  title="AI Leadership Readiness Checklist | AILD"
+  description="A flagship executive checklist to assess AI leadership readiness across strategy, governance, decision rights, and operating cadence."
+  canonical="https://aild.org/ai-leadership-readiness-checklist/"
+  active=""
+>
+  <section class="hero home-hero">
+    <div class="home-hero-grid">
+      <div>
+        <p class="eyebrow">Flagship executive tool</p>
+        <h1>AI leadership readiness checklist</h1>
+        <p class="lead">
+          A practical executive tool for strategy leaders, transformation owners, and nontechnical leadership teams who
+          need to assess readiness before scaling AI across the organization.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Board-ready questions</span>
+          <span class="badge">Governance + decision rights</span>
+          <span class="badge">90-day action prompts</span>
+        </div>
+        <div class="stack">
+          <a class="btn btn-secondary" href="/downloads/ai-leadership-readiness-checklist.html" download>Preview the checklist</a>
+          <a class="btn btn-primary" href="#checklist-form">Request the download</a>
+        </div>
+      </div>
+      <LeadCaptureForm
+        eyebrow="Get the asset"
+        title="Request the printable checklist"
+        lead="Leave your details and we will send you to the download page immediately."
+        buttonLabel="Get the checklist"
+        subject="AILD checklist request"
+        nextUrl="https://aild.org/checklist-success/"
+        source="checklist-page"
+        interest="AI leadership readiness checklist"
+        proofItems={['Board prep', 'Executive workshops', 'Quarterly readiness reviews']}
+      />
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What it covers</p>
+      <h2>Six questions leadership teams should answer before scaling AI</h2>
+      <ul>
+        <li>Do we know which decisions should be AI-assisted and which should not?</li>
+        <li>Are governance roles, escalation paths, and override rules explicit?</li>
+        <li>Can we show baseline metrics, not just enthusiasm and pilots?</li>
+        <li>Do leaders know what this quarter's AI priorities actually are?</li>
+        <li>Are board and executive reviews looking at value and control together?</li>
+        <li>Is there a 30-90 day operating rhythm, not just isolated experiments?</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Best use cases</p>
+      <h2>Use it before a workshop, steering meeting, or board update</h2>
+      <ul>
+        <li>Transformation office readiness reviews</li>
+        <li>Executive team strategy offsites</li>
+        <li>Board AI readiness and governance sessions</li>
+        <li>Early-stage advisory diagnostics for a business unit</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">What you download</p>
+      <h2>A concise executive tool, not a generic worksheet</h2>
+      <p>
+        The checklist combines a leadership scorecard, risk prompts, board questions, and a 90-day action plan. It is
+        built from AILD's readiness assessment, governance brief, and operating model guidance.
+      </p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/learn/ai-literacy-baseline-assessment/">Read the baseline assessment guide</a>
+        <a class="btn btn-secondary" href="/learn/board-ai-governance-briefing/">Open the board briefing framework</a>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Included sections</p>
+      <ul>
+        <li>Executive readiness scorecard</li>
+        <li>Decision-rights and governance checks</li>
+        <li>Evidence and KPI prompts</li>
+        <li>Board discussion questions</li>
+        <li>First 90 days action priorities</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section panel" id="checklist-form">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Request access</p>
+        <h2>Download the checklist and use it in your next leadership review</h2>
+      </div>
+      <p class="lead">If you are evaluating AI readiness this quarter, this is the fastest AILD asset to start with.</p>
+    </div>
+    <LeadCaptureForm
+      title="Get the AI leadership readiness checklist"
+      lead="This request goes to the AILD inbox and redirects you straight to the download page."
+      buttonLabel="Get the checklist"
+      subject="AILD checklist request"
+      nextUrl="https://aild.org/checklist-success/"
+      source="checklist-bottom"
+      interest="AI leadership readiness checklist"
+      note="After submission you will land on the AILD download page with the printable asset."
+      proofItems={['Printable asset', 'Immediate access', 'Executive-use format']}
+    />
+  </section>
+</Layout>

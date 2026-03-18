@@ -1,9 +1,104 @@
 ---
-import { getEntry } from 'astro:content';
-import ManagedPage from '../components/ManagedPage.astro';
-
-const entry = await getEntry('pages', 'about');
-if (!entry) throw new Error('Missing pages/about.md');
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 ---
 
-<ManagedPage entry={entry} active="about" canonical="https://aild.org/about/" />
+<Layout
+  title="About AILD | AI Leadership and Development"
+  description="AILD is an editorial and advisory platform focused on executive AI leadership, governance, and operating model design."
+  canonical="https://aild.org/about/"
+  active="about"
+>
+  <section class="hero">
+    <p class="eyebrow">About</p>
+    <h1>AILD exists to close the gap between AI adoption and leadership readiness</h1>
+    <p class="lead">AI is moving into core workflows faster than most executive teams are building the governance, decision rights, and operating discipline to manage it well.</p>
+    <div class="badge-row">
+      <span class="badge">Independent editorial platform</span>
+      <span class="badge">Executive tools + recurring briefings</span>
+      <span class="badge">Workshops and advisory formats</span>
+    </div>
+  </section>
+
+  <section class="section about-grid">
+    <article class="panel">
+      <p class="eyebrow">What AILD is</p>
+      <h2>An executive AI leadership platform</h2>
+      <p>AILD publishes practical frameworks, weekly briefings, templates, cases, and research designed for leaders making high-impact AI decisions.</p>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who it serves</p>
+      <h2>Strategy leaders and transformation owners first</h2>
+      <p>AILD is built for the people who need to turn AI into a managed system across the organization, not just run isolated tools.</p>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">What it produces</p>
+      <h2>Insight that can move into action</h2>
+      <p>Every AILD output is designed to help with a real leadership task: align a team, brief a board, choose a governance model, or structure a workshop.</p>
+    </article>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">Founder/editor note</p>
+      <h2>About the founder-editor</h2>
+      <p><strong>Chen Chen</strong> is the founder-editor behind AILD. His background spans editorial work, media production, web publishing, and independent publishing projects built around technology, ideas, and public communication.</p>
+      <p>Local project records in this workspace show more than two decades of editing and communications work, including senior editorial work at Duke Kunshan University and the founding of Robot.tv. AILD extends that experience into a dedicated executive AI leadership platform.</p>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Editorial method</p>
+      <h2>How AILD decides what belongs on the site</h2>
+      <ul>
+        <li>Use external evidence and standards where they sharpen executive choices.</li>
+        <li>Convert theory into templates, operating guides, and case structures.</li>
+        <li>Maintain recurring editorial freshness through the Weekly Brief.</li>
+        <li>Favor governance, decision quality, and follow-through over hype-driven tool coverage.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section founder-cred-grid">
+    <article class="panel">
+      <p class="eyebrow">Grounded credibility</p>
+      <h2>Why this perspective is useful</h2>
+      <ul>
+        <li>Long editorial and publishing experience across English and Chinese contexts.</li>
+        <li>Hands-on work in content systems, web publishing, and executive communications.</li>
+        <li>Founder experience building independent media and knowledge platforms.</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">What that means for AILD</p>
+      <h2>Practical editorial judgment over generic AI commentary</h2>
+      <p>AILD is intentionally shaped by someone who has worked at the intersection of editing, institutional communications, web platforms, and knowledge products, not by a generic “AI trends” content machine.</p>
+    </article>
+  </section>
+
+  <section class="section panel">
+    <p class="eyebrow">Why now</p>
+    <h2>Leadership systems are lagging behind deployment speed</h2>
+    <p>Many organizations already have AI activity. Fewer have the management system needed to guide it. That is the gap AILD is built to address through executive content, tools, and advisory formats.</p>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">Ways to work with AILD</p>
+      <h2>Read, subscribe, or bring the work into a live session</h2>
+      <p>AILD can be used as a reading layer, a recurring brief, a tool library, or a starting point for executive workshops and governance advisory.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/weekly-brief/">Open the Weekly Brief</a>
+        <a class="btn btn-secondary" href="/advisory/">View advisory formats</a>
+      </div>
+    </div>
+    <LeadCaptureForm
+      eyebrow="Stay connected"
+      title="Request briefings or an introduction"
+      lead="Use this if you want the Weekly Brief, executive tools, or a conversation about your leadership context."
+      buttonLabel="Send request"
+      subject="AILD about-page inquiry"
+      nextUrl="https://aild.org/brief-subscribe-success/"
+      source="about-page"
+      interest="AILD introduction"
+    />
+  </section>
+</Layout>

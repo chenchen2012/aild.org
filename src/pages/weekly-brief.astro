@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import { getCollection } from 'astro:content';
+
+const briefs = (await getCollection('docs'))
+  .filter((doc) => doc.data.tags.includes('weekly-brief'))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const [latestBrief, ...archiveBriefs] = briefs;
+---
+
+<Layout
+  title="AI Leadership Weekly Brief | AILD"
+  description="A weekly executive AI brief covering what changed, why it matters, and what leadership teams should do next."
+  canonical="https://aild.org/weekly-brief/"
+  active=""
+>
+  <section class="hero home-hero weekly-brief-hero">
+    <div class="home-hero-grid">
+      <div>
+        <p class="eyebrow">Signature product</p>
+        <h1>The Weekly Brief for strategy and transformation leaders</h1>
+        <p class="lead">
+          AILD's weekly brief turns fast-moving AI developments into an executive reading format: what happened, why it
+          matters, and what leaders should do in the next 7 days.
+        </p>
+        <div class="badge-row">
+          <span class="badge">What changed</span>
+          <span class="badge">Why it matters</span>
+          <span class="badge">Leadership actions for this week</span>
+        </div>
+        <div class="stack">
+          {latestBrief && <a class="btn btn-primary" href={`/learn/${latestBrief.slug}/`}>Read the latest brief</a>}
+          <a class="btn btn-secondary" href="/ai-leadership-readiness-checklist/">Get the readiness checklist</a>
+        </div>
+      </div>
+      <LeadCaptureForm
+        compact={true}
+        eyebrow="Join the list"
+        title="Request the executive brief by email"
+        lead="Use this when you want AILD's weekly brief, priority updates, and new executive tools in one place."
+        buttonLabel="Join the brief list"
+        subject="AILD Weekly Brief signup"
+        nextUrl="https://aild.org/brief-subscribe-success/"
+        source="weekly-brief-page"
+        interest="AI Leadership Weekly Brief"
+        proofItems={['Weekly cadence', 'Executive-use format', 'Signal -> implications -> actions']}
+      />
+    </div>
+  </section>
+
+  <section class="section brief-signature-grid">
+    <article class="panel brief-signature-card">
+      <p class="eyebrow">Why executives use it</p>
+      <h2>Designed for leadership teams that need signal, not noise</h2>
+      <ul>
+        <li>Connects AI news to governance, operating model, and decision-quality implications.</li>
+        <li>Filters for issues that matter this quarter, not abstract future speculation.</li>
+        <li>Creates a repeatable input for staff meetings, board prep, and transformation reviews.</li>
+      </ul>
+    </article>
+    <article class="panel brief-signature-card">
+      <p class="eyebrow">Recurring structure</p>
+      <h2>Every issue follows the same discipline</h2>
+      <ul>
+        <li><strong>What changed:</strong> the external developments leaders should not miss.</li>
+        <li><strong>Leadership implications:</strong> the operating, governance, and capability meaning.</li>
+        <li><strong>Next 7 days:</strong> concrete management decisions or review moves.</li>
+      </ul>
+    </article>
+    <article class="panel brief-signature-card">
+      <p class="eyebrow">Editorial promise</p>
+      <h2>A maintained executive product, not a blog category</h2>
+      <ul>
+        <li>Consistent cadence and date visibility.</li>
+        <li>Built to feed leadership meetings and board preparation.</li>
+        <li>Paired with checklist, cases, and advisory formats.</li>
+      </ul>
+    </article>
+  </section>
+
+  {
+    latestBrief && (
+      <section class="section panel brief-latest-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest issue</p>
+            <h2>{latestBrief.data.title}</h2>
+          </div>
+          <p class="lead">{latestBrief.data.description}</p>
+        </div>
+        <div class="article-list brief-latest-shell">
+          <article class="article-item brief-latest-card">
+            <p class="tag">Published {latestBrief.data.pubDate}</p>
+            <p class="kb-meta">
+              {latestBrief.data.readingTime ? `Read time: ${latestBrief.data.readingTime}` : ''}{latestBrief.data.audience ? ` | Audience: ${latestBrief.data.audience}` : ''}
+            </p>
+            <p>
+              The current issue packages AI leadership shifts into one short executive briefing designed to inform weekly
+              operating reviews and governance decisions.
+            </p>
+            <a class="text-link" href={`/learn/${latestBrief.slug}/`}>Open the latest issue</a>
+          </article>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Archive</p>
+        <h2>Recent Weekly Brief issues</h2>
+      </div>
+      <p class="lead">Use the archive to assess editorial freshness, recurring themes, and the decision quality of AILD's lens.</p>
+    </div>
+    <div class="article-list brief-archive editorial-archive-grid">
+      {archiveBriefs.slice(0, 6).map((brief) => (
+        <article class="article-item editorial-archive-card">
+          <p class="tag">Weekly brief | {brief.data.pubDate}</p>
+          <h3><a href={`/learn/${brief.slug}/`}>{brief.data.title}</a></h3>
+          <p>{brief.data.description}</p>
+          <p class="kb-meta">
+            {brief.data.readingTime ? `Read time: ${brief.data.readingTime}` : ''}{brief.data.audience ? ` | Audience: ${brief.data.audience}` : ''}
+          </p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">Pair it with a tool</p>
+      <h2>Make the brief actionable inside your leadership rhythm</h2>
+      <p>
+        Teams typically pair the weekly brief with the AILD readiness checklist, board briefing template, or a working
+        session on governance and operating model design.
+      </p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/ai-leadership-readiness-checklist/">Open the checklist</a>
+        <a class="btn btn-secondary" href="/advisory/">View advisory formats</a>
+      </div>
+    </div>
+    <LeadCaptureForm
+      eyebrow="Stay in the loop"
+      title="Request future Weekly Brief issues"
+      lead="If you want the executive brief plus new templates and flagship updates, leave your details here."
+      buttonLabel="Join the brief list"
+      subject="AILD Weekly Brief signup"
+      nextUrl="https://aild.org/brief-subscribe-success/"
+      source="weekly-brief-bottom"
+      interest="AI Leadership Weekly Brief"
+      proofItems={['Fresh issues', 'New tools', 'Leadership-only relevance']}
+    />
+  </section>
+</Layout>

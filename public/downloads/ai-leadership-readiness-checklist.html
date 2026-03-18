@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AILD AI Leadership Readiness Checklist</title>
+    <style>
+      :root {
+        --ink: #102a23;
+        --muted: #4a635b;
+        --line: #d1e1db;
+        --brand: #0a8f63;
+        --accent: #bf7a26;
+        --paper: #ffffff;
+        --bg: #eef5f3;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.55;
+      }
+
+      .sheet {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 20px 50px rgba(10, 46, 34, 0.08);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--brand);
+        margin: 0;
+      }
+
+      h1, h2, h3 { margin: 0; line-height: 1.15; }
+      h1 { margin-top: 10px; font-size: 40px; }
+      h2 { margin-top: 28px; font-size: 24px; }
+      h3 { font-size: 17px; }
+      p, li { color: var(--muted); }
+
+      .top-grid,
+      .score-grid,
+      .action-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .top-grid { grid-template-columns: 1.2fr 0.8fr; margin-top: 24px; }
+      .score-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 18px; }
+      .action-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+        background: linear-gradient(180deg, #ffffff, #f7fbf9);
+      }
+
+      .tag {
+        display: inline-block;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #1a493d;
+        background: #eff8f4;
+        margin: 6px 8px 0 0;
+      }
+
+      ol, ul { padding-left: 20px; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+        font-size: 14px;
+      }
+
+      th, td {
+        border: 1px solid var(--line);
+        padding: 10px 12px;
+        vertical-align: top;
+      }
+
+      th {
+        text-align: left;
+        background: #f3faf7;
+        color: #173d32;
+      }
+
+      .footer-note {
+        margin-top: 28px;
+        font-size: 13px;
+      }
+
+      @media print {
+        body { background: #fff; }
+        .sheet { padding: 0; max-width: none; }
+        .card { box-shadow: none; border-radius: 0; border: 0; padding: 0; }
+      }
+
+      @media (max-width: 760px) {
+        h1 { font-size: 30px; }
+        .top-grid,
+        .score-grid,
+        .action-grid { grid-template-columns: 1fr; }
+        .card { padding: 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <article class="card">
+        <p class="eyebrow">AILD executive tool</p>
+        <h1>AI Leadership Readiness Checklist</h1>
+        <p>
+          Use this checklist before scaling AI across functions. The goal is to assess whether leadership, governance,
+          and operating discipline are ready for wider deployment.
+        </p>
+
+        <div class="top-grid">
+          <section class="panel">
+            <h3>Who this is for</h3>
+            <ul>
+              <li>Strategy leaders</li>
+              <li>Transformation owners</li>
+              <li>Nontechnical executive teams</li>
+              <li>Board and governance reviewers</li>
+            </ul>
+          </section>
+          <section class="panel">
+            <h3>How to score</h3>
+            <ul>
+              <li>1 = weak or unclear</li>
+              <li>3 = partial readiness</li>
+              <li>5 = strong and repeatable</li>
+            </ul>
+            <p>Mark each dimension, then note the first leadership action required.</p>
+          </section>
+        </div>
+
+        <h2>1. Executive readiness scorecard</h2>
+        <div class="score-grid">
+          <section class="panel">
+            <h3>Strategy and priorities</h3>
+            <p>Do leaders agree on where AI creates value this quarter, and what should not be automated?</p>
+          </section>
+          <section class="panel">
+            <h3>Decision rights</h3>
+            <p>Is it clear which decisions AI can inform, which require approval, and who owns overrides?</p>
+          </section>
+          <section class="panel">
+            <h3>Governance and controls</h3>
+            <p>Are policy rules, escalation logic, and review checkpoints explicit for higher-risk use cases?</p>
+          </section>
+          <section class="panel">
+            <h3>Operating cadence</h3>
+            <p>Is there a weekly or monthly leadership rhythm for signals, decisions, follow-through, and calibration?</p>
+          </section>
+          <section class="panel">
+            <h3>Measurement and evidence</h3>
+            <p>Do teams track baseline time, quality, risk, and decision outcomes before claiming success?</p>
+          </section>
+          <section class="panel">
+            <h3>Capability and trust</h3>
+            <p>Do leaders and managers understand what AI is good at, where it fails, and when humans must step in?</p>
+          </section>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Score (1-5)</th>
+              <th>Gap you see</th>
+              <th>First action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Strategy and priorities</td><td></td><td></td><td></td></tr>
+            <tr><td>Decision rights</td><td></td><td></td><td></td></tr>
+            <tr><td>Governance and controls</td><td></td><td></td><td></td></tr>
+            <tr><td>Operating cadence</td><td></td><td></td><td></td></tr>
+            <tr><td>Measurement and evidence</td><td></td><td></td><td></td></tr>
+            <tr><td>Capability and trust</td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <h2>2. Board and executive review questions</h2>
+        <ul>
+          <li>Where is AI creating measurable business value today?</li>
+          <li>Which workflows still lack clear human accountability?</li>
+          <li>What high-risk decisions require documented human approval?</li>
+          <li>Which metrics would tell us adoption is improving decision quality, not just activity volume?</li>
+          <li>What should the leadership team fix before expanding to another function?</li>
+        </ul>
+
+        <h2>3. First 90 days action plan</h2>
+        <div class="action-grid">
+          <section class="panel">
+            <h3>Days 1-30</h3>
+            <ul>
+              <li>Choose one priority decision stream</li>
+              <li>Capture baseline cycle time and quality</li>
+              <li>Define trust and override rules</li>
+            </ul>
+          </section>
+          <section class="panel">
+            <h3>Days 31-60</h3>
+            <ul>
+              <li>Run a controlled pilot with weekly reviews</li>
+              <li>Log exceptions, overrides, and lessons</li>
+              <li>Refine KPIs and escalation logic</li>
+            </ul>
+          </section>
+          <section class="panel">
+            <h3>Days 61-90</h3>
+            <ul>
+              <li>Decide whether to expand, pause, or redesign</li>
+              <li>Prepare a board or executive update</li>
+              <li>Institutionalize the operating cadence</li>
+            </ul>
+          </section>
+        </div>
+
+        <h2>4. Good signals vs warning signals</h2>
+        <p>
+          <span class="tag">Good signal</span> Leaders can name the top use cases, owners, review points, and metrics.
+          <span class="tag">Warning signal</span> AI activity is high, but no one can show decision quality, control posture, or business impact.
+        </p>
+
+        <p class="footer-note">
+          Source framework: AILD.org. Pair this checklist with the AI Leadership Maturity Model, Trust vs Override
+          Framework, and Board AI Governance Briefing.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

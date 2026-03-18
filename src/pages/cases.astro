@@ -1,9 +1,146 @@
 ---
-import { getEntry } from 'astro:content';
-import ManagedPage from '../components/ManagedPage.astro';
+import Layout from '../layouts/Layout.astro';
 
-const entry = await getEntry('pages', 'cases');
-if (!entry) throw new Error('Missing pages/cases.md');
+const caseStudies = [
+  {
+    tag: 'B2B services leadership team | 42 managers',
+    title: 'Executive reporting decision redesign',
+    result: '-69% KPI prep time | -27% clarification churn',
+    problem: 'Weekly KPI narratives were slow, inconsistent, and manually reconciled.',
+    challenge: 'Leadership needed faster reporting without letting AI-generated summaries become unaudited truth.',
+    aiUse: 'AI-generated decision briefs and structured KPI narrative drafts.',
+    governance: 'Final sign-off stayed with line managers and finance owners.',
+    structure: 'Baseline review -> AI draft -> owner review -> executive decision log.',
+    lesson: 'AI speeds executive reporting only when review ownership and evidence standards stay explicit.',
+  },
+  {
+    tag: 'Retail headquarters | 11 functional leaders',
+    title: 'Weekly AI-augmented executive workflow',
+    result: '-33% decision-to-action delay',
+    problem: 'Cross-functional initiatives stalled between leadership discussion and actual follow-through.',
+    challenge: 'The team had updates, but no shared rhythm that converted them into accountable action.',
+    aiUse: 'Weekly AI brief, priority board, and action summary for leaders.',
+    governance: 'Each action required a named owner, deadline, and Friday review checkpoint.',
+    structure: 'Signal brief -> leadership decision meeting -> action board -> weekly calibration.',
+    lesson: 'The biggest win came from operating cadence, not from AI content generation alone.',
+  },
+  {
+    tag: 'Healthcare provider operations | 24 managers',
+    title: 'Clinical operations escalation governance',
+    result: '-29% approval cycle | -38% policy deviations',
+    problem: 'Escalation approvals varied by site, creating delay and inconsistent policy application.',
+    challenge: 'Teams needed faster triage while protecting high-risk decisions from over-automation.',
+    aiUse: 'AI-assisted triage recommendations and escalation summaries.',
+    governance: 'High-risk cases triggered mandatory human override and review logging.',
+    structure: 'Risk-tier intake -> AI triage suggestion -> human approval -> deviation review.',
+    lesson: 'Governance quality improved because human override was designed into the workflow from day one.',
+  },
+  {
+    tag: 'Global procurement leadership | 14 category leaders',
+    title: 'Supplier risk review decision protocol',
+    result: '-38% review lead time | audit traceability improved',
+    problem: 'Supplier risk reviews were delayed by fragmented evidence collection and inconsistent memo quality.',
+    challenge: 'Leadership needed speed without weakening auditability.',
+    aiUse: 'AI-generated supplier risk briefs and standardized decision memo drafts.',
+    governance: 'Procurement leaders retained final decision authority and documented exceptions.',
+    structure: 'Evidence collection -> AI memo draft -> category leader review -> audit-ready record.',
+    lesson: 'Templates and logging matter as much as model quality when procurement decisions carry audit pressure.',
+  },
+  {
+    tag: 'SMB commerce leadership team | 16 decision owners',
+    title: 'Campaign prioritization and launch governance',
+    result: '-38% launch prep time | +19pt compliance pass rate',
+    problem: 'Launch packages moved slowly and brand-compliance issues kept surfacing late.',
+    challenge: 'The team wanted AI speed without weakening brand and policy controls.',
+    aiUse: 'AI-assisted scenario comparison and launch package drafting.',
+    governance: 'Trust-vs-override checkpoints were added before approval and release.',
+    structure: 'Scenario generation -> risk review -> human approval gate -> launch package finalization.',
+    lesson: 'AI adds commercial value when governance shows up before launch, not after errors happen.',
+  },
+];
 ---
 
-<ManagedPage entry={entry} active="cases" canonical="https://aild.org/cases/" />
+<Layout
+  title="AI Leadership Cases and Benchmarks | AILD.org"
+  description="AI leadership cases structured around problem, governance, decision design, outcomes, and lessons."
+  canonical="https://aild.org/cases/"
+  active="cases"
+>
+  <section class="hero">
+    <p class="eyebrow">Case intelligence</p>
+    <h1>Implementation-proof cases for executive AI leadership</h1>
+    <p class="lead">Each case follows the same structure: problem, leadership challenge, AI use, governance issue, decision design, result, and lesson.</p>
+    <div class="badge-row">
+      <span class="badge">Consistent case method</span>
+      <span class="badge">Governance and decision structure included</span>
+      <span class="badge">Built for executive proof, not vanity storytelling</span>
+    </div>
+  </section>
+
+  <section class="section case-kpi-row">
+    <article class="case-kpi"><strong>20%-40%</strong><span>Typical decision-cycle improvement range</span></article>
+    <article class="case-kpi"><strong>15%-35%</strong><span>Typical policy and quality improvement range</span></article>
+    <article class="case-kpi"><strong>5 case formats</strong><span>Designed to help leaders compare patterns, not anecdotes</span></article>
+  </section>
+
+  <section class="section article-list">
+    {caseStudies.map((item) => (
+      <article class="article-item case-card-detailed">
+        <p class="tag">{item.tag}</p>
+        <h2>{item.title}</h2>
+        <p class="impact-pill case-impact">{item.result}</p>
+        <div class="case-structure-grid">
+          <div class="case-field"><strong>Problem</strong><span>{item.problem}</span></div>
+          <div class="case-field"><strong>Leadership challenge</strong><span>{item.challenge}</span></div>
+          <div class="case-field"><strong>AI use</strong><span>{item.aiUse}</span></div>
+          <div class="case-field"><strong>Governance issue</strong><span>{item.governance}</span></div>
+          <div class="case-field"><strong>Decision structure</strong><span>{item.structure}</span></div>
+          <div class="case-field"><strong>Lesson</strong><span>{item.lesson}</span></div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">How AILD builds cases</p>
+      <h2>Method before story</h2>
+      <ul>
+        <li>Define the baseline problem before AI workflow changes.</li>
+        <li>Describe leadership and governance interventions, not only the tool used.</li>
+        <li>Track measurable outcomes at weekly or monthly cadence.</li>
+        <li>Capture the lesson so the case can be transferred to another leadership context.</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">How to use this page</p>
+      <h2>Best uses for internal persuasion</h2>
+      <ul>
+        <li>Support a board or executive discussion about AI governance choices.</li>
+        <li>Show what “good” decision structure looks like in practice.</li>
+        <li>Benchmark improvement ranges before designing a pilot.</li>
+        <li>Pair with Templates and Research to build a stronger rollout case.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section split-callout">
+    <div>
+      <p class="eyebrow">Need a live version of this?</p>
+      <h2>AILD also packages these patterns into workshops and advisory formats</h2>
+      <p>Use the case page for proof, then use an executive workshop or governance sprint to apply the same logic to your own decision streams.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">View advisory formats</a>
+        <a class="btn btn-secondary" href="/contact/">Contact AILD</a>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Best companion pages</p>
+      <ul>
+        <li><a href="/learn/ai-decision-intelligence-stack-executives/">Decision Intelligence Stack</a></li>
+        <li><a href="/learn/trust-vs-override-framework/">Trust vs Override Framework</a></li>
+        <li><a href="/research/">Research evidence base</a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>
