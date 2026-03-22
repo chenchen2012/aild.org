@@ -4,19 +4,42 @@ import LeadCaptureForm from '../../components/LeadCaptureForm.astro';
 import { getCollection } from 'astro:content';
 
 const docs = await getCollection('zhdocs');
-const docsBySlug = new Map(docs.map((doc) => [doc.slug, doc]));
 const weeklyBriefs = docs
   .filter((doc) => doc.data.tags.includes('weekly-brief'))
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
   .slice(0, 2);
-const featuredDocSlugs = [
-  'ai-decision-intelligence-stack-executives',
-  'trust-vs-override-framework',
-  'ai-leadership-maturity-model',
+const cornerstonePages = [
+  {
+    label: '框架',
+    title: '面向高管的 AI 决策智能栈',
+    href: '/zh/learn/ai-decision-intelligence-stack-executives/',
+    summary: 'AILD 的核心管理模型：先建立决策结构，再扩展工具。',
+  },
+  {
+    label: '治理',
+    title: '信任与接管框架',
+    href: '/zh/learn/trust-vs-override-framework/',
+    summary: '明确哪些情境可以信任 AI，哪些情境必须人工接管。',
+  },
+  {
+    label: '能力',
+    title: 'AI 领导力成熟度模型',
+    href: '/zh/learn/ai-leadership-maturity-model/',
+    summary: '用于评估组织在领导层、治理和执行节奏上的准备度。',
+  },
+  {
+    label: '签名产品',
+    title: 'AI 领导力每周简报',
+    href: '/zh/weekly-brief/',
+    summary: '固定管理层格式：发生了什么、为什么重要、下周做什么。',
+  },
+  {
+    label: '旗舰工具',
+    title: 'AI 领导力准备度清单',
+    href: '/zh/ai-leadership-readiness-checklist/',
+    summary: '适合董事会准备、转型推进和首个 90 天行动设计。',
+  },
 ];
-const featuredDocs = featuredDocSlugs
-  .map((slug) => docsBySlug.get(slug))
-  .filter((doc): doc is NonNullable<typeof doc> => Boolean(doc));
 ---
 
 <Layout
@@ -228,22 +251,19 @@ const featuredDocs = featuredDocSlugs
     <div class="section-heading">
       <div>
         <p class="eyebrow">基石页面</p>
-        <h2>建议优先阅读的AI领导力与治理指南</h2>
+        <h2>定义 AILD 品牌的 5 个核心入口</h2>
       </div>
       <p class="lead">
-        先看最核心的三篇，再逐步进入完整知识库，建立适合管理层的AI决策、AI治理与执行系统。
+        先读这 5 个标准入口，再进入完整知识库，构建适合管理层的 AI 决策、治理与执行系统。
       </p>
     </div>
     <div class="article-list section home-featured-grid">
       {
-        featuredDocs.map((doc) => (
+        cornerstonePages.map((page) => (
           <article class="article-item home-featured-item">
-            <p class="tag">{doc.data.tags.join(' | ')}</p>
-            <h3><a href={`/zh/learn/${doc.slug}/`}>{doc.data.title}</a></h3>
-            <p>{doc.data.description}</p>
-            <p class="kb-meta">
-              {doc.data.readingTime ? `阅读时长：${doc.data.readingTime}` : ''}{doc.data.audience ? ` | 适用：${doc.data.audience}` : ''}
-            </p>
+            <p class="tag">{page.label}</p>
+            <h3><a href={page.href}>{page.title}</a></h3>
+            <p>{page.summary}</p>
           </article>
         ))
       }

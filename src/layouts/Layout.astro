@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import pageLastmod from '../data/page-lastmod.json';
 
 interface Props {
   title: string;
@@ -46,6 +47,17 @@ const brandFullName = 'AI Leadership and Development';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
 const weeklyBriefLabel = isZh ? '每周简报' : 'Weekly Brief';
+const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
+const lastmodMap = pageLastmod as Record<string, string>;
+const visibleLastmod = lastmodMap[normalizedPath];
+const updatedLabel = isZh ? '更新于' : 'Updated';
+const formattedLastmod = visibleLastmod
+  ? new Date(visibleLastmod).toLocaleDateString(isZh ? 'zh-CN' : 'en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    })
+  : '';
 const footerLinks = [
   { href: '/weekly-brief/', en: 'Weekly Brief', zh: '每周简报' },
   { href: '/ai-leadership-readiness-checklist/', en: 'Checklist', zh: '准备度清单' },
@@ -158,6 +170,14 @@ const nav = [
       </div>
     </header>
     <main class="page wrapper">
+      {
+        formattedLastmod && (
+          <p class="page-updated-stamp">
+            <span>{updatedLabel}</span>
+            <time datetime={visibleLastmod}>{formattedLastmod}</time>
+          </p>
+        )
+      }
       <slot />
     </main>
     <footer class="footer">

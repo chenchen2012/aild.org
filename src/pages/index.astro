@@ -4,19 +4,42 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 import { getCollection } from 'astro:content';
 
 const docs = await getCollection('docs');
-const docsBySlug = new Map(docs.map((doc) => [doc.slug, doc]));
 const weeklyBriefs = docs
   .filter((doc) => doc.data.tags.includes('weekly-brief'))
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
   .slice(0, 2);
-const featuredDocSlugs = [
-  'ai-decision-intelligence-stack-executives',
-  'trust-vs-override-framework',
-  'ai-leadership-maturity-model',
+const cornerstonePages = [
+  {
+    label: 'Framework',
+    title: 'AI Decision Intelligence Stack for Executives',
+    href: '/learn/ai-decision-intelligence-stack-executives/',
+    summary: 'The core operating model for leadership-level AI decision architecture.',
+  },
+  {
+    label: 'Governance',
+    title: 'Trust vs Override Framework',
+    href: '/learn/trust-vs-override-framework/',
+    summary: 'Defines where teams can trust AI and where explicit human override is required.',
+  },
+  {
+    label: 'Capability',
+    title: 'AI Leadership Maturity Model',
+    href: '/learn/ai-leadership-maturity-model/',
+    summary: 'A practical benchmark for leadership readiness before wider rollout.',
+  },
+  {
+    label: 'Signal Product',
+    title: 'AI Leadership Weekly Brief',
+    href: '/weekly-brief/',
+    summary: 'Recurring executive format: what changed, why it matters, and next actions.',
+  },
+  {
+    label: 'Flagship Tool',
+    title: 'AI Leadership Readiness Checklist',
+    href: '/ai-leadership-readiness-checklist/',
+    summary: 'Board- and transformation-ready diagnostic tool for the first 90 days.',
+  },
 ];
-const featuredDocs = featuredDocSlugs
-  .map((slug) => docsBySlug.get(slug))
-  .filter((doc): doc is NonNullable<typeof doc> => Boolean(doc));
 ---
 
 <Layout
@@ -276,24 +299,21 @@ const featuredDocs = featuredDocSlugs
     <div class="section-heading">
       <div>
         <p class="eyebrow">Cornerstone pages</p>
-        <h2>Best AI leadership and governance guides to read first</h2>
+        <h2>Five definitive pages that anchor the AILD brand</h2>
       </div>
       <p class="lead">
-        Begin with the core pages leaders usually need first, then expand into the full library of {docs.length} practical guides on AI leadership, governance, and executive workflows.
+        Start with these five canonical entry points, then expand into the full library of {docs.length} practical guides and tools.
       </p>
     </div>
     <div class="article-list section home-featured-grid">
       {
-        featuredDocs.map((doc) => (
+        cornerstonePages.map((page) => (
           <article class="article-item home-featured-item">
-            <p class="tag">{doc.data.tags.join(' | ')}</p>
+            <p class="tag">{page.label}</p>
             <h3>
-              <a href={`/learn/${doc.slug}/`}>{doc.data.title}</a>
+              <a href={page.href}>{page.title}</a>
             </h3>
-            <p>{doc.data.description}</p>
-            <p class="kb-meta">
-              {doc.data.readingTime ? `Read time: ${doc.data.readingTime}` : ''}{doc.data.audience ? ` | Audience: ${doc.data.audience}` : ''}
-            </p>
+            <p>{page.summary}</p>
           </article>
         ))
       }

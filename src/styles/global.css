@@ -190,6 +190,26 @@ a {
   padding: 2.1rem 0 3.8rem;
 }
 
+.page-updated-stamp {
+  margin: 0 0 1rem;
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  border: 1px solid rgba(19, 56, 44, 0.16);
+  background: rgba(238, 246, 243, 0.95);
+  color: #2f4f45;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.32rem 0.72rem;
+}
+
+.page-updated-stamp time {
+  color: #153d32;
+}
+
 .hero {
   background: linear-gradient(180deg, #ffffff, #fbfdfc 58%, #f6faf8);
   border: 1px solid var(--line);
