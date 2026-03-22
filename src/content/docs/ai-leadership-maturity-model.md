@@ -1,6 +1,6 @@
 ---
-title: AI Leadership Maturity Model
-description: A 4-stage AI leadership maturity model for assessing how management teams use AI in decision-making, governance, and execution.
+title: AI Leadership and Governance Maturity Model
+description: A 4-stage AI leadership and governance maturity model for assessing how management teams use AI in decision-making, governance, and execution.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Assessment', 'Decision']

@@ -1,5 +1,5 @@
 ---
-title: AI领导力成熟度模型
+title: AI领导力与治理成熟度模型
 description: 用四阶段模型评估管理层在AI决策、AI治理与执行体系上的成熟度，并明确下一步升级路径。
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
