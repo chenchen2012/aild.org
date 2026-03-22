@@ -2,67 +2,93 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const docs = (await getCollection('docs')).sort(
-  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
-);
-
+const allDocs = await getCollection('docs');
+const docs = allDocs
+  .filter((doc) => !doc.data.tags.includes('weekly-brief'))
+  .sort((a, b) => new Date(b.data.updatedDate ?? b.data.pubDate).getTime() - new Date(a.data.updatedDate ?? a.data.pubDate).getTime());
 const tags = Array.from(new Set(docs.flatMap((d) => d.data.tags))).sort();
+
+const flagshipSlugs = [
+  'ai-leadership-maturity-model',
+  'ai-decision-intelligence-stack-executives',
+  'trust-vs-override-framework',
+  'board-ai-governance-briefing',
+  'executive-decision-memo-template',
+  'ai-signal-to-decision-operating-rhythm',
+];
+
+const implementationSlugs = [
+  'ai-augmented-executive-workflow',
+  'ai-assisted-strategic-review-playbook',
+  'governance-lite-implementation',
+  'decision-quality-scorecard-for-ai-teams',
+  'ai-roi-dashboard-and-metrics',
+  '90-day-ai-adoption-roadmap',
+];
+
+const flagshipDocs = flagshipSlugs
+  .map((slug) => docs.find((doc) => doc.slug === slug))
+  .filter(Boolean);
+
+const implementationDocs = implementationSlugs
+  .map((slug) => docs.find((doc) => doc.slug === slug))
+  .filter(Boolean);
 
 const quickStarts = [
   {
-    title: 'Decision Leadership Launch (60 min)',
-    desc: 'Set executive decision architecture before tool-level expansion.',
-    links: [
-      { href: '/learn/ai-decision-intelligence-stack-executives/', label: 'Decision Intelligence Stack' },
-      { href: '/learn/cognitive-augmentation-for-leaders/', label: 'Cognitive Augmentation for Leaders' },
-      { href: '/learn/ai-assisted-strategic-review-playbook/', label: 'Strategic Review Playbook' },
-    ],
-  },
-  {
-    title: 'Trust and Control (45 min)',
-    desc: 'Define trust thresholds and override rules before scaling decisions.',
+    title: 'AI governance framework',
+    desc: 'Start here if your real question is how to govern AI use without stalling adoption.',
     links: [
       { href: '/learn/trust-vs-override-framework/', label: 'Trust vs Override Framework' },
-      { href: '/learn/board-ai-governance-briefing/', label: 'Board Governance Briefing' },
-      { href: '/learn/ai-policy-template-smb/', label: 'Policy Template' },
+      { href: '/learn/board-ai-governance-briefing/', label: 'Board AI Governance Briefing' },
+      { href: '/learn/governance-lite-implementation/', label: 'Governance implementation guide' },
     ],
   },
   {
-    title: 'Executive Workflow Build (45 min)',
-    desc: 'Turn leadership decisions into AI-augmented weekly execution.',
+    title: 'AI readiness checklist',
+    desc: 'Use this path when you need to assess leadership readiness before a broader rollout.',
     links: [
-      { href: '/learn/ai-augmented-executive-workflow/', label: 'AI-Augmented Executive Workflow' },
-      { href: '/learn/executive-decision-memo-template/', label: 'Executive Decision Memo Template' },
-      { href: '/learn/ai-roi-dashboard-and-metrics/', label: 'ROI Dashboard Guide' },
+      { href: '/ai-leadership-readiness-checklist/', label: 'Leadership Readiness Checklist' },
+      { href: '/learn/ai-leadership-maturity-model/', label: 'Leadership maturity model' },
+      { href: '/learn/ai-literacy-baseline-assessment/', label: 'AI literacy baseline assessment' },
+    ],
+  },
+  {
+    title: 'AI operating model for executives',
+    desc: 'Choose this path if you need a repeatable executive operating rhythm, not just one-off pilots.',
+    links: [
+      { href: '/learn/ai-decision-intelligence-stack-executives/', label: 'Decision intelligence stack' },
+      { href: '/learn/ai-signal-to-decision-operating-rhythm/', label: 'Signal-to-decision operating rhythm' },
+      { href: '/learn/executive-decision-memo-template/', label: 'Executive decision memo template' },
     ],
   },
 ];
 ---
 
 <Layout
-  title="Learn AI Leadership | AILD.org"
-  description="Actionable AI leadership library focused on decision intelligence, cognitive augmentation, governance, and executive execution."
+  title="AI Governance Frameworks, Readiness Checklists, and Executive Operating Models | AILD"
+  description="Find AILD's flagship evergreen resources for AI governance frameworks, AI readiness checklists, board oversight, executive decision-making, and AI operating models."
   canonical="https://aild.org/learn/"
   active="learn"
 >
   <section class="hero">
-    <p class="eyebrow">Knowledge hub</p>
-    <h1>High-value AI leadership and decision library</h1>
+    <p class="eyebrow">Evergreen resource library</p>
+    <h1>Executive AI resources built for specific leadership questions</h1>
     <p class="lead">
-      Learn is the concepts layer of AILD. Start here when you need the mental models behind executive AI decisions,
-      governance, and operating design before moving into playbooks, templates, cases, and research.
+      Learn is AILD's evergreen library for executive AI search intent. Start here when you need a practical AI governance
+      framework, AI readiness checklist, board AI oversight model, executive decision template, or operating model guide.
     </p>
     <div class="badge-row">
-      <span class="badge">{docs.length} practical guides</span>
-      <span class="badge">Decision + Governance + Executive Workflows</span>
-      <span class="badge">Wiki-linked to templates, cases, and research</span>
+      <span class="badge">{docs.length} evergreen guides</span>
+      <span class="badge">Governance + readiness + operating model</span>
+      <span class="badge">Weekly brief archive is separated from this ranking layer</span>
     </div>
   </section>
 
   <section class="section grid-3">
     {quickStarts.map((item) => (
       <article class="panel">
-        <p class="eyebrow">Quick start</p>
+        <p class="eyebrow">Popular search intent</p>
         <h2>{item.title}</h2>
         <p>{item.desc}</p>
         <ul>
@@ -74,11 +100,52 @@ const quickStarts = [
     ))}
   </section>
 
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Flagship pages</p>
+        <h2>Six pages that should carry the main search authority</h2>
+      </div>
+      <p class="lead">These are the canonical assets for the core executive-intent topics AILD wants to own.</p>
+    </div>
+    <div class="article-list">
+      {flagshipDocs.map((doc) => (
+        <article class="article-item">
+          <p class="tag">{doc.data.tags.join(' | ')}</p>
+          <h2><a href={`/learn/${doc.slug}/`}>{doc.data.title}</a></h2>
+          <p>{doc.data.description}</p>
+          <p class="kb-meta">
+            {doc.data.readingTime ? `Read time: ${doc.data.readingTime}` : ''}{doc.data.audience ? ` | Audience: ${doc.data.audience}` : ''}
+          </p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Implementation layer</p>
+        <h2>Supporting resources that feed the flagship pages</h2>
+      </div>
+      <p class="lead">Use these to move from framework understanding into operating cadence, rollout steps, and measurement.</p>
+    </div>
+    <div class="article-list">
+      {implementationDocs.map((doc) => (
+        <article class="article-item">
+          <p class="tag">{doc.data.tags.join(' | ')}</p>
+          <h2><a href={`/learn/${doc.slug}/`}>{doc.data.title}</a></h2>
+          <p>{doc.data.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section panel">
     <h2>Find Exactly What You Need</h2>
-    <p class="lead">Search by keyword and filter by topic. Results update instantly.</p>
+    <p class="lead">Search and filter the evergreen library. Weekly Brief issues live on a separate editorial path.</p>
     <div class="kb-toolbar">
-      <input id="kb-search" class="kb-search" type="search" placeholder="Search guides (e.g., policy, ROI, support, prompt)..." />
+      <input id="kb-search" class="kb-search" type="search" placeholder="Search evergreen guides (e.g., governance, board, checklist, ROI)..." />
       <div class="kb-filters" id="kb-filters">
         <button class="kb-chip active" data-tag="all" type="button">All</button>
         {tags.map((tag) => (
@@ -87,7 +154,7 @@ const quickStarts = [
       </div>
       <p class="kb-count"><span id="kb-count">{docs.length}</span> guides shown</p>
     </div>
-    <p class="signal-note">Use Learn for concepts and frameworks. Use Playbooks for implementation, Templates for working documents, Cases for proof, and Research for the evidence layer.</p>
+    <p class="signal-note">Need the recurring editorial product instead? Use the <a href="/weekly-brief/">Weekly Brief archive</a>.</p>
   </section>
 
   <section class="section article-list" id="kb-list">

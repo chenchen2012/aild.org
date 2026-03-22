@@ -12,6 +12,7 @@ if (!slug) throw new Error('Missing slug');
 
 const entry = await getEntry('zhdocs', slug);
 if (!entry) throw new Error(`Unknown zh doc: ${slug}`);
+const isWeeklyBrief = entry.data.tags.includes('weekly-brief');
 
 const { Content } = await render(entry);
 const canonical = `https://aild.org/zh/learn/${entry.slug}/`;
@@ -50,6 +51,7 @@ const breadcrumbJsonLd = {
   canonical={canonical}
   active="learn"
   lang="zh-CN"
+  robots={isWeeklyBrief ? 'noindex,follow' : 'index,follow'}
   ogType="article"
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
@@ -87,8 +89,17 @@ const breadcrumbJsonLd = {
       </div>
       <aside class="article-aside">
         <section class="trust-card">
+          <h3>信任说明</h3>
+          <ul class="mini-list">
+            <li><a href="/zh/author/">创始编辑说明</a></li>
+            <li><a href="/zh/editorial-standards/">编辑标准</a></li>
+            <li><a href="/zh/research/">研究索引</a></li>
+          </ul>
+        </section>
+        <section class="trust-card">
           <h3>下一步</h3>
           <ul class="mini-list">
+            {isWeeklyBrief && <li><a href="/zh/weekly-brief/">查看每周简报归档</a></li>}
             <li><a href="/zh/templates/">使用模板包</a></li>
             <li><a href="/zh/cases/">参考案例指标</a></li>
             <li><a href="/zh/contact/">预约领导力咨询</a></li>

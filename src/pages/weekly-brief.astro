@@ -119,8 +119,9 @@ const [latestBrief, ...archiveBriefs] = briefs;
       {archiveBriefs.slice(0, 6).map((brief) => (
         <article class="article-item editorial-archive-card">
           <p class="tag">Weekly brief | {brief.data.pubDate}</p>
-          <h3><a href={`/learn/${brief.slug}/`}>{brief.data.title}</a></h3>
+          <h3><a href={`/learn/${brief.slug}/`}>Executive AI brief for the week of {brief.data.pubDate}</a></h3>
           <p>{brief.data.description}</p>
+          <p class="signal-note">Theme: {brief.data.title}</p>
           <p class="kb-meta">
             {brief.data.readingTime ? `Read time: ${brief.data.readingTime}` : ''}{brief.data.audience ? ` | Audience: ${brief.data.audience}` : ''}
           </p>
@@ -153,5 +154,15 @@ const [latestBrief, ...archiveBriefs] = briefs;
       interest="AI Leadership Weekly Brief"
       proofItems={['Fresh issues', 'New tools', 'Leadership-only relevance']}
     />
+  </section>
+
+  <section class="section panel">
+    <p class="eyebrow">Important note</p>
+    <h2>The Weekly Brief is a maintained editorial product, not the main ranking asset</h2>
+    <p>For evergreen search intent, start with the governance framework, readiness checklist, maturity model, or board briefing pages in the main library.</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="/learn/">Open evergreen resource library</a>
+      <a class="btn btn-secondary" href="/learn/trust-vs-override-framework/">Open AI governance framework</a>
+    </div>
   </section>
 </Layout>

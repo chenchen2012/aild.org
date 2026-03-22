@@ -115,8 +115,9 @@ const [latestBrief, ...archiveBriefs] = briefs;
       {archiveBriefs.slice(0, 6).map((brief) => (
         <article class="article-item editorial-archive-card">
           <p class="tag">每周简报 | {brief.data.pubDate}</p>
-          <h3><a href={`/zh/learn/${brief.slug}/`}>{brief.data.title}</a></h3>
+          <h3><a href={`/zh/learn/${brief.slug}/`}>{brief.data.pubDate} 当周管理层 AI 简报</a></h3>
           <p>{brief.data.description}</p>
+          <p class="signal-note">主题：{brief.data.title}</p>
           <p class="kb-meta">
             {brief.data.readingTime ? `阅读时长：${brief.data.readingTime}` : ''}{brief.data.audience ? ` | 适用：${brief.data.audience}` : ''}
           </p>
@@ -147,5 +148,15 @@ const [latestBrief, ...archiveBriefs] = briefs;
       lang="zh"
       proofItems={['持续更新', '新工具', '只保留管理层相关内容']}
     />
+  </section>
+
+  <section class="section panel">
+    <p class="eyebrow">重要说明</p>
+    <h2>每周简报是持续维护的编辑产品，不是主要排名资产</h2>
+    <p>如果你要找常青搜索内容，请优先从治理框架、准备度清单、成熟度模型或董事会简报页开始。</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="/zh/learn/">打开常青资源库</a>
+      <a class="btn btn-secondary" href="/zh/learn/trust-vs-override-framework/">打开 AI 治理框架</a>
+    </div>
   </section>
 </Layout>

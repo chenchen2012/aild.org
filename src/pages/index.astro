@@ -10,41 +10,41 @@ const weeklyBriefs = docs
   .slice(0, 2);
 const cornerstonePages = [
   {
-    label: 'Framework',
-    title: 'AI Decision Intelligence Stack for Executives',
-    href: '/learn/ai-decision-intelligence-stack-executives/',
-    summary: 'The core operating model for leadership-level AI decision architecture.',
-  },
-  {
-    label: 'Governance',
+    label: 'Governance framework',
     title: 'Trust vs Override Framework',
     href: '/learn/trust-vs-override-framework/',
-    summary: 'Defines where teams can trust AI and where explicit human override is required.',
+    summary: 'The clearest entry point for teams defining where AI can be trusted and where human override is mandatory.',
   },
   {
-    label: 'Capability',
-    title: 'AI Leadership Maturity Model',
-    href: '/learn/ai-leadership-maturity-model/',
-    summary: 'A practical benchmark for leadership readiness before wider rollout.',
-  },
-  {
-    label: 'Signal Product',
-    title: 'AI Leadership Weekly Brief',
-    href: '/weekly-brief/',
-    summary: 'Recurring executive format: what changed, why it matters, and next actions.',
-  },
-  {
-    label: 'Flagship Tool',
+    label: 'Readiness checklist',
     title: 'AI Leadership Readiness Checklist',
     href: '/ai-leadership-readiness-checklist/',
-    summary: 'Board- and transformation-ready diagnostic tool for the first 90 days.',
+    summary: 'A practical diagnostic for executive teams deciding whether they are ready to scale AI safely.',
+  },
+  {
+    label: 'Maturity model',
+    title: 'AI Leadership Maturity Model',
+    href: '/learn/ai-leadership-maturity-model/',
+    summary: 'A stage-based model for assessing leadership readiness, governance, and operating discipline.',
+  },
+  {
+    label: 'Operating model',
+    title: 'AI Decision Intelligence Stack for Executives',
+    href: '/learn/ai-decision-intelligence-stack-executives/',
+    summary: 'The core operating model for executive AI decision-making and accountable management cadence.',
+  },
+  {
+    label: 'Board oversight',
+    title: 'Board AI Governance Briefing',
+    href: '/learn/board-ai-governance-briefing/',
+    summary: 'A board-level brief for leadership teams answering oversight, policy, and accountability questions.',
   },
 ];
 ---
 
 <Layout
-  title="AI Leadership Frameworks, Governance, and Executive Decision-Making | AILD"
-  description="Executive AI leadership frameworks for decision-making, AI governance, operating models, and management workflows. Learn how leaders use AI without losing accountability."
+  title="AI Governance Framework, AI Readiness Checklist, and Executive AI Operating Model | AILD"
+  description="Executive resources for AI governance frameworks, AI readiness checklists, board AI oversight, and AI operating models. Built for strategy leaders and transformation owners."
   canonical="https://aild.org/"
   active="home"
   alternates={[
@@ -57,24 +57,24 @@ const cornerstonePages = [
   <section class="hero home-hero">
     <div class="home-hero-grid">
       <div>
-        <p class="eyebrow">Executive AI for strategy and transformation owners</p>
-        <h1>Make AI credible at the leadership level before you scale it</h1>
+        <p class="eyebrow">Executive AI for strategy leaders and transformation owners</p>
+        <h1>Build an AI governance framework and operating model before you scale adoption</h1>
         <p class="lead">
-          AILD helps strategy leaders, transformation owners, and nontechnical executive teams build an AI operating
-          model for management. Use AILD to improve decision quality, set governance boundaries, package executive
-          tools, and move from scattered pilots to a repeatable leadership system.
+          AILD helps executive teams answer concrete questions such as how to implement AI governance in a company, how
+          to assess AI readiness, how to brief a board on AI policy, and how to run an AI operating model without losing
+          accountability.
         </p>
         <div class="home-proofline">
           <span>Built for strategy and transformation leaders</span>
           <span>{docs.length} practical guides and executive tools</span>
-          <span>Weekly executive brief + cases + templates</span>
+          <span>Flagship evergreen resources + cases + templates</span>
         </div>
         <div class="stack">
           <a class="btn btn-primary" href="/ai-leadership-readiness-checklist/">Get the readiness checklist</a>
-          <a class="btn btn-secondary" href="/weekly-brief/">Read the Weekly Brief</a>
+          <a class="btn btn-secondary" href="/learn/">Browse flagship resources</a>
           <a class="btn btn-secondary" href="/advisory/">Book an executive briefing format</a>
         </div>
-        <p class="signal-note">Best first move: use the checklist if you need a diagnostic, or the Weekly Brief if you need a current executive signal feed.</p>
+        <p class="signal-note">Best first move: use the checklist for diagnosis, the governance framework for policy questions, or the board briefing if executive oversight is the blocker.</p>
       </div>
       <LeadCaptureForm
         compact={true}
@@ -91,7 +91,7 @@ const cornerstonePages = [
     </div>
     <div class="metrics home-metrics">
       <div class="metric"><strong>37+</strong><span>practical guides, playbooks, templates, and cases</span></div>
-      <div class="metric"><strong>Weekly</strong><span>editorial brief for leaders who need signal and action</span></div>
+      <div class="metric"><strong>Evergreen</strong><span>ranking assets for governance, readiness, and operating model queries</span></div>
       <div class="metric"><strong>3 core offers</strong><span>briefings, tools, and advisory formats for executive teams</span></div>
     </div>
   </section>
@@ -148,7 +148,7 @@ const cornerstonePages = [
         <p class="eyebrow">Start here by role</p>
         <h2>Choose the path that matches your job</h2>
       </div>
-      <p class="lead">Busy leaders should not have to decode the whole site. Start with the path that fits your role, then go deeper into tools and proof.</p>
+      <p class="lead">Busy leaders should not have to decode categories first. Start with the executive question you actually need to answer.</p>
     </div>
     <div class="role-journey">
       <article class="home-path-card panel">
@@ -172,13 +172,40 @@ const cornerstonePages = [
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Common executive searches</p>
+        <h2>Start with the problem you are actually trying to solve</h2>
+      </div>
+      <p class="lead">These are the narrower, higher-intent resource paths AILD is optimizing for first.</p>
+    </div>
+    <div class="article-list home-featured-grid">
+      <article class="article-item home-featured-item">
+        <p class="tag">AI governance framework</p>
+        <h3><a href="/learn/trust-vs-override-framework/">How do we set AI trust boundaries without blocking adoption?</a></h3>
+        <p>Use the trust-vs-override framework and board briefing path to define accountability and escalation rules.</p>
+      </article>
+      <article class="article-item home-featured-item">
+        <p class="tag">AI readiness checklist</p>
+        <h3><a href="/ai-leadership-readiness-checklist/">Are we actually ready to scale AI across leadership workflows?</a></h3>
+        <p>Start with the readiness checklist and maturity model before adding more tools or more pilots.</p>
+      </article>
+      <article class="article-item home-featured-item">
+        <p class="tag">Board AI policy template</p>
+        <h3><a href="/learn/board-ai-governance-briefing/">What should a board or executive committee review first?</a></h3>
+        <p>Use the board briefing and decision memo structure for policy, oversight, and review cadence.</p>
+      </article>
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div>
-      <p class="eyebrow">Signature product</p>
-      <h2>Turn the Weekly Brief into your leadership signal layer</h2>
+      <p class="eyebrow">Recurring editorial product</p>
+      <h2>Use the Weekly Brief as a returning signal layer, not the main entry page</h2>
       <p>
-        The Weekly Brief is becoming AILD's signature product: one recurring executive format that explains what changed,
-        why it matters, and what leaders should do next.
+        The Weekly Brief helps returning readers stay current, but the core SEO assets on AILD are the evergreen
+        frameworks, checklists, templates, and board-level resources.
       </p>
       <div class="stack">
         <a class="btn btn-primary" href="/weekly-brief/">View the Weekly Brief</a>
@@ -199,7 +226,7 @@ const cornerstonePages = [
   <section class="section split-callout">
     <div>
       <p class="eyebrow">Lead magnet</p>
-      <h2>Start with a concrete executive tool, not a generic article</h2>
+      <h2>Start with a concrete AI readiness checklist, not a vague strategy page</h2>
       <p>
         AILD now offers a flagship AI leadership readiness checklist for strategy leaders and transformation owners. Use it
         to structure executive reviews, steering meetings, and early board conversations.
@@ -300,7 +327,7 @@ const cornerstonePages = [
     <div class="section-heading">
       <div>
         <p class="eyebrow">Cornerstone pages</p>
-        <h2>Five definitive pages that anchor the AILD brand</h2>
+        <h2>Five definitive evergreen pages that anchor AILD's organic growth</h2>
       </div>
       <p class="lead">
         Start with these five canonical entry points, then expand into the full library of {docs.length} practical guides and tools.
@@ -329,7 +356,7 @@ const cornerstonePages = [
     <div>
       <p class="eyebrow">Stay close to the signal</p>
       <h2>Get the Weekly Brief, flagship tools, and new AILD releases</h2>
-      <p>The homepage is now designed to turn AILD into a returning executive resource, not a one-time article read.</p>
+      <p>The homepage is designed to introduce the evergreen assets first, then turn AILD into a returning executive resource.</p>
       <div class="stack">
         <a class="btn btn-secondary" href="/advisory/">Book a leadership workshop or advisory sprint</a>
         <a class="btn btn-secondary" href="/contact/">Request a tailored briefing</a>

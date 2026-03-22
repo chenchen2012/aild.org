@@ -10,41 +10,41 @@ const weeklyBriefs = docs
   .slice(0, 2);
 const cornerstonePages = [
   {
-    label: '框架',
+    label: '治理框架',
+    title: '信任与接管框架',
+    href: '/zh/learn/trust-vs-override-framework/',
+    summary: '最适合回答“哪些情境可以信任 AI，哪些情境必须人工接管”。',
+  },
+  {
+    label: '准备度清单',
+    title: 'AI 领导力准备度清单',
+    href: '/zh/ai-leadership-readiness-checklist/',
+    summary: '帮助管理层先判断是否真的准备好进入规模化采用。',
+  },
+  {
+    label: '成熟度模型',
+    title: 'AI 领导力成熟度模型',
+    href: '/zh/learn/ai-leadership-maturity-model/',
+    summary: '用于评估领导层准备度、治理能力和执行节奏所处阶段。',
+  },
+  {
+    label: '运营模型',
     title: '面向高管的 AI 决策智能栈',
     href: '/zh/learn/ai-decision-intelligence-stack-executives/',
     summary: 'AILD 的核心管理模型：先建立决策结构，再扩展工具。',
   },
   {
-    label: '治理',
-    title: '信任与接管框架',
-    href: '/zh/learn/trust-vs-override-framework/',
-    summary: '明确哪些情境可以信任 AI，哪些情境必须人工接管。',
-  },
-  {
-    label: '能力',
-    title: 'AI 领导力成熟度模型',
-    href: '/zh/learn/ai-leadership-maturity-model/',
-    summary: '用于评估组织在领导层、治理和执行节奏上的准备度。',
-  },
-  {
-    label: '签名产品',
-    title: 'AI 领导力每周简报',
-    href: '/zh/weekly-brief/',
-    summary: '固定管理层格式：发生了什么、为什么重要、下周做什么。',
-  },
-  {
-    label: '旗舰工具',
-    title: 'AI 领导力准备度清单',
-    href: '/zh/ai-leadership-readiness-checklist/',
-    summary: '适合董事会准备、转型推进和首个 90 天行动设计。',
+    label: '董事会监督',
+    title: '董事会 AI 治理简报框架',
+    href: '/zh/learn/board-ai-governance-briefing/',
+    summary: '适合回答董事会监督、政策边界与责任结构等关键问题。',
   },
 ];
 ---
 
 <Layout
-  title="AI领导力、AI治理与管理层决策框架 | AILD"
-  description="面向管理层的AI领导力框架、AI治理方法与高管决策体系。帮助组织建立AI辅助决策、信任边界与执行节奏。"
+  title="AI治理框架、AI准备度清单与管理层AI运营模型 | AILD"
+  description="面向管理层的 AI 治理框架、AI 准备度清单、董事会监督路径与 AI 运营模型资源。"
   canonical="https://aild.org/zh/"
   active="home"
   lang="zh-CN"
@@ -53,21 +53,21 @@ const cornerstonePages = [
     <div class="home-hero-grid">
       <div>
         <p class="eyebrow">面向战略负责人和转型负责人的 AI 管理系统</p>
-        <h1>先让 AI 在管理层层面变得可信，再谈规模化</h1>
+        <h1>先建立 AI 治理框架和运营模型，再谈规模化采用</h1>
         <p class="lead">
-          AILD现在更明确地服务于战略负责人、转型负责人和非技术高管团队。重点不是“工具多先进”，而是帮助组织建立AI决策框架、治理边界、执行节奏和真正可复盘的管理系统。
+          AILD 现在更明确地服务于战略负责人、转型负责人和非技术高管团队，重点回答具体问题：如何做 AI 治理、如何判断 AI 准备度、如何做董事会 AI 简报、如何建立 AI 管理节奏。
         </p>
         <div class="home-proofline">
           <span>聚焦战略与转型负责人</span>
           <span>{docs.length} 篇实用指南与管理工具</span>
-          <span>每周简报 + 模板 + 案例 + 研究</span>
+          <span>常青旗舰资源 + 模板 + 案例 + 研究</span>
         </div>
         <div class="stack">
           <a class="btn btn-primary" href="/zh/ai-leadership-readiness-checklist/">获取准备度清单</a>
-          <a class="btn btn-secondary" href="/zh/weekly-brief/">阅读每周简报</a>
+          <a class="btn btn-secondary" href="/zh/learn/">浏览旗舰资源</a>
           <a class="btn btn-secondary" href="/zh/advisory/">预约高管工作坊/咨询方案</a>
         </div>
-        <p class="signal-note">如果你需要一份诊断工具，就先看准备度清单；如果你需要持续的管理层信号输入，就先看每周简报。</p>
+        <p class="signal-note">如果你需要诊断工具，就先看准备度清单；如果你要解决治理问题，就先看信任与接管框架；如果你卡在董事会监督，就先看董事会简报页。</p>
       </div>
       <LeadCaptureForm
         compact={true}
@@ -85,7 +85,7 @@ const cornerstonePages = [
     </div>
     <div class="metrics home-metrics">
       <div class="metric"><strong>37+</strong><span>篇实用指南、模板、案例和研究内容</span></div>
-      <div class="metric"><strong>每周更新</strong><span>管理层可直接使用的编辑简报</span></div>
+      <div class="metric"><strong>常青资产</strong><span>优先覆盖治理、准备度与运营模型等搜索意图</span></div>
       <div class="metric"><strong>3类核心产品</strong><span>简报、工具、咨询服务共同构成品牌入口</span></div>
     </div>
   </section>
@@ -142,7 +142,7 @@ const cornerstonePages = [
         <p class="eyebrow">按角色开始</p>
         <h2>直接进入与你职责匹配的路径</h2>
       </div>
-      <p class="lead">一个忙碌的管理者不应该先研究网站结构，而应该先找到自己的入口。</p>
+      <p class="lead">一个忙碌的管理者不应该先研究栏目结构，而应该先找到自己真正要解决的问题。</p>
     </div>
     <div class="role-journey">
       <article class="home-path-card panel">
@@ -166,11 +166,38 @@ const cornerstonePages = [
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">常见管理层搜索</p>
+        <h2>从你真正要解决的问题开始</h2>
+      </div>
+      <p class="lead">这些是 AILD 当前更值得争取的高意图入口。</p>
+    </div>
+    <div class="article-list home-featured-grid">
+      <article class="article-item home-featured-item">
+        <p class="tag">AI 治理框架</p>
+        <h3><a href="/zh/learn/trust-vs-override-framework/">如何划定 AI 的信任边界，而不是一刀切？</a></h3>
+        <p>用信任与接管框架、董事会简报路径来明确责任、复核与升级规则。</p>
+      </article>
+      <article class="article-item home-featured-item">
+        <p class="tag">AI 准备度清单</p>
+        <h3><a href="/zh/ai-leadership-readiness-checklist/">我们真的准备好把 AI 扩展到管理流程了吗？</a></h3>
+        <p>先用准备度清单和成熟度模型判断基础是否足够，再决定 rollout 节奏。</p>
+      </article>
+      <article class="article-item home-featured-item">
+        <p class="tag">董事会 AI 政策</p>
+        <h3><a href="/zh/learn/board-ai-governance-briefing/">董事会或高管委员会最该先看什么？</a></h3>
+        <p>用董事会 AI 简报页和决策备忘录结构来回答监督、政策和责任问题。</p>
+      </article>
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div>
-      <p class="eyebrow">签名产品</p>
-      <h2>把 AI 每周简报变成品牌核心资产</h2>
-      <p>AILD 的每周简报正在成为品牌的固定入口：本周发生了什么，为什么重要，下周该采取什么动作。</p>
+      <p class="eyebrow">持续更新的编辑产品</p>
+      <h2>把每周简报当作回访型信号层，而不是主入口</h2>
+      <p>每周简报适合持续回访的读者，但 AILD 更核心的搜索资产仍然是治理框架、准备度清单、模板和董事会资源。</p>
       <div class="stack">
         <a class="btn btn-primary" href="/zh/weekly-brief/">打开每周简报</a>
         <a class="btn btn-secondary" href="/zh/advisory/">查看工作坊与咨询形式</a>
@@ -251,8 +278,8 @@ const cornerstonePages = [
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">基石页面</p>
-        <h2>定义 AILD 品牌的 5 个核心入口</h2>
+      <p class="eyebrow">基石页面</p>
+      <h2>定义 AILD 自然增长的 5 个常青入口</h2>
       </div>
       <p class="lead">
         先读这 5 个标准入口，再进入完整知识库，构建适合管理层的 AI 决策、治理与执行系统。
@@ -279,7 +306,7 @@ const cornerstonePages = [
     <div>
       <p class="eyebrow">保持更新</p>
       <h2>获取每周简报、旗舰工具和新的AILD更新</h2>
-      <p>中文首页现在更明确地承担回访入口和订阅入口的角色，而不只是内容目录。</p>
+      <p>中文首页现在先介绍常青资产，再承担回访和订阅入口的角色。</p>
       <div class="stack">
         <a class="btn btn-secondary" href="/zh/advisory/">查看工作坊与治理冲刺方案</a>
         <a class="btn btn-secondary" href="/zh/contact/">提交定制化简报需求</a>

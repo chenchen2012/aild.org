@@ -12,6 +12,7 @@ if (!slug) throw new Error('Missing slug');
 
 const entry = await getEntry('docs', slug);
 if (!entry) throw new Error(`Unknown doc: ${slug}`);
+const isWeeklyBrief = entry.data.tags.includes('weekly-brief');
 
 const relatedEntries = await Promise.all(entry.data.related.map((s) => getEntry('docs', s)));
 const { Content } = await render(entry);
@@ -50,6 +51,7 @@ const breadcrumbJsonLd = {
   description={entry.data.description}
   canonical={canonical}
   active="learn"
+  robots={isWeeklyBrief ? 'noindex,follow' : 'index,follow'}
   ogType="article"
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
@@ -87,7 +89,7 @@ const breadcrumbJsonLd = {
         <Content />
 
         <section class="panel section">
-          <h2>Related Pages</h2>
+          <h2>{isWeeklyBrief ? 'Evergreen Pages to Use With This Brief' : 'Related Pages'}</h2>
           <ul>
             {relatedEntries.filter(Boolean).map((rel) => <li><a href={`/learn/${rel.slug}/`}>{rel.data.title}</a></li>)}
             <li><a href="/playbooks/">Role-based playbooks</a></li>
@@ -108,6 +110,14 @@ const breadcrumbJsonLd = {
           </ul>
         </section>
         <section class="trust-card">
+          <h3>Trust Signals</h3>
+          <ul class="mini-list">
+            <li><a href="/author/">Founder-editor profile</a></li>
+            <li><a href="/editorial-standards/">Editorial standards</a></li>
+            <li><a href="/research/">Research index</a></li>
+          </ul>
+        </section>
+        <section class="trust-card">
           <h3>Citation Rail</h3>
           <p>Reference evidence used across AILD frameworks.</p>
           <ul class="mini-list">
@@ -119,6 +129,7 @@ const breadcrumbJsonLd = {
         <section class="trust-card">
           <h3>Next Actions</h3>
           <ul>
+            {isWeeklyBrief && <li><a href="/weekly-brief/">Browse the Weekly Brief archive</a></li>}
             <li><a href="/templates/">Apply template pack</a></li>
             <li><a href="/cases/">Compare case benchmarks</a></li>
             <li><a href="/contact/">Request a rollout roadmap</a></li>

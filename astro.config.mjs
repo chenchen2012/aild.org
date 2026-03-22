@@ -8,6 +8,16 @@ import { fileURLToPath } from 'node:url';
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const siteUrl = 'https://aild.org';
 const pageLastmod = JSON.parse(fs.readFileSync(path.join(rootDir, 'src/data/page-lastmod.json'), 'utf8'));
+const excludedSitemapPaths = new Set([
+  '/en/',
+  '/es/',
+  '/brief-subscribe-success/',
+  '/checklist-success/',
+  '/contact-success/',
+  '/zh/brief-subscribe-success/',
+  '/zh/checklist-success/',
+  '/zh/contact-success/',
+]);
 
 function readCollectionDates(collectionDir, urlPrefix) {
   const dir = path.join(rootDir, collectionDir);
@@ -64,7 +74,13 @@ export default defineConfig({
   site: 'https://aild.org',
   integrations: [
     sitemap({
-      filter: (page) => !['https://aild.org/en/', 'https://aild.org/es/'].includes(page),
+      filter: (page) => {
+        const pathname = new URL(page).pathname;
+        if (excludedSitemapPaths.has(pathname)) return false;
+        if (pathname.startsWith('/learn/weekly-ai-leadership-brief-')) return false;
+        if (pathname.startsWith('/zh/learn/weekly-ai-leadership-brief-')) return false;
+        return true;
+      },
       serialize: (item) => {
         const lastmod = sitemapLastmod.get(item.url);
         return lastmod ? { ...item, lastmod } : item;
