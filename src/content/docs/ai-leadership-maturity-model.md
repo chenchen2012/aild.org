@@ -2,7 +2,7 @@
 title: AI Leadership Maturity Model
 description: A 4-stage AI leadership maturity model for assessing how management teams use AI in decision-making, governance, and execution.
 pubDate: '2026-02-25'
-updatedDate: '2026-02-25'
+updatedDate: '2026-03-22'
 tags: ['Leadership', 'Assessment', 'Decision']
 related: ['ai-decision-intelligence-stack-executives', 'ai-augmented-executive-workflow', 'trust-vs-override-framework']
 audience: Executive teams and transformation leaders
@@ -17,104 +17,125 @@ outcomes:
   - Align governance and execution by maturity level
 ---
 
-## What is an AI leadership maturity model?
+## Why maturity is the right leadership lens
 
-An AI leadership maturity model is a way to assess how far a management team has progressed from ad hoc AI use to a governed executive operating system. Many organizations adopt AI tools faster than leadership systems evolve. A maturity model prevents random adoption and builds a deliberate capability path.
+Many organizations ask: "How much AI are we using?"
 
-## Why leadership maturity matters
+The better question is: "How mature is our leadership system for using AI safely and effectively?"
 
-Without a maturity model, teams often confuse tool usage with management capability. A company may have many AI pilots and still be weak at executive decision-making, AI governance, and cross-functional execution.
+You can have many pilots and still remain immature if decision ownership, governance controls, and operating cadence are weak.
 
-The right question is not “Are we using AI?” It is “How mature is our leadership system for using AI well?”
+## The four maturity stages
 
-## The 4 stages of AI leadership maturity
+### Stage 1: Tool Adoption
 
-### 1. Tool stage
+AI is used in isolated tasks such as drafting and summarization.
 
-Leaders use AI for isolated tasks such as drafting, summarization, or quick research.
-
-Signal:
+Typical signal:
 
 - high experimentation
-- low consistency
+- low repeatability
 - no shared management standard
 
-### 2. Workflow stage
+Leadership risk: local productivity gains with no enterprise control model.
 
-AI is embedded in repeated leadership routines such as meeting prep, reporting, weekly reviews, or planning workflows.
+### Stage 2: Workflow Integration
 
-Signal:
+AI is embedded into recurring management workflows.
 
-- repeated weekly usage
-- shared templates
-- clearer ownership
+Typical signal:
 
-### 3. Decision stage
+- repeat weekly usage
+- common templates and QA checks
+- clearer process ownership
 
-AI supports scenario analysis, option comparison, and structured executive judgment.
+Leadership risk: faster routines without explicit trust boundaries.
 
-Signal:
+### Stage 3: Decision Integration
 
-- explicit trust and override rules
-- decision briefs
-- better alignment between evidence and decision quality
+AI supports structured option comparison and executive judgment.
 
-### 4. System stage
+Typical signal:
 
-Governance, cadence, logging, and business metrics are integrated across functions. AI is no longer a tool experiment. It becomes part of the leadership operating model.
+- decision briefs are standard
+- trust-vs-override rules are active
+- evidence quality is reviewed before recommendations
 
-Signal:
+Leadership risk: good analysis, uneven follow-through.
 
-- cross-functional review rhythm
-- leadership KPIs tied to business outcomes
-- stable governance and accountability model
+### Stage 4: System Leadership
 
-## Stage diagnostics
+AI governance, cadence, logging, and performance metrics are integrated cross-functionally.
 
-- Tool stage signal: high experimentation, low consistency
-- Workflow stage signal: repeated weekly usage with templates
-- Decision stage signal: explicit trust and override rules
-- System stage signal: leadership KPIs tied to business outcomes
+Typical signal:
 
-## How to move up one stage
+- executive KPIs linked to business outcomes
+- monthly governance and risk reviews
+- consistent accountability model across functions
 
-### Stage 1 to 2
+Leadership risk: complacency and control drift if periodic calibration stops.
 
-Standardize one weekly leadership workflow. This could be a strategic review, planning review, or executive prep process.
+## Stage diagnostics: quick self-check
 
-### Stage 2 to 3
+Use these four questions:
 
-Implement decision briefs, evidence criteria, and override logs so AI supports structured management judgment rather than casual use.
+1. Are decision owners explicit for all AI-assisted high-impact decisions?
+2. Are trust boundaries documented by workflow?
+3. Are expected-vs-actual outcomes reviewed on a fixed cadence?
+4. Are policy exceptions logged with remediation ownership?
 
-### Stage 3 to 4
+If most answers are "no," maturity is still below decision/system level.
 
-Run a cross-functional review cadence with unified KPIs, governance rules, and executive ownership.
+## How to move one stage up
 
-## Common maturity mistakes
+### Stage 1 -> Stage 2
 
-- mistaking tool adoption for leadership capability
-- scaling AI without governance
-- using AI in decisions without review logs
-- running pilots with no operating cadence
-- measuring activity instead of business outcome
+- standardize one high-frequency leadership workflow
+- define QA criteria and template ownership
+- measure cycle time and defect rate
+
+### Stage 2 -> Stage 3
+
+- enforce decision briefs and evidence standards
+- activate trust-vs-override controls
+- log high-impact decision rationale and review dates
+
+### Stage 3 -> Stage 4
+
+- integrate finance, risk, legal, and operations into one governance cadence
+- tie AI decisions to outcome KPIs
+- run quarterly maturity reassessment
+
+## 90-day progression plan
+
+### Days 1-30
+
+- baseline maturity by function
+- select one upgrade objective per business unit
+- assign sponsors and operating owners
+
+### Days 31-60
+
+- implement missing controls (logs, approvals, trust tiers)
+- train management teams on decision protocol
+- start weekly exception reviews
+
+### Days 61-90
+
+- publish maturity scorecard to leadership
+- scale only workflows that meet quality and governance thresholds
+- retire pilots with no measurable decision impact
+
+## Common maturity traps
+
+- equating adoption volume with leadership capability
+- scaling before governance controls are operational
+- treating dashboards as outcomes
+- skipping post-decision review because of time pressure
+- leaving accountability vague in cross-functional decisions
 
 ## Related next steps
-
-To operationalize this model, read:
 
 - [AI Decision Intelligence Stack for Executives](/learn/ai-decision-intelligence-stack-executives/)
 - [When to Trust AI vs Override It](/learn/trust-vs-override-framework/)
 - [AI-Augmented Executive Workflow Design](/learn/ai-augmented-executive-workflow/)
-
-## Executive implementation plan (next 30 days)
-
-- Define one pilot scope, one owner, and one measurable outcome before execution.
-- Add weekly review cadence with quality and governance checkpoints.
-- Keep evidence logs for decisions, exceptions, and remediation steps.
-
-## Failure modes to avoid
-
-- Expanding usage before controls and ownership are stable.
-- Measuring activity without linking outputs to management outcomes.
-- Ignoring recurring defects instead of fixing workflow design.
-
