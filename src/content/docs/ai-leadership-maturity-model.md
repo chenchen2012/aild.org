@@ -1,6 +1,6 @@
 ---
-title: AI Leadership and Governance Maturity Model
-description: A 4-stage AI leadership and governance maturity model for assessing how management teams use AI in decision-making, governance, and execution.
+title: AI Governance Maturity Model for Leadership Teams
+description: A 4-stage AI governance maturity model for leadership teams assessing decision-making, governance, accountability, and execution readiness.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Assessment', 'Decision']
@@ -17,11 +17,11 @@ outcomes:
   - Align governance and execution by maturity level
 ---
 
-## Why maturity is the right leadership lens
+## Why an AI governance maturity model is the right leadership lens
 
 Many organizations ask: "How much AI are we using?"
 
-The better question is: "How mature is our leadership system for using AI safely and effectively?"
+The better question is: "How mature is our governance and leadership system for using AI safely and effectively?"
 
 You can have many pilots and still remain immature if decision ownership, governance controls, and operating cadence are weak.
 

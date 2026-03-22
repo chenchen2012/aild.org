@@ -1,9 +1,9 @@
 /sitemap.xml /sitemap-index.xml 301
-/en /
-/en/ /
-/es /
-/es/ /
-/zh/en /zh/
-/zh/en/ /zh/
-/zh/es /zh/
-/zh/es/ /zh/
+/en / 301
+/en/ / 301
+/es / 301
+/es/ / 301
+/zh/en /zh/ 301
+/zh/en/ /zh/ 301
+/zh/es /zh/ 301
+/zh/es/ /zh/ 301
