@@ -2,7 +2,7 @@
 title: AI Policy Template for SMB Teams
 description: A lightweight but practical policy baseline for data handling, approved tooling, human review, and incident response.
 pubDate: '2026-02-24'
-updatedDate: '2026-02-25'
+updatedDate: '2026-03-22'
 tags: ['Governance', 'Cornerstone']
 related: ['30-day-ai-rollout', '5-minute-ai-quality-check', 'ai-data-privacy-checklist']
 audience: Leadership, operations, legal-adjacent teams
@@ -13,52 +13,28 @@ outcomes:
   - Create incident response steps for AI-related failures
 ---
 
-## Purpose
+## Why this matters now
 
-Policy is not a document exercise. It is operating infrastructure for safe scale.
+Unregulated AI adoption introduces material business risks: data leakage, compliance violations, and reputational damage. Establishing clear governance before scaling is a core leadership responsibility. This template provides the operational framework to deploy AI with control and accountability.
 
-## Section 1: Data classes
+## What leaders should do in the next 90 days
 
-- Public: allowed in approved tools
-- Internal: use only in controlled environments
-- Restricted: never entered into external AI tools
+**Weeks 1-4: Foundation & Pilot**
+- Appoint a single policy owner with cross-functional authority (e.g., Head of Operations or CTO).
+- Define a pilot scope: one high-value, low-risk workflow (e.g., marketing copy generation or internal report summarization).
+- Establish the Approved Tool Registry. Populate it with no more than three vetted tools. Ban all others in production.
 
-## Section 2: Tool governance
+**Weeks 5-8: Implementation & Review**
+- Launch the pilot. Mandate that all outputs for customer-facing materials and financial reports undergo human review before release.
+- Initiate a weekly governance review with the policy owner. Agenda: review audit logs, assess output quality, and adjudicate any policy exceptions.
 
-- maintain approved-tool registry
-- define approval owner for new tools
-- disallow shadow tooling in production workflows
-
-## Section 3: Human review rules
-
-Mandatory review before release for:
-
-- customer-facing outputs
-- executive reporting
-- finance/compliance-related content
-
-## Section 4: Incident protocol
-
-1. Pause workflow variant with risk signal.
-2. Record issue type, impact, and root cause.
-3. Apply remediation and communicate changes.
-4. Update policy and templates to prevent recurrence.
-
-## Operational cadence
-
-- monthly policy audit
-- quarterly policy refresh
-- team training after each major update
-
-## Executive implementation plan (next 30 days)
-
-- Define one pilot scope, one owner, and one measurable outcome before execution.
-- Add weekly review cadence with quality and governance checkpoints.
-- Keep evidence logs for decisions, exceptions, and remediation steps.
+**Weeks 9-12: Scale & Systematize**
+- Based on pilot evidence, refine data classification rules (Public, Internal, Restricted) and human-review triggers.
+- Formalize the incident protocol: 1) Immediate workflow pause, 2) Causal analysis documented within 48 hours, 3) Policy update to prevent recurrence.
+- Schedule the first quarterly policy refresh and mandatory team training.
 
 ## Failure modes to avoid
 
-- Expanding usage before controls and ownership are stable.
-- Measuring activity without linking outputs to management outcomes.
-- Ignoring recurring defects instead of fixing workflow design.
-
+- **Governance Lag:** Allowing AI usage to expand before the approval registry, review protocols, and incident response are fully operational and tested.
+- **Vanity Metrics:** Tracking only usage volume or cost savings instead of measuring impact on core business outcomes (e.g., error reduction, cycle time, compliance audit results).
+- **Symptomatic Fixes:** Addressing individual AI errors with one-off corrections rather than analyzing patterns and redesigning the underlying workflow or policy boundary.

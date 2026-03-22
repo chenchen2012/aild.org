@@ -2,7 +2,7 @@
 title: Decision Quality Scorecard for AI-Enabled Teams
 description: A scorecard to evaluate whether AI-assisted decisions are actually improving leadership outcomes.
 pubDate: '2026-02-25'
-updatedDate: '2026-02-25'
+updatedDate: '2026-03-22'
 tags: ['Leadership', 'Measurement', 'Decision']
 related: ['ai-roi-dashboard-and-metrics', 'trust-vs-override-framework', 'executive-decision-memo-template']
 audience: Leadership teams, operations leads, PMO
@@ -13,38 +13,31 @@ outcomes:
   - Build a repeatable leadership review standard
 ---
 
-## Why a separate scorecard
+## Why this matters now
 
-Output volume is not decision quality. Teams need a structured way to track whether AI improves judgment and business impact.
+AI adoption is accelerating, but implementation quality varies widely. Without structured evaluation, organizations risk automating poor decisions at scale. This scorecard provides a concrete framework to measure whether AI systems improve actual business judgment, not just output volume.
 
-## Core dimensions
+## What leaders should do in the next 90 days
 
-1. Clarity: was the decision question defined precisely?
-2. Evidence quality: were assumptions and data confidence explicit?
-3. Risk handling: were major downside scenarios addressed?
-4. Execution quality: were ownership and deadlines clear?
-5. Outcome alignment: did results match the intended objective?
+**Weeks 1-4: Establish governance baseline**
+- Mandate that all new AI initiatives include a Decision Quality Scorecard in project charters.
+- Define and publish three non-negotiable red lines: (1) All training data must be documented and auditable, (2) Model outputs cannot bypass existing compliance controls, (3) Vendor contracts must include quarterly performance reviews.
 
-## Scoring approach
+**Weeks 5-8: Pilot implementation**
+- Select two high-impact use cases (e.g., demand forecasting, customer segmentation) for pilot scoring.
+- Require teams to score both the AI system and the previous manual process using the same five dimensions.
+- Document all human overrides of AI recommendations with justification.
 
-- Score each dimension 1-5.
-- Flag any dimension below 3 for corrective action.
-- Review trends monthly, not in isolation.
-
-## Leadership practice
-
-Pair this scorecard with weekly review meetings and override logs to calibrate both AI use and human judgment quality.
-
-## Executive implementation plan (next 30 days)
-
-- Evaluate tools on the same scorecard across security, workflow fit, reliability, and cost.
-- Require two-week pilot evidence before procurement or enterprise rollout.
-- Publish non-negotiable red lines (data handling, auditability, vendor controls).
-- Re-score approved tools quarterly using production data, not vendor claims.
+**Weeks 9-12: Institutionalize process**
+- Integrate scorecard results into existing business review cycles (monthly operational reviews, quarterly strategy sessions).
+- Link scorecard performance to technology vendor payments and internal team KPIs.
+- Establish an executive review committee to address any dimension consistently scoring below 3.
 
 ## Failure modes to avoid
 
-- Selecting tools from demos without workflow-level validation.
-- Overweighting features and underweighting governance and adoption risk.
-- Locking contracts before teams prove measurable business fit.
+- **Governance bypass**: Allowing AI systems to operate outside established approval workflows and compliance checks.
+- **Validation theater**: Accepting vendor demonstrations as sufficient evidence without production-environment testing.
+- **Contract lock-in**: Signing multi-year agreements before teams demonstrate measurable business impact (minimum 15% improvement over baseline).
+- **Metric isolation**: Evaluating AI performance separately from business outcomes it was designed to improve.
 
+For related frameworks, see [AI ROI Dashboard and Metrics Guide](/learn/ai-roi-dashboard-and-metrics/) and [When to Trust AI vs Override It](/learn/trust-vs-override-framework/).
