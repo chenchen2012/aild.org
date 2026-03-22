@@ -110,3 +110,17 @@ It will go to organizations that learn early, test carefully, establish governan
 The question is no longer whether AI can support your people.
 
 The question is whether your organization is preparing for AI to become part of how work gets done.
+
+## Executive implementation plan (next 30 days)
+
+- Restrict agent permissions to one bounded workflow with clear stop conditions.
+- Require full action logs for every tool call, handoff, and exception event.
+- Add a human checkpoint before any external communication or irreversible action.
+- Review all failures weekly and classify whether the root cause is policy, prompt, or process design.
+
+## Failure modes to avoid
+
+- Granting broad system access before workflow-level controls are proven.
+- Confusing autonomous execution with strategic productivity gains.
+- Scaling agent usage without incident taxonomy and rollback rules.
+

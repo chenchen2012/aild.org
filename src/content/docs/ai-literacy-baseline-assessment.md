@@ -37,3 +37,17 @@ Use a 1-5 scale per dimension.
 ## Decision rule
 
 Do not scale across departments until at least three dimensions score 4+ for the pilot function.
+
+## Executive implementation plan (next 30 days)
+
+- Run one leadership literacy baseline survey across strategy, operations, and risk owners.
+- Convert literacy gaps into role-based learning priorities tied to active workflows.
+- Add a monthly leadership session focused on real decisions, not generic AI news.
+- Track whether literacy improvements translate into better governance and decision speed.
+
+## Failure modes to avoid
+
+- Treating literacy as one-off training instead of an operating capability.
+- Measuring completion rates but not decision quality improvements.
+- Leaving executives out of the learning loop while expecting cross-functional alignment.
+

@@ -34,3 +34,16 @@ outcomes:
 ## Common failure mode
 
 Teams over-document context but under-document accountability. Keep the memo short and execution-specific.
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

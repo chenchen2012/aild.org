@@ -34,3 +34,17 @@ Output volume is not decision quality. Teams need a structured way to track whet
 ## Leadership practice
 
 Pair this scorecard with weekly review meetings and override logs to calibrate both AI use and human judgment quality.
+
+## Executive implementation plan (next 30 days)
+
+- Evaluate tools on the same scorecard across security, workflow fit, reliability, and cost.
+- Require two-week pilot evidence before procurement or enterprise rollout.
+- Publish non-negotiable red lines (data handling, auditability, vendor controls).
+- Re-score approved tools quarterly using production data, not vendor claims.
+
+## Failure modes to avoid
+
+- Selecting tools from demos without workflow-level validation.
+- Overweighting features and underweighting governance and adoption risk.
+- Locking contracts before teams prove measurable business fit.
+

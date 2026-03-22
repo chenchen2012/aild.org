@@ -32,3 +32,16 @@ Decisions are made but not reviewed. Fix by running weekly and monthly decision 
 ## Anti-pattern 5: Pilot theater
 
 Many pilots, little operational impact. Fix by retiring low-value pilots and scaling only measurable winners.
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

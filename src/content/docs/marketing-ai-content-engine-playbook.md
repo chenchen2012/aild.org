@@ -29,3 +29,17 @@ Move from ad hoc AI drafting to a reliable content operating pipeline.
 - content production cycle time
 - acceptance rate at first review
 - campaign launch velocity
+
+## Executive implementation plan (next 30 days)
+
+- Lock one campaign family as the pilot and define conversion, speed, and compliance as the three success metrics.
+- Require every AI draft to include audience, claim source, and channel objective before review.
+- Establish a two-step review gate: brand voice check first, legal/policy check second.
+- Run a Friday performance retro to retire low-performing prompts and keep only reusable assets.
+
+## Failure modes to avoid
+
+- Treating content volume as success while brand consistency declines.
+- Running AI drafts without claim verification for numbers, benchmarks, or product statements.
+- Scaling channels before the team has a shared QA rubric.
+

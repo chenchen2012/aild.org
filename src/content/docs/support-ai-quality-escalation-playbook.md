@@ -39,3 +39,17 @@ outcomes:
 - first-pass quality rate
 - escalation accuracy
 - repeat-follow-up rate
+
+## Executive implementation plan (next 30 days)
+
+- Define three risk tiers for tickets and connect each tier to approval and escalation rules.
+- Build one standard response library for top recurring intents before enabling AI drafting at scale.
+- Track false-assurance responses separately from normal QA misses and review them weekly.
+- Require support leads to review 20 random outputs per week and publish corrective actions.
+
+## Failure modes to avoid
+
+- Letting AI handle sensitive cases without identity/context verification.
+- Measuring only response speed while customer trust metrics decline.
+- Treating escalation as failure instead of a safety control.
+

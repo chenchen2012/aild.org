@@ -27,3 +27,17 @@ Use simple prompts for single-step tasks. Use agent workflows only for multi-ste
 ## Rollout advice
 
 Start with semi-automated mode (human-in-the-loop) before autonomous execution.
+
+## Executive implementation plan (next 30 days)
+
+- Restrict agent permissions to one bounded workflow with clear stop conditions.
+- Require full action logs for every tool call, handoff, and exception event.
+- Add a human checkpoint before any external communication or irreversible action.
+- Review all failures weekly and classify whether the root cause is policy, prompt, or process design.
+
+## Failure modes to avoid
+
+- Granting broad system access before workflow-level controls are proven.
+- Confusing autonomous execution with strategic productivity gains.
+- Scaling agent usage without incident taxonomy and rollback rules.
+

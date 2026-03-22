@@ -107,3 +107,16 @@ If you are building this system in practice, read:
 - [When to Trust AI vs Override It](/learn/trust-vs-override-framework/)
 - [AI Leadership Maturity Model](/learn/ai-leadership-maturity-model/)
 - [AI-Augmented Executive Workflow Design](/learn/ai-augmented-executive-workflow/)
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

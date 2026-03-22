@@ -71,3 +71,16 @@ Senior leaders do not usually suffer from a lack of information. They suffer fro
 - [AI-Assisted Strategic Review Playbook](/learn/ai-assisted-strategic-review-playbook/)
 - [AI Decision Intelligence Stack for Executives](/learn/ai-decision-intelligence-stack-executives/)
 - [When to Trust AI vs Override It](/learn/trust-vs-override-framework/)
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

@@ -112,3 +112,16 @@ For a full operating model, pair this with:
 - [AI Decision Intelligence Stack for Executives](/learn/ai-decision-intelligence-stack-executives/)
 - [5-Minute AI Quality Check](/learn/5-minute-ai-quality-check/)
 - [AI Policy Template for SMB Teams](/learn/ai-policy-template-smb/)
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

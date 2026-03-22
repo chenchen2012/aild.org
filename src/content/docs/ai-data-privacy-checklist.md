@@ -41,3 +41,17 @@ Sample output sets monthly and verify:
 - no prohibited data used
 - review was completed
 - incidents logged where needed
+
+## Executive implementation plan (next 30 days)
+
+- Map restricted data classes to explicit "allowed / prohibited" input rules per workflow.
+- Enforce tool-level controls so unapproved models cannot receive sensitive inputs.
+- Create a monthly privacy sampling routine with named reviewers and documented findings.
+- Require an exception log with closure dates for every policy breach or near miss.
+
+## Failure modes to avoid
+
+- Publishing policy statements without translating them into workflow controls.
+- Assuming users can self-police sensitive data handling at scale.
+- Treating audits as compliance theater rather than decision inputs.
+

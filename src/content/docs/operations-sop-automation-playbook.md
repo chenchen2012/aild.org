@@ -34,3 +34,17 @@ Convert SOP maintenance from ad hoc writing into a repeatable controlled system.
 
 - percentage of outdated SOPs
 - rework caused by SOP ambiguity
+
+## Executive implementation plan (next 30 days)
+
+- Week 1: nominate one process owner per SOP family and lock one source of truth for versions.
+- Week 2: run one controlled SOP update sprint on a high-volume process and measure review cycle time.
+- Week 3: enforce approval metadata (owner, approver, effective date, rollback contact) before publication.
+- Week 4: review defect tickets linked to SOP ambiguity and decide where guardrails need to be tightened.
+
+## Failure modes to avoid
+
+- Publishing AI-generated SOP drafts without owner sign-off.
+- Updating templates without updating exception paths and escalation points.
+- Measuring output volume but ignoring downstream rework caused by unclear instructions.
+

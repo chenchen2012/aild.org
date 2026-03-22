@@ -33,3 +33,17 @@ Use AI to improve decision preparation, not to replace meeting ownership.
 ## Weekly artifact
 
 Publish one decision memo and one action board after each meeting.
+
+## Executive implementation plan (next 30 days)
+
+- Require one pre-read packet per meeting: signal summary, decision options, risk notes.
+- Cap each meeting to three high-impact decisions with explicit owner assignment.
+- Add a post-meeting action board with due dates and status checkpoints.
+- Review override decisions weekly to improve judgment quality over time.
+
+## Failure modes to avoid
+
+- Turning AI summaries into agenda noise instead of decision input.
+- Ending meetings without owner-level accountability and deadlines.
+- Accepting AI recommendations without risk and dependency review.
+

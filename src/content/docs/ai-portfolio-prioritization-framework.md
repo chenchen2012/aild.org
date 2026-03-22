@@ -55,3 +55,16 @@ Most organizations have more AI ideas than leadership bandwidth. Without a portf
 - [AI Decision Intelligence Stack for Executives](/learn/ai-decision-intelligence-stack-executives/)
 - [Board AI Governance Briefing Framework](/learn/board-ai-governance-briefing/)
 - [AI Leadership Maturity Model](/learn/ai-leadership-maturity-model/)
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

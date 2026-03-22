@@ -45,3 +45,17 @@ For each workflow report:
 - weekly function review
 - monthly leadership review
 - quarterly strategy reset
+
+## Executive implementation plan (next 30 days)
+
+- Pick three decision-level metrics (quality, cycle time, rework) before adding productivity metrics.
+- Set baseline values from the prior four weeks and freeze metric definitions for one quarter.
+- Add one monthly executive review that decides scale, pause, or redesign by workflow.
+- Require each workflow owner to submit one-page evidence logs, not narrative-only updates.
+
+## Failure modes to avoid
+
+- Reporting activity metrics without tying them to management decisions.
+- Changing metric definitions every month and losing comparability.
+- Declaring ROI before quality thresholds are stable.
+

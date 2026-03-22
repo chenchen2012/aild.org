@@ -46,3 +46,17 @@ Before final output, check for [accuracy, completeness, actionability].
 - vague objective
 - missing constraints
 - no required output format
+
+## Executive implementation plan (next 30 days)
+
+- Standardize prompt templates for the top three recurring workflows per function.
+- Require every prompt to specify objective, boundary conditions, and output format.
+- Record failure examples weekly and update templates based on observed defects.
+- Publish a versioned prompt library with owners and change history.
+
+## Failure modes to avoid
+
+- Optimizing prompts for style while ignoring factual reliability.
+- Allowing team-level prompt drift without governance.
+- Updating prompts without measuring downstream quality impact.
+

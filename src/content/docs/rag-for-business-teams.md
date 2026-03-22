@@ -27,3 +27,17 @@ When teams rely only on model memory, factual drift rises. Retrieval workflows a
 ## Reliability rule
 
 No source cited, no approval.
+
+## Executive implementation plan (next 30 days)
+
+- Select one knowledge domain with high repeat demand and curate trusted source documents.
+- Define document owners and freshness cadence before connecting retrieval to workflows.
+- Require citation visibility in every generated answer used for business decisions.
+- Track answer accuracy and "no source / weak source" rates during weekly quality review.
+
+## Failure modes to avoid
+
+- Loading uncurated documents and assuming retrieval quality will self-correct.
+- Allowing uncited outputs into customer or policy-facing communication.
+- Ignoring source freshness while measuring only response speed.
+

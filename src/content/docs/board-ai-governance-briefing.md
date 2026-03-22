@@ -61,3 +61,16 @@ If governance visibility is low but deployment speed is high, pause expansion un
 - [AI Leadership Maturity Model](/learn/ai-leadership-maturity-model/)
 - [When to Trust AI vs Override It](/learn/trust-vs-override-framework/)
 - [AI Policy Template for SMB Teams](/learn/ai-policy-template-smb/)
+
+## Executive implementation plan (next 30 days)
+
+- Define one pilot scope, one owner, and one measurable outcome before execution.
+- Add weekly review cadence with quality and governance checkpoints.
+- Keep evidence logs for decisions, exceptions, and remediation steps.
+
+## Failure modes to avoid
+
+- Expanding usage before controls and ownership are stable.
+- Measuring activity without linking outputs to management outcomes.
+- Ignoring recurring defects instead of fixing workflow design.
+

@@ -9,7 +9,9 @@
     "astro": "astro",
     "test:weekly-brief": "node scripts/test-auto-weekly-brief.mjs",
     "content:refresh": "node scripts/content-refresh-check.mjs",
-    "content:auto-weekly": "node scripts/auto-weekly-brief.mjs"
+    "content:auto-weekly": "node scripts/auto-weekly-brief.mjs",
+    "content:enrich-thin": "node scripts/enrich-thin-guides.mjs",
+    "content:quality-check": "node scripts/content-quality-check.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",

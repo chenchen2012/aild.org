@@ -34,3 +34,17 @@ Do not approve tools that score below threshold on security even if quality scor
 ## After selection
 
 Add approved tools to your [policy template](/learn/ai-policy-template-smb/) and monitor outcomes via [ROI dashboard](/learn/ai-roi-dashboard-and-metrics/).
+
+## Executive implementation plan (next 30 days)
+
+- Evaluate tools on the same scorecard across security, workflow fit, reliability, and cost.
+- Require two-week pilot evidence before procurement or enterprise rollout.
+- Publish non-negotiable red lines (data handling, auditability, vendor controls).
+- Re-score approved tools quarterly using production data, not vendor claims.
+
+## Failure modes to avoid
+
+- Selecting tools from demos without workflow-level validation.
+- Overweighting features and underweighting governance and adoption risk.
+- Locking contracts before teams prove measurable business fit.
+

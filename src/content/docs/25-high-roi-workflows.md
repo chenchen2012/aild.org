@@ -34,3 +34,17 @@ related: ['30-day-ai-rollout', 'ai-policy-template-smb', '5-minute-ai-quality-ch
 ## First workflow selection rule
 
 Choose a workflow that is frequent, predictable, and has a measurable quality standard. Then apply [policy boundaries](/learn/ai-policy-template-smb/) and [QA checks](/learn/5-minute-ai-quality-check/) before scale.
+
+## Executive implementation plan (next 30 days)
+
+- Pick three decision-level metrics (quality, cycle time, rework) before adding productivity metrics.
+- Set baseline values from the prior four weeks and freeze metric definitions for one quarter.
+- Add one monthly executive review that decides scale, pause, or redesign by workflow.
+- Require each workflow owner to submit one-page evidence logs, not narrative-only updates.
+
+## Failure modes to avoid
+
+- Reporting activity metrics without tying them to management decisions.
+- Changing metric definitions every month and losing comparability.
+- Declaring ROI before quality thresholds are stable.
+
