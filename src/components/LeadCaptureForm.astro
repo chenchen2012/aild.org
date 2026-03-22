@@ -45,7 +45,8 @@ const labels =
         organization: '职位或机构',
         emailPlaceholder: 'name@company.com',
         organizationPlaceholder: '例如：战略负责人 / 转型办公室',
-        defaultNote: '面向管理层的资源申请与简报入口。',
+        defaultNote: '仅发送管理层相关简报与工具，不发送无关营销邮件。',
+        responseNote: '通常 1-2 个工作日内回复。',
       }
     : {
         name: 'Name',
@@ -53,7 +54,8 @@ const labels =
         organization: 'Role or organization',
         emailPlaceholder: 'name@company.com',
         organizationPlaceholder: 'e.g. Strategy lead / Transformation office',
-        defaultNote: 'Executive resource request and briefing access.',
+        defaultNote: 'Executive-only briefings and tools. No unrelated marketing emails.',
+        responseNote: 'Typical response time: 1-2 business days.',
       };
 ---
 
@@ -117,4 +119,5 @@ const labels =
     <button type="submit" class="btn btn-primary">{buttonLabel ?? (lang === 'zh' ? '提交' : 'Request access')}</button>
   </form>
   <p class="capture-note">{note ?? labels.defaultNote}</p>
+  <p class="capture-note">{labels.responseNote}</p>
 </aside>
