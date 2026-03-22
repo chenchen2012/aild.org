@@ -45,4 +45,4 @@ Executive decision velocity and quality directly impact quarterly performance. U
 
 -   The Decision Governance Lead has authority to return memos for revision if trade-offs are vague or ownership is ambiguous.
 -   Memos for decisions exceeding $1M budget impact require co-signature from the CFO.
--   All final memos are archived in the central decision register ([see Decision Log Policy](https://aild.org/policy/decision-log)).
+-   All final memos should be archived in the central decision register and reviewed in the monthly governance cadence.

@@ -2,7 +2,7 @@
 title: AI-Assisted Strategic Review Playbook
 description: A step-by-step playbook for running weekly and monthly strategic reviews with AI support, better decision quality, and stronger follow-through.
 pubDate: '2026-02-25'
-updatedDate: '2026-02-25'
+updatedDate: '2026-03-22'
 tags: ['Leadership', 'Decision', 'Playbook']
 related: ['ai-decision-intelligence-stack-executives', 'ai-roi-dashboard-and-metrics', '90-day-ai-adoption-roadmap']
 audience: Leadership teams and PMO/operations strategy functions
@@ -17,64 +17,30 @@ outcomes:
   - Tie strategic discussions to measurable execution outcomes
 ---
 
-## What is an AI-assisted strategic review?
+## Why this matters now
+Strategic reviews are often data-heavy but insight-light. AI can now process internal and external signals at scale, surfacing material variances and plausible options faster than manual analysis. This reduces time spent on data gathering and increases time for judgment and decision-making. For leadership teams, this means moving from reactive reporting to proactive steering.
 
-An AI-assisted strategic review is a recurring leadership meeting process where AI helps summarize signals, compare options, and sharpen decision framing. The goal is not to automate strategy. The goal is to improve strategic review quality and make follow-through measurable.
+## What leaders should do in the next 90 days
+**Weeks 1-4: Pilot Design**
+- Appoint a single process owner (e.g., Chief of Staff, Head of Strategy) accountable for the review's governance and output quality.
+- Define a narrow pilot scope: one recurring executive meeting (e.g., weekly ops review) and one clear decision type (e.g., resource reallocation, project continuation).
+- Establish the input protocol: which KPIs, risk logs, and competitor intelligence feeds the AI will summarize.
 
-## Review rhythm
+**Weeks 5-8: Execution & Calibration**
+- Run two pilot cycles. The AI's role is to deliver a pre-read memo containing: a) KPI deltas vs. plan, b) top three emerging risks, c) two viable options per major variance with projected impact.
+- The human-led meeting must: a) validate AI inputs, b) debate option trade-offs, c) make the final decision, d) assign a single owner with clear success criteria.
+- The process owner documents each decision, the rationale, and any overrides of AI suggestions.
 
-- Weekly: tactical course-correction
-- Monthly: strategic alignment and resource shift
+**Weeks 9-12: Scale Decision**
+- Assess pilot success based on: a) reduction in pre-meeting prep time, b) quality of decision documentation, c) speed of execution follow-through.
+- Based on evidence, decide to expand, refine, or halt. If expanding, update the governance checklist before applying to a second meeting type.
 
-## Review flow
-
-1. Pre-read synthesis
-2. variance and risk scan
-3. option generation
-4. decision framing
-5. owner assignment and follow-up
-
-## Pre-read template
-
-- KPI movement summary
-- major risks and unknowns
-- options with projected impact
-- required leadership decisions
-
-## Meeting operating rules
-
-- one decision owner per topic
-- explicit decision statement
-- record accepted option and discarded options
-
-## Post-review discipline
-
-- publish decision memo within 24h
-- track execution delta in weekly dashboard
-- revisit assumptions at next cycle
-
-## Where this playbook is most useful
-
-- weekly executive review
-- monthly resource reallocation
-- PMO and strategy cadence
-- cross-functional issue escalation
+## Failure modes to avoid
+- **Governance Gap:** Allowing AI to suggest decisions without a human-in-the-loop approval layer. The AI is an analyst, not a decider.
+- **Metric Myopia:** Measuring AI usage (e.g., report generation speed) instead of business outcomes (e.g., better decision velocity, reduced operational surprises).
+- **Process Neglect:** Failing to fix the underlying meeting discipline when the AI exposes recurring data quality issues or unclear decision rights. The tool reveals problems; leaders must solve them.
 
 ## Related next steps
-
 - [AI-Augmented Executive Workflow Design](/learn/ai-augmented-executive-workflow/)
 - [AI ROI Dashboard and Metrics](/learn/ai-roi-dashboard-and-metrics/)
 - [90-Day AI Adoption Roadmap for SMBs](/learn/90-day-ai-adoption-roadmap/)
-
-## Executive implementation plan (next 30 days)
-
-- Define one pilot scope, one owner, and one measurable outcome before execution.
-- Add weekly review cadence with quality and governance checkpoints.
-- Keep evidence logs for decisions, exceptions, and remediation steps.
-
-## Failure modes to avoid
-
-- Expanding usage before controls and ownership are stable.
-- Measuring activity without linking outputs to management outcomes.
-- Ignoring recurring defects instead of fixing workflow design.
-
