@@ -67,13 +67,17 @@ a {
 
 .header-row {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "brand . actions"
+    "nav nav nav";
   align-items: center;
-  gap: 1.15rem;
-  min-height: 84px;
+  gap: 0.7rem 1rem;
+  padding: 0.88rem 0 0.72rem;
 }
 
 .brand {
+  grid-area: brand;
   display: inline-flex;
   align-items: center;
   gap: 0.72rem;
@@ -118,22 +122,24 @@ a {
 
 
 .nav-links {
+  grid-area: nav;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.12rem;
-  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 0.28rem;
+  flex-wrap: wrap;
   min-width: 0;
   overflow: visible;
+  padding-bottom: 0.06rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #16332b;
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   letter-spacing: -0.01em;
-  padding: 0.4rem 0.46rem;
+  padding: 0.34rem 0.46rem;
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -154,10 +160,12 @@ a {
 }
 
 .header-actions {
+  grid-area: actions;
   display: flex;
   align-items: center;
   gap: 0.42rem;
   flex-shrink: 0;
+  justify-content: flex-end;
 }
 
 .header-cta {
@@ -274,29 +282,29 @@ a {
 }
 
 .home-hero {
-  padding: 2.35rem;
+  padding: 2.05rem 2.05rem 1.95rem;
 }
 
 .home-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.14fr) minmax(300px, 0.86fr);
-  gap: 1.4rem;
+  gap: 1.15rem;
   align-items: start;
 }
 
 .home-hero h1 {
-  max-width: 11.5ch;
+  max-width: 12.4ch;
   margin: 0.45rem 0 0;
-  font-size: clamp(2.6rem, 5vw, 4.1rem);
-  line-height: 1.03;
+  font-size: clamp(2.28rem, 4vw, 3.35rem);
+  line-height: 1.05;
   letter-spacing: -0.05em;
 }
 
 .home-hero .lead {
   max-width: 42rem;
-  margin-top: 1.15rem;
-  font-size: 1.14rem;
-  line-height: 1.72;
+  margin-top: 0.95rem;
+  font-size: 1.04rem;
+  line-height: 1.68;
   color: #4b685f;
 }
 
@@ -311,7 +319,7 @@ a {
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 249, 0.95)),
     radial-gradient(circle at top right, rgba(13, 110, 80, 0.08), transparent 38%);
   border-radius: 22px;
-  padding: 1.25rem 1.35rem;
+  padding: 1.08rem 1.18rem;
   box-shadow: 0 16px 40px rgba(9, 38, 30, 0.08);
 }
 
@@ -529,40 +537,6 @@ a {
   font-family: Sora, sans-serif;
   font-weight: 700;
   font-size: 0.74rem;
-}
-
-@media (max-width: 1220px) {
-  .header-row {
-    grid-template-columns: auto auto;
-    grid-template-areas:
-      "brand actions"
-      "nav nav";
-    align-items: center;
-    gap: 0.7rem 1rem;
-    padding: 0.82rem 0;
-  }
-
-  .brand {
-    grid-area: brand;
-  }
-
-  .nav-links {
-    grid-area: nav;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    padding-bottom: 0.08rem;
-  }
-
-  .header-actions {
-    grid-area: actions;
-    justify-content: flex-end;
-  }
-
-  .nav-links a {
-    font-size: 0.84rem;
-    padding: 0.42rem 0.58rem;
-  }
 }
 
 /* Chinese typography system: optimized for readability and visual quality */
@@ -1731,19 +1705,18 @@ li {
     gap: 0.46rem;
   }
 
+  .brand-divider,
+  .brand-full {
+    display: none;
+  }
+
   .brand-mark {
     font-size: 1.28rem;
   }
 
-  .brand-full {
-    font-size: 0.67rem;
-    max-width: 170px;
-    letter-spacing: 0.02em;
-  }
-
   .home-hero h1 {
     max-width: none;
-    font-size: clamp(2.1rem, 9vw, 3.15rem);
+    font-size: clamp(1.95rem, 8vw, 2.75rem);
   }
 
   .home-hero .lead {
