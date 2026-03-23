@@ -34,6 +34,8 @@ const implementationDocs = implementationSlugs
   .map((slug) => docs.find((doc) => doc.slug === slug))
   .filter(Boolean);
 
+const featuredAnalysis = docs.find((doc) => doc.slug === 'openclaw-ai-agents-leadership-actions');
+
 const quickStarts = [
   {
     title: 'AI governance framework',
@@ -100,6 +102,26 @@ const quickStarts = [
       </article>
     ))}
   </section>
+
+  {featuredAnalysis && (
+    <section class="section panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Featured analysis</p>
+          <h2>High-signal reading on AI agents and leadership action</h2>
+        </div>
+        <p class="lead">A recent standout piece worth surfacing for leaders tracking the shift from AI assistance to AI execution.</p>
+      </div>
+      <article class="article-item">
+        <p class="tag">{featuredAnalysis.data.tags.join(' | ')}</p>
+        <h2><a href={`/learn/${featuredAnalysis.slug}/`}>{featuredAnalysis.data.title}</a></h2>
+        <p>{featuredAnalysis.data.description}</p>
+        <p class="kb-meta">
+          {featuredAnalysis.data.readingTime ? `Read time: ${featuredAnalysis.data.readingTime}` : ''}{featuredAnalysis.data.audience ? ` | Audience: ${featuredAnalysis.data.audience}` : ''}
+        </p>
+      </article>
+    </section>
+  )}
 
   <section class="section">
     <div class="section-heading">

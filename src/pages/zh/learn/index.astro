@@ -34,6 +34,8 @@ const implementationDocs = implementationSlugs
   .map((slug) => docs.find((doc) => doc.slug === slug))
   .filter(Boolean);
 
+const featuredAnalysis = docs.find((doc) => doc.slug === 'openclaw-ai-agents-leadership-actions');
+
 const quickStarts = [
   {
     title: 'AI 治理框架',
@@ -97,6 +99,26 @@ const quickStarts = [
       </article>
     ))}
   </section>
+
+  {featuredAnalysis && (
+    <section class="section panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">精选分析</p>
+          <h2>值得放在前面的高质量 AI 智能体文章</h2>
+        </div>
+        <p class="lead">这是一篇最近发布、质量很强的管理层分析，适合放在常青资源入口显著展示。</p>
+      </div>
+      <article class="article-item">
+        <p class="tag">{featuredAnalysis.data.tags.join(' | ')}</p>
+        <h2><a href={`/zh/learn/${featuredAnalysis.slug}/`}>{featuredAnalysis.data.title}</a></h2>
+        <p>{featuredAnalysis.data.description}</p>
+        <p class="kb-meta">
+          {featuredAnalysis.data.readingTime ? `阅读时长：${featuredAnalysis.data.readingTime}` : ''}{featuredAnalysis.data.audience ? ` | 适用：${featuredAnalysis.data.audience}` : ''}
+        </p>
+      </article>
+    </section>
+  )}
 
   <section class="section">
     <div class="section-heading">
