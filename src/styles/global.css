@@ -80,7 +80,7 @@ a {
   grid-area: brand;
   display: inline-flex;
   align-items: center;
-  gap: 0.72rem;
+  gap: 0;
   text-decoration: none;
   color: var(--ink);
   font-family:
@@ -95,29 +95,21 @@ a {
 
 .brand-mark {
   color: var(--ink);
-  font-size: 1.54rem;
+  font-size: 1.72rem;
   font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .brand-divider {
-  width: 1px;
-  height: 1.4rem;
-  background: #b8ccc5;
+  display: none;
 }
 
 .brand-full {
-  display: inline-flex;
-  flex-direction: column;
-  color: #2a4b40;
-  font-size: 0.76rem;
-  text-transform: none;
-  letter-spacing: 0.025em;
-  line-height: 1.06;
-  max-width: 184px;
+  display: none;
 }
 
 .brand-full-break {
-  white-space: nowrap;
+  display: none;
 }
 
 
@@ -163,7 +155,7 @@ a {
   grid-area: actions;
   display: flex;
   align-items: center;
-  gap: 0.42rem;
+  gap: 0.55rem;
   flex-shrink: 0;
   justify-content: flex-end;
 }
@@ -295,16 +287,16 @@ a {
 .home-hero h1 {
   max-width: 12.4ch;
   margin: 0.45rem 0 0;
-  font-size: clamp(2.28rem, 4vw, 3.35rem);
-  line-height: 1.05;
+  font-size: clamp(2rem, 3.3vw, 2.9rem);
+  line-height: 1.08;
   letter-spacing: -0.05em;
 }
 
 .home-hero .lead {
   max-width: 42rem;
   margin-top: 0.95rem;
-  font-size: 1.04rem;
-  line-height: 1.68;
+  font-size: 0.99rem;
+  line-height: 1.66;
   color: #4b685f;
 }
 
@@ -339,6 +331,30 @@ a {
 .home-hero-aside .mini-list li {
   margin: 0.48rem 0;
   color: #49665d;
+}
+
+.snapshot-item {
+  display: grid;
+  gap: 0.12rem;
+  padding: 0.72rem 0;
+  border-top: 1px solid #dbe8e2;
+}
+
+.snapshot-item:first-of-type {
+  border-top: 0;
+  padding-top: 0.18rem;
+}
+
+.snapshot-item strong {
+  color: #163c31;
+  font-size: 0.96rem;
+  line-height: 1.3;
+}
+
+.snapshot-item span {
+  color: #567268;
+  font-size: 0.93rem;
+  line-height: 1.55;
 }
 
 .home-brief-panel {
@@ -1703,11 +1719,6 @@ li {
 
   .brand {
     gap: 0.46rem;
-  }
-
-  .brand-divider,
-  .brand-full {
-    display: none;
   }
 
   .brand-mark {

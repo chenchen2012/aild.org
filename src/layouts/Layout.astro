@@ -48,7 +48,6 @@ const brandLineOne = 'AI Leadership for';
 const brandLineTwo = 'Decisionmakers';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
-const weeklyBriefLabel = isZh ? '每周简报' : 'Weekly Brief';
 const priorityPathLabel = isZh ? '从你的优先路径开始' : 'Start with Your Priority Path';
 const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
 const lastmodMap = pageLastmod as Record<string, string>;
@@ -154,11 +153,6 @@ const nav = [
       <div class="wrapper header-row">
         <a class="brand" href={brandHref} aria-label={`AILD | ${brandFullName}`}>
           <span class="brand-mark">AILD</span>
-          <span class="brand-divider" aria-hidden="true"></span>
-          <span class="brand-full">
-            <span>{brandLineOne}</span>
-            <span class="brand-full-break">{brandLineTwo}</span>
-          </span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
           {
@@ -171,7 +165,6 @@ const nav = [
         </nav>
         <div class="header-actions">
           <a class="header-cta" href={makeLocalizedPath('/#priority-paths')}>{priorityPathLabel}</a>
-          <a class="header-cta" href={makeLocalizedPath('/weekly-brief/')}>{weeklyBriefLabel}</a>
           <div class="lang-switch" aria-label="Language switcher">
             <a class={!isZh ? 'active' : ''} href={enPath}>EN</a>
             <a class={isZh ? 'active' : ''} href={zhPath}>中文</a>
