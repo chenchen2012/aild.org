@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">AILD social preview</title>
-  <desc id="desc">AI Leadership and Development</desc>
+  <desc id="desc">AI Leadership for Decision-Makers</desc>
   <defs>
     <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
       <stop offset="0%" stop-color="#eef5f3" />
@@ -13,7 +13,7 @@
   <circle cx="180" cy="540" r="220" fill="#e7d8b9" opacity="0.45" />
   <rect x="72" y="72" width="1056" height="486" rx="28" fill="#ffffff" opacity="0.8" />
   <text x="110" y="186" fill="#0f2620" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="74" font-weight="800">AILD</text>
-  <text x="110" y="245" fill="#2a4b40" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="600">AI Leadership and Development</text>
+  <text x="110" y="245" fill="#2a4b40" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="600">AI Leadership for Decision-Makers</text>
   <text x="110" y="355" fill="#173d32" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="54" font-weight="700">Decision Intelligence</text>
   <text x="110" y="422" fill="#173d32" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="54" font-weight="700">for Leaders</text>
   <text x="110" y="500" fill="#4a635b" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="30">Governance, workflows, and measurable execution.</text>
