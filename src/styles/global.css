@@ -102,12 +102,18 @@ a {
 }
 
 .brand-full {
+  display: inline-flex;
+  flex-direction: column;
   color: #2a4b40;
   font-size: 0.69rem;
   text-transform: none;
   letter-spacing: 0.03em;
   line-height: 1.1;
   max-width: 156px;
+}
+
+.brand-full-break {
+  white-space: nowrap;
 }
 
 
