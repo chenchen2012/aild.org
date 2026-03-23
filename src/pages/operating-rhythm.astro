@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const rhythmAssets = [
+  { title: 'AI Signal-to-Decision Operating Rhythm', href: '/learn/ai-signal-to-decision-operating-rhythm/', summary: 'Use this model to turn AI signals into recurring executive decisions and follow-through.' },
+  { title: 'AI Decision Intelligence Stack for Executives', href: '/learn/ai-decision-intelligence-stack-executives/', summary: 'Define the executive operating model that supports better AI-related decisions.' },
+  { title: 'Executive AI Meeting Protocol', href: '/learn/executive-ai-meeting-protocol/', summary: 'Use a meeting structure built for review, escalation, and operating discipline.' },
+];
+---
+
+<Layout
+  title="Operating Rhythm | AILD"
+  description="Use AILD to establish a repeatable leadership rhythm for AI review, decisionmaking, and follow-through."
+  canonical="https://aild.org/operating-rhythm/"
+  active="operating-rhythm"
+>
+  <section class="hero">
+    <p class="eyebrow">Operating Rhythm</p>
+    <h1>Establish a repeatable leadership rhythm for AI decisions and follow-through</h1>
+    <p class="lead">Use this path when AI oversight needs to become part of recurring operating practice rather than a one-off initiative.</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#rhythm-assets">See Operating Rhythm Models</a>
+      <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What this solves</p>
+      <ul class="mini-list">
+        <li>Creates recurring review cadence</li>
+        <li>Improves decision follow-through</li>
+        <li>Connects signals to leadership action</li>
+        <li>Builds operating discipline</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who this is for</p>
+      <ul class="mini-list">
+        <li>Executive teams</li>
+        <li>COOs</li>
+        <li>Strategy leaders</li>
+        <li>Transformation owners</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="rhythm-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Core assets</p>
+        <h2>The models that turn AI activity into operating discipline</h2>
+      </div>
+      <p class="lead">Use these pages to build recurring review moments, decision ownership, and action follow-through.</p>
+    </div>
+    <div class="article-list">
+      {rhythmAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">What a strong operating rhythm includes</p>
+      <ul class="mini-list">
+        <li>Recurring review moments</li>
+        <li>Signal tracking and escalation rules</li>
+        <li>Decision ownership and action follow-through</li>
+        <li>Operating checkpoints that leadership actually uses</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Need an operating rhythm leadership will actually use?</h2>
+      <p>AILD can help leadership teams build a working cadence for signals, reviews, decisions, and accountability.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
+      </div>
+    </div>
+  </section>
+</Layout>

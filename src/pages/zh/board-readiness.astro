@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const starterAssets = [
+  { title: '董事会AI治理简报', href: '/zh/learn/board-ai-governance-briefing/', summary: '用于准备董事会层面的讨论框架、监督重点与责任问题。' },
+  { title: 'AI领导力准备度清单', href: '/zh/ai-leadership-readiness-checklist/', summary: '在采用扩大前先判断领导系统是否真的准备好。' },
+  { title: '高管决策备忘录模板', href: '/zh/learn/executive-decision-memo-template/', summary: '用标准化备忘录支持高管复核、决策与跟进。' },
+];
+---
+
+<Layout
+  title="董事会准备 | AILD"
+  description="用 AILD 帮助管理层在 AI 规模化采用前准备董事会监督、责任界面和可用的汇报结构。"
+  canonical="https://aild.org/zh/board-readiness/"
+  active="board-readiness"
+  lang="zh-CN"
+>
+  <section class="hero">
+    <p class="eyebrow">董事会准备</p>
+    <h1>在AI规模化采用前，先准备好管理层与董事会监督机制</h1>
+    <p class="lead">当董事会需要更清楚的监督视角、管理层需要更明确的责任结构，而 AI 活动又推进得比治理更快时，就应该从这里开始。</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#starter-assets">查看董事会准备资产</a>
+      <a class="btn btn-secondary" href="/zh/advisory/">申请高管简报</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">解决什么问题</p>
+      <ul class="mini-list">
+        <li>明确董事会应该看什么</li>
+        <li>强化管理层责任结构</li>
+        <li>把AI活动转成董事会可讨论的问题</li>
+        <li>建立更清晰的汇报与升级逻辑</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">适合谁</p>
+      <ul class="mini-list">
+        <li>CEO</li>
+        <li>COO</li>
+        <li>治理负责人</li>
+        <li>面向董事会汇报的运营负责人</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="starter-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">从这里开始</p>
+        <h2>最适合董事会准备的核心资产</h2>
+      </div>
+      <p class="lead">这些页面可用于组织董事会监督、管理层复核和责任界面。</p>
+    </div>
+    <div class="article-list">
+      {starterAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">什么才算准备充分</p>
+      <ul class="mini-list">
+        <li>董事会材料聚焦监督、风险、责任与关键决策</li>
+        <li>管理层复盘节奏先于采用扩张建立</li>
+        <li>汇报突出行动、升级事项和下一步决策</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">下一步</p>
+      <h2>如果你要把这件事带入真实董事会或领导场景</h2>
+      <p>AILD 可以帮助你把董事会叙事、复盘结构和管理层决策流程提前做清楚。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/advisory/">讨论咨询支持</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const rolloutAssets = [
+  { title: '90天AI采用路线图', href: '/zh/learn/90-day-ai-adoption-roadmap/', summary: '用结构化路线把零散试点转为受控落地。' },
+  { title: 'AI增强型高管工作流', href: '/zh/learn/ai-augmented-executive-workflow/', summary: '理解高管工作流在AI进入后如何变化。' },
+  { title: 'AI辅助战略复盘手册', href: '/zh/learn/ai-assisted-strategic-review-playbook/', summary: '为90天推进窗口建立管理层可用的复盘顺序。' },
+];
+---
+
+<Layout
+  title="90天落地 | AILD"
+  description="用 AILD 把 AI 试点转成受控的90天落地计划，明确管理责任、治理节点与复盘节奏。"
+  canonical="https://aild.org/zh/90-day-rollout/"
+  active="90-day-rollout"
+  lang="zh-CN"
+>
+  <section class="hero">
+    <p class="eyebrow">90天落地</p>
+    <h1>把AI试点升级成一个受控的90天落地计划</h1>
+    <p class="lead">当管理层需要一个更务实的落地方案，明确优先级、顺序和运营责任时，就应该从这里开始。</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#rollout-assets">打开90天落地计划</a>
+      <a class="btn btn-secondary" href="/zh/advisory/">申请高管简报</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">解决什么问题</p>
+      <ul class="mini-list">
+        <li>用结构化落地替代零散试点</li>
+        <li>明确管理责任</li>
+        <li>建立顺序和复盘节点</li>
+        <li>把执行与治理连接起来</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">适合谁</p>
+      <ul class="mini-list">
+        <li>COO</li>
+        <li>转型负责人</li>
+        <li>战略负责人</li>
+        <li>跨部门推进负责人</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="rollout-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">从这些页面开始</p>
+        <h2>管理层真正能驾驭的落地路径</h2>
+      </div>
+      <p class="lead">这些页面用于安排落地顺序、复盘节点和运营责任。</p>
+    </div>
+    <div class="article-list">
+      {rolloutAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">一个受控90天落地应包含什么</p>
+      <ul class="mini-list">
+        <li>场景选择与责任人</li>
+        <li>治理关口与复核节点</li>
+        <li>汇报节奏与风险检查</li>
+        <li>明确的下一季度决策</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">下一步</p>
+      <h2>如果你需要把前90天的管理结构搭好</h2>
+      <p>AILD 可以帮助管理团队把试点活动升级为有责任、有顺序、有复盘的正式推进路径。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/advisory/">讨论咨询支持</a>
+      </div>
+    </div>
+  </section>
+</Layout>

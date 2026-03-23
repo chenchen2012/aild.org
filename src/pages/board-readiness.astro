@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const starterAssets = [
+  { title: 'Board AI Governance Briefing', href: '/learn/board-ai-governance-briefing/', summary: 'Prepare board-level discussion, oversight framing, and accountability questions.' },
+  { title: 'AI Leadership Readiness Checklist', href: '/ai-leadership-readiness-checklist/', summary: 'Assess whether leadership systems are ready before adoption expands.' },
+  { title: 'Executive Decision Memo Template', href: '/learn/executive-decision-memo-template/', summary: 'Use a structured memo format for executive review and follow-through.' },
+];
+---
+
+<Layout
+  title="Board Readiness | AILD"
+  description="Use AILD to prepare board oversight, leadership accountability, and board-ready reporting before AI adoption scales."
+  canonical="https://aild.org/board-readiness/"
+  active="board-readiness"
+>
+  <section class="hero">
+    <p class="eyebrow">Board Readiness</p>
+    <h1>Prepare leadership and board oversight before AI adoption scales</h1>
+    <p class="lead">Use this path when the board needs clearer visibility, leadership needs sharper accountability, and AI activity is moving faster than governance discipline.</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#starter-assets">Review the Board Readiness Assets</a>
+      <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What this solves</p>
+      <ul class="mini-list">
+        <li>Clarifies what the board should review</li>
+        <li>Improves leadership accountability</li>
+        <li>Turns AI activity into board-ready discussion</li>
+        <li>Creates cleaner reporting and escalation</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who this is for</p>
+      <ul class="mini-list">
+        <li>CEOs</li>
+        <li>COOs</li>
+        <li>Governance owners</li>
+        <li>Board-facing operators</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="starter-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Start here</p>
+        <h2>The key assets for board readiness</h2>
+      </div>
+      <p class="lead">Use these pages to structure board oversight, executive review, and leadership accountability.</p>
+    </div>
+    <div class="article-list">
+      {starterAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">What strong board readiness looks like</p>
+      <ul class="mini-list">
+        <li>Board materials focus on oversight, risk, accountability, and decision points</li>
+        <li>Leadership review cadence is clear before adoption accelerates</li>
+        <li>Reporting highlights actions, escalations, and next decisions</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Need this in a live board or leadership context?</h2>
+      <p>Use AILD to sharpen the board narrative, review structure, and executive decision flow before AI adoption scales further.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
+      </div>
+    </div>
+  </section>
+</Layout>

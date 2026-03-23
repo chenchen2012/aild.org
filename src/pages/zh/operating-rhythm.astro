@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const rhythmAssets = [
+  { title: 'AI信号到决策运营节奏', href: '/zh/learn/ai-signal-to-decision-operating-rhythm/', summary: '把 AI 信号转成固定的管理层决策与后续跟进。' },
+  { title: '面向高管的AI决策智能栈', href: '/zh/learn/ai-decision-intelligence-stack-executives/', summary: '明确支持 AI 决策的管理运营模型。' },
+  { title: '高管AI会议协议', href: '/zh/learn/executive-ai-meeting-protocol/', summary: '建立复盘、升级和管理纪律所需的会议结构。' },
+];
+---
+
+<Layout
+  title="运营节奏 | AILD"
+  description="用 AILD 建立可重复的 AI 管理层节奏，把信号、决策与跟进纳入固定运营机制。"
+  canonical="https://aild.org/zh/operating-rhythm/"
+  active="operating-rhythm"
+  lang="zh-CN"
+>
+  <section class="hero">
+    <p class="eyebrow">运营节奏</p>
+    <h1>建立一个可重复的AI管理层节奏，用于决策和后续跟进</h1>
+    <p class="lead">当 AI 管理需要变成固定运营实践，而不是一次性项目时，就应该从这里开始。</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#rhythm-assets">查看运营节奏模型</a>
+      <a class="btn btn-secondary" href="/zh/advisory/">申请高管简报</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">解决什么问题</p>
+      <ul class="mini-list">
+        <li>建立固定复盘节奏</li>
+        <li>提升决策后的执行跟进</li>
+        <li>把信号转成管理层动作</li>
+        <li>形成运营纪律</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">适合谁</p>
+      <ul class="mini-list">
+        <li>高管团队</li>
+        <li>COO</li>
+        <li>战略负责人</li>
+        <li>转型负责人</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="rhythm-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">核心资产</p>
+        <h2>把AI活动转成运营纪律的关键模型</h2>
+      </div>
+      <p class="lead">这些页面帮助你建立固定复盘时点、决策责任和后续执行节奏。</p>
+    </div>
+    <div class="article-list">
+      {rhythmAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">一个强运营节奏包含什么</p>
+      <ul class="mini-list">
+        <li>固定复盘时点</li>
+        <li>信号跟踪与升级规则</li>
+        <li>决策责任人与执行跟进</li>
+        <li>管理层真正会用的运营检查点</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">下一步</p>
+      <h2>如果你需要一个领导层真正会用的运营节奏</h2>
+      <p>AILD 可以帮助你把信号、复盘、决策和责任串成一个可运行的管理机制。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/advisory/">讨论咨询支持</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const reportingAssets = [
+  { title: 'Executive Decision Memo Template', href: '/learn/executive-decision-memo-template/', summary: 'Use a memo structure built for decision review, action, and follow-through.' },
+  { title: 'AI ROI Dashboard and Metrics', href: '/learn/ai-roi-dashboard-and-metrics/', summary: 'Track AI progress with reporting that connects activity to outcomes and accountability.' },
+  { title: 'Decision Quality Scorecard for AI Teams', href: '/learn/decision-quality-scorecard-for-ai-teams/', summary: 'Assess decision quality, not just output volume or activity count.' },
+];
+---
+
+<Layout
+  title="Executive Reporting | AILD"
+  description="Use AILD to create executive reporting, board-ready updates, and decision support structures leaders can actually use."
+  canonical="https://aild.org/executive-reporting/"
+  active="executive-reporting"
+>
+  <section class="hero">
+    <p class="eyebrow">Executive Reporting</p>
+    <h1>Create reporting leaders and boards can actually use</h1>
+    <p class="lead">Use this path when AI activity needs to be translated into clearer executive updates, decision support, and oversight materials.</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#reporting-assets">Use the Executive Reporting Tools</a>
+      <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What this solves</p>
+      <ul class="mini-list">
+        <li>Improves executive visibility</li>
+        <li>Creates board-ready reporting</li>
+        <li>Supports decision review</li>
+        <li>Connects activity to accountability</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who this is for</p>
+      <ul class="mini-list">
+        <li>Board-facing operators</li>
+        <li>CEOs</li>
+        <li>COOs</li>
+        <li>Transformation leaders</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="reporting-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Core assets</p>
+        <h2>The reporting tools built for executive review</h2>
+      </div>
+      <p class="lead">Use these pages to turn AI activity into usable reporting, decision support, and board-ready materials.</p>
+    </div>
+    <div class="article-list">
+      {reportingAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">What executive reporting should show</p>
+      <ul class="mini-list">
+        <li>Decisions made and owners accountable</li>
+        <li>Risks, escalations, and unresolved questions</li>
+        <li>Adoption, performance, and operating signals</li>
+        <li>Next actions and review dates</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Need sharper reporting for leadership or board review?</h2>
+      <p>AILD can help tighten reporting structure so executive updates support better decisions rather than just summarizing activity.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
+      </div>
+    </div>
+  </section>
+</Layout>

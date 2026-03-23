@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const rolloutAssets = [
+  { title: '90-Day AI Adoption Roadmap', href: '/learn/90-day-ai-adoption-roadmap/', summary: 'Use a structured 90-day path to move beyond fragmented pilots.' },
+  { title: 'AI-Augmented Executive Workflow', href: '/learn/ai-augmented-executive-workflow/', summary: 'See how executive work changes when AI is built into operating flow.' },
+  { title: 'AI-Assisted Strategic Review Playbook', href: '/learn/ai-assisted-strategic-review-playbook/', summary: 'Build a review sequence leadership teams can use during the rollout window.' },
+];
+---
+
+<Layout
+  title="90-Day Rollout | AILD"
+  description="Use AILD to move from AI pilots to a managed 90-day rollout with leadership ownership, governance checkpoints, and review cadence."
+  canonical="https://aild.org/90-day-rollout/"
+  active="90-day-rollout"
+>
+  <section class="hero">
+    <p class="eyebrow">90-Day Rollout</p>
+    <h1>Move from AI pilots to a managed 90-day rollout</h1>
+    <p class="lead">Use this path when leadership wants a practical rollout plan with clear priorities, sequencing, and operating ownership.</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#rollout-assets">Open the 90-Day Rollout Plan</a>
+      <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What this solves</p>
+      <ul class="mini-list">
+        <li>Replaces scattered pilots with a structured rollout</li>
+        <li>Clarifies leadership ownership</li>
+        <li>Sets rollout sequence and review points</li>
+        <li>Connects execution to governance</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who this is for</p>
+      <ul class="mini-list">
+        <li>COOs</li>
+        <li>Transformation leaders</li>
+        <li>Heads of strategy</li>
+        <li>Cross-functional rollout owners</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="rollout-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Start with these assets</p>
+        <h2>The rollout path leadership can actually manage</h2>
+      </div>
+      <p class="lead">Use these pages to sequence rollout decisions, review checkpoints, and operating responsibilities.</p>
+    </div>
+    <div class="article-list">
+      {rolloutAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">What a managed 90-day rollout includes</p>
+      <ul class="mini-list">
+        <li>Use-case selection and ownership</li>
+        <li>Governance gates and review points</li>
+        <li>Reporting cadence and risk checks</li>
+        <li>Clear next-quarter decisions</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Need help structuring the first 90 days?</h2>
+      <p>AILD can help leadership teams turn pilot activity into a controlled rollout sequence with clearer responsibility and decision flow.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const reportingAssets = [
+  { title: '高管决策备忘录模板', href: '/zh/learn/executive-decision-memo-template/', summary: '用备忘录结构支持决策复核、行动安排和后续跟进。' },
+  { title: 'AI ROI 仪表盘与指标', href: '/zh/learn/ai-roi-dashboard-and-metrics/', summary: '把 AI 活动与结果、责任和运营信号连接起来。' },
+  { title: 'AI团队决策质量评分卡', href: '/zh/learn/decision-quality-scorecard-for-ai-teams/', summary: '评估的不只是产出数量，而是决策质量。' },
+];
+---
+
+<Layout
+  title="高管汇报 | AILD"
+  description="用 AILD 建立高管与董事会真正能用的 AI 汇报结构、决策支持材料与复盘格式。"
+  canonical="https://aild.org/zh/executive-reporting/"
+  active="executive-reporting"
+  lang="zh-CN"
+>
+  <section class="hero">
+    <p class="eyebrow">高管汇报</p>
+    <h1>建立高管和董事会真正能用的汇报结构</h1>
+    <p class="lead">当 AI 活动需要被翻译成更清晰的高管更新、决策支持和监督材料时，就应该从这里开始。</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#reporting-assets">使用高管汇报工具</a>
+      <a class="btn btn-secondary" href="/zh/advisory/">申请高管简报</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">解决什么问题</p>
+      <ul class="mini-list">
+        <li>提升高管可见性</li>
+        <li>建立董事会可用的汇报</li>
+        <li>支持管理层复核与决策</li>
+        <li>让活动和责任真正对应起来</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">适合谁</p>
+      <ul class="mini-list">
+        <li>面向董事会汇报的运营负责人</li>
+        <li>CEO</li>
+        <li>COO</li>
+        <li>转型负责人</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="reporting-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">核心资产</p>
+        <h2>真正面向高管复核的汇报工具</h2>
+      </div>
+      <p class="lead">这些页面帮助你把 AI 活动转成可用的汇报、决策支持和董事会材料。</p>
+    </div>
+    <div class="article-list">
+      {reportingAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">高管汇报应该呈现什么</p>
+      <ul class="mini-list">
+        <li>已经做出的决策和责任人</li>
+        <li>风险、升级事项与未决问题</li>
+        <li>采用、绩效与运营信号</li>
+        <li>下一步动作和复盘时间</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">下一步</p>
+      <h2>如果你需要更适合高管或董事会复核的汇报结构</h2>
+      <p>AILD 可以帮助你把更新材料从“活动总结”升级成“支持决策的汇报结构”。</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/zh/advisory/">讨论咨询支持</a>
+      </div>
+    </div>
+  </section>
+</Layout>

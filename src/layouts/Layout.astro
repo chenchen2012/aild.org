@@ -49,6 +49,7 @@ const brandLineTwo = 'Decisionmakers';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
 const weeklyBriefLabel = isZh ? '每周简报' : 'Weekly Brief';
+const priorityPathLabel = isZh ? '从你的优先路径开始' : 'Start with Your Priority Path';
 const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
 const lastmodMap = pageLastmod as Record<string, string>;
 const visibleLastmod = lastmodMap[normalizedPath];
@@ -61,12 +62,14 @@ const formattedLastmod = visibleLastmod
     })
   : '';
 const footerLinks = [
-  { href: '/weekly-brief/', en: 'Weekly Brief', zh: '每周简报' },
-  { href: '/ai-leadership-readiness-checklist/', en: 'Checklist', zh: '准备度清单' },
+  { href: '/board-readiness/', en: 'Board Readiness', zh: '董事会准备' },
+  { href: '/ai-governance/', en: 'AI Governance', zh: 'AI治理' },
+  { href: '/executive-reporting/', en: 'Executive Reporting', zh: '高管汇报' },
+  { href: '/operating-rhythm/', en: 'Operating Rhythm', zh: '运营节奏' },
   { href: '/advisory/', en: 'Advisory', zh: '咨询服务' },
   { href: '/author/', en: 'Author', zh: '作者说明' },
   { href: '/editorial-standards/', en: 'Editorial Standards', zh: '编辑标准' },
-  { href: '/contact/', en: 'Contact', zh: '联系' },
+  { href: '/weekly-brief/', en: 'Weekly Brief', zh: '每周简报' },
 ];
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || 'G-WKLPXSSB6Z';
 const autoAlternates =
@@ -111,14 +114,13 @@ const pageJsonLd = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 const allJsonLd = [...baseJsonLd, ...pageJsonLd];
 
 const nav = [
-  { href: '/', en: 'Home', zh: '首页', key: 'home' },
-  { href: '/learn/', en: 'Learn', zh: '知识库', key: 'learn' },
-  { href: '/playbooks/', en: 'Playbooks', zh: '手册', key: 'playbooks' },
-  { href: '/templates/', en: 'Templates', zh: '模板', key: 'templates' },
-  { href: '/cases/', en: 'Cases', zh: '案例', key: 'cases' },
-  { href: '/research/', en: 'Research', zh: '研究', key: 'research' },
+  { href: '/board-readiness/', en: 'Board Readiness', zh: '董事会准备', key: 'board-readiness' },
+  { href: '/ai-governance/', en: 'AI Governance', zh: 'AI治理', key: 'ai-governance' },
+  { href: '/90-day-rollout/', en: '90-Day Rollout', zh: '90天落地', key: '90-day-rollout' },
+  { href: '/executive-reporting/', en: 'Executive Reporting', zh: '高管汇报', key: 'executive-reporting' },
+  { href: '/operating-rhythm/', en: 'Operating Rhythm', zh: '运营节奏', key: 'operating-rhythm' },
+  { href: '/advisory/', en: 'Executive Advisory', zh: '高管咨询', key: 'advisory' },
   { href: '/about/', en: 'About', zh: '关于', key: 'about' },
-  { href: '/contact/', en: 'Contact', zh: '联系', key: 'contact' },
 ];
 ---
 
@@ -168,6 +170,7 @@ const nav = [
           }
         </nav>
         <div class="header-actions">
+          <a class="header-cta" href={makeLocalizedPath('/#priority-paths')}>{priorityPathLabel}</a>
           <a class="header-cta" href={makeLocalizedPath('/weekly-brief/')}>{weeklyBriefLabel}</a>
           <div class="lang-switch" aria-label="Language switcher">
             <a class={!isZh ? 'active' : ''} href={enPath}>EN</a>

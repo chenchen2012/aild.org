@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const governanceAssets = [
+  { title: 'Trust vs Override Framework', href: '/learn/trust-vs-override-framework/', summary: 'Define where AI can be trusted and where human override must remain explicit.' },
+  { title: 'Governance Lite Implementation', href: '/learn/governance-lite-implementation/', summary: 'Translate governance intent into lightweight operating controls leadership can run.' },
+  { title: 'AI Leadership Maturity Model', href: '/learn/ai-leadership-maturity-model/', summary: 'Use governance maturity to assess readiness, accountability, and control posture.' },
+  { title: 'AI Data Privacy Checklist', href: '/learn/ai-data-privacy-checklist/', summary: 'Use a practical checklist to tighten governance around data exposure and review.' },
+];
+---
+
+<Layout
+  title="AI Governance | AILD"
+  description="Use AILD to define AI governance structure, control points, decision rights, and review rules before adoption scales."
+  canonical="https://aild.org/ai-governance/"
+  active="ai-governance"
+>
+  <section class="hero">
+    <p class="eyebrow">AI Governance</p>
+    <h1>Set governance before AI use spreads across the organization</h1>
+    <p class="lead">Use this path when leadership needs clear control points, ownership, and decision rules for AI adoption.</p>
+    <div class="stack">
+      <a class="btn btn-primary" href="#governance-assets">See the Governance Framework</a>
+      <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What this solves</p>
+      <ul class="mini-list">
+        <li>Defines decision rights</li>
+        <li>Sets governance boundaries</li>
+        <li>Creates review and escalation structure</li>
+        <li>Reduces unmanaged AI use</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who this is for</p>
+      <ul class="mini-list">
+        <li>Governance owners</li>
+        <li>Transformation leaders</li>
+        <li>COOs</li>
+        <li>Strategy leaders</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" id="governance-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Core frameworks</p>
+        <h2>The assets that define governance structure and control posture</h2>
+      </div>
+      <p class="lead">Use these pages to define ownership, risk posture, review logic, and policy boundaries.</p>
+    </div>
+    <div class="article-list">
+      {governanceAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">What leaders need answered</p>
+      <ul class="mini-list">
+        <li>Who approves new AI uses</li>
+        <li>What requires human override</li>
+        <li>What must be logged and escalated</li>
+        <li>How governance changes as adoption expands</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Need a governance structure leadership can actually run?</h2>
+      <p>AILD can help turn policy intent into a usable governance model with practical checkpoints, ownership, and review discipline.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
+      </div>
+    </div>
+  </section>
+</Layout>
