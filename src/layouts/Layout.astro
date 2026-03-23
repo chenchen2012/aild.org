@@ -9,6 +9,7 @@ interface Props {
   active?: string;
   lang?: string;
   robots?: string;
+  showUpdatedStamp?: boolean;
   alternates?: { hreflang: string; href: string }[];
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
   ogType?: string;
@@ -22,6 +23,7 @@ const {
   active = '',
   lang = 'en',
   robots = 'index,follow',
+  showUpdatedStamp = true,
   alternates = [],
   jsonLd,
   ogType = 'website',
@@ -174,7 +176,7 @@ const nav = [
     </header>
     <main class="page wrapper">
       {
-        formattedLastmod && (
+        showUpdatedStamp && formattedLastmod && (
           <p class="page-updated-stamp">
             <span>{updatedLabel}</span>
             <time datetime={visibleLastmod}>{formattedLastmod}</time>
