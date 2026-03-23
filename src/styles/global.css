@@ -80,7 +80,7 @@ a {
   grid-area: brand;
   display: inline-flex;
   align-items: center;
-  gap: 0;
+  gap: 0.55rem;
   text-decoration: none;
   color: var(--ink);
   font-family:
@@ -101,15 +101,21 @@ a {
 }
 
 .brand-divider {
-  display: none;
+  display: inline-block;
+  color: #9bb3aa;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .brand-full {
-  display: none;
-}
-
-.brand-full-break {
-  display: none;
+  display: inline-block;
+  color: #476359;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 
@@ -1792,6 +1798,11 @@ li {
 
   .brand-mark {
     font-size: 1.28rem;
+  }
+
+  .brand-divider,
+  .brand-full {
+    display: none;
   }
 
   .home-hero h1 {

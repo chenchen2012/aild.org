@@ -46,8 +46,6 @@ const chineseDefaultPath =
 const enPath = englishDefaultPath;
 const zhPath = chineseDefaultPath;
 const brandFullName = 'AI Leadership for Decisionmakers';
-const brandLineOne = 'AI Leadership for';
-const brandLineTwo = 'Decisionmakers';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
 const priorityPathLabel = isZh ? '从你的优先路径开始' : 'Start with Your Priority Path';
@@ -155,6 +153,8 @@ const nav = [
       <div class="wrapper header-row">
         <a class="brand" href={brandHref} aria-label={`AILD | ${brandFullName}`}>
           <span class="brand-mark">AILD</span>
+          <span class="brand-divider" aria-hidden="true">|</span>
+          <span class="brand-full">{brandFullName}</span>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
           {
