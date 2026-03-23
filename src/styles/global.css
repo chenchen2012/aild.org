@@ -69,14 +69,14 @@ a {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 1rem;
-  min-height: 76px;
+  gap: 1.15rem;
+  min-height: 84px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.72rem;
   text-decoration: none;
   color: var(--ink);
   font-family:
@@ -91,13 +91,13 @@ a {
 
 .brand-mark {
   color: var(--ink);
-  font-size: 1.36rem;
+  font-size: 1.54rem;
   font-weight: 800;
 }
 
 .brand-divider {
   width: 1px;
-  height: 1.15rem;
+  height: 1.4rem;
   background: #b8ccc5;
 }
 
@@ -105,11 +105,11 @@ a {
   display: inline-flex;
   flex-direction: column;
   color: #2a4b40;
-  font-size: 0.69rem;
+  font-size: 0.76rem;
   text-transform: none;
-  letter-spacing: 0.03em;
-  line-height: 1.1;
-  max-width: 156px;
+  letter-spacing: 0.025em;
+  line-height: 1.06;
+  max-width: 184px;
 }
 
 .brand-full-break {
@@ -121,23 +121,19 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.18rem;
+  gap: 0.12rem;
   flex-wrap: nowrap;
   min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.nav-links::-webkit-scrollbar {
-  display: none;
+  overflow: visible;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #16332b;
-  font-weight: 650;
-  font-size: 0.9rem;
-  padding: 0.42rem 0.58rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: -0.01em;
+  padding: 0.4rem 0.46rem;
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -160,7 +156,7 @@ a {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.42rem;
   flex-shrink: 0;
 }
 
@@ -170,10 +166,11 @@ a {
   background: linear-gradient(180deg, #f7fcfa, #eef6f2);
   border: 1px solid #bfd4ca;
   border-radius: 999px;
-  padding: 0.44rem 0.78rem;
+  padding: 0.46rem 0.76rem;
   font-weight: 800;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
 }
 
 .lang-switch a {
@@ -277,14 +274,68 @@ a {
 }
 
 .home-hero {
-  padding: 2rem;
+  padding: 2.35rem;
 }
 
 .home-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1.14fr) minmax(300px, 0.86fr);
+  gap: 1.4rem;
   align-items: start;
+}
+
+.home-hero h1 {
+  max-width: 11.5ch;
+  margin: 0.45rem 0 0;
+  font-size: clamp(2.6rem, 5vw, 4.1rem);
+  line-height: 1.03;
+  letter-spacing: -0.05em;
+}
+
+.home-hero .lead {
+  max-width: 42rem;
+  margin-top: 1.15rem;
+  font-size: 1.14rem;
+  line-height: 1.72;
+  color: #4b685f;
+}
+
+.home-hero .stack {
+  margin-top: 1.15rem;
+}
+
+.home-hero-aside {
+  position: relative;
+  border: 1px solid #cbded6;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 249, 0.95)),
+    radial-gradient(circle at top right, rgba(13, 110, 80, 0.08), transparent 38%);
+  border-radius: 22px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 16px 40px rgba(9, 38, 30, 0.08);
+}
+
+.home-hero-aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.home-hero-aside .mini-list {
+  margin-top: 0.45rem;
+}
+
+.home-hero-aside .mini-list li {
+  margin: 0.48rem 0;
+  color: #49665d;
+}
+
+.home-brief-panel {
+  border-color: #c6dbd2;
+  background: linear-gradient(180deg, #fdfefd, #f6faf8);
 }
 
 .signal-panel {
@@ -478,6 +529,40 @@ a {
   font-family: Sora, sans-serif;
   font-weight: 700;
   font-size: 0.74rem;
+}
+
+@media (max-width: 1220px) {
+  .header-row {
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "brand actions"
+      "nav nav";
+    align-items: center;
+    gap: 0.7rem 1rem;
+    padding: 0.82rem 0;
+  }
+
+  .brand {
+    grid-area: brand;
+  }
+
+  .nav-links {
+    grid-area: nav;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding-bottom: 0.08rem;
+  }
+
+  .header-actions {
+    grid-area: actions;
+    justify-content: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 0.84rem;
+    padding: 0.42rem 0.58rem;
+  }
 }
 
 /* Chinese typography system: optimized for readability and visual quality */
@@ -1592,6 +1677,10 @@ li {
     align-items: start;
     gap: 0.75rem;
     padding: 0.75rem 0;
+    grid-template-areas:
+      "brand"
+      "actions"
+      "nav";
   }
 
   .hero,
@@ -1611,11 +1700,18 @@ li {
     width: 100%;
     justify-content: flex-start;
     gap: 0.22rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .header-actions {
     width: 100%;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .nav-links a {
@@ -1643,6 +1739,15 @@ li {
     font-size: 0.67rem;
     max-width: 170px;
     letter-spacing: 0.02em;
+  }
+
+  .home-hero h1 {
+    max-width: none;
+    font-size: clamp(2.1rem, 9vw, 3.15rem);
+  }
+
+  .home-hero .lead {
+    font-size: 1.02rem;
   }
 
   html[lang^="zh"] .hero h1 {
