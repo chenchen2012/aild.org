@@ -18,7 +18,7 @@ interface Props {
 
 const {
   title,
-  description = 'AILD (AI Leadership for Decisionmakers) helps leaders build AI decision capability, governance systems, and measurable execution outcomes.',
+  description = 'AILD (AI Lab for Decisionmakers) helps leaders build AI decision capability, governance systems, and measurable execution outcomes.',
   canonical,
   active = '',
   lang = 'en',
@@ -45,7 +45,7 @@ const chineseDefaultPath =
   isLanguageLanding ? '/zh/' : isZh ? pathname : pathname === '/' ? '/zh/' : `/zh${pathname}`;
 const enPath = englishDefaultPath;
 const zhPath = chineseDefaultPath;
-const brandFullName = 'AI Leadership for Decisionmakers';
+const brandFullName = 'AI Lab for Decisionmakers';
 const brandHref = isZh ? '/zh/' : '/';
 const siteUrl = 'https://aild.org';
 const priorityPathLabel = isZh ? '从你的优先路径开始' : 'Start with Your Priority Path';
@@ -87,7 +87,7 @@ const baseJsonLd: Array<Record<string, unknown>> = [
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'AI Leadership for Decisionmakers',
+    name: 'AI Lab for Decisionmakers',
     alternateName: 'AILD',
     url: siteUrl,
     logo: `${siteUrl}/favicon.svg`,
@@ -95,7 +95,7 @@ const baseJsonLd: Array<Record<string, unknown>> = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'AI Leadership for Decisionmakers',
+    name: 'AI Lab for Decisionmakers',
     url: siteUrl,
     inLanguage: ['en', 'zh-CN'],
   },
@@ -188,7 +188,7 @@ const nav = [
     <footer class="footer">
       <div class="wrapper footer-inner">
         <div class="footer-brand">
-          <span>© {new Date().getFullYear()} AILD.org | AI Leadership for Decisionmakers</span>
+          <span>© {new Date().getFullYear()} AILD.org | AI Lab for Decisionmakers</span>
           <span>{isZh ? '面向管理层的AI领导力、治理与执行平台' : 'Executive AI leadership, governance, and operating model platform'}</span>
         </div>
         <div class="footer-links">
