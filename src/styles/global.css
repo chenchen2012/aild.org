@@ -320,8 +320,8 @@ a {
 
 .home-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
-  gap: 1.25rem;
+  grid-template-columns: minmax(0, 1.48fr) minmax(280px, 0.52fr);
+  gap: 1rem;
   align-items: start;
 }
 
@@ -330,13 +330,12 @@ a {
 }
 
 .home-hero h1 {
-  max-width: 15ch;
+  max-width: none;
   margin: 0.38rem 0 0;
-  font-size: clamp(1.62rem, 2.15vw, 2.24rem);
+  font-size: clamp(1.48rem, 1.92vw, 2rem);
   line-height: 1.08;
   letter-spacing: -0.05em;
-  white-space: normal;
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .home-hero .lead {
@@ -389,6 +388,8 @@ a {
 
   .home-hero h1 {
     max-width: 16ch;
+    white-space: normal;
+    text-wrap: balance;
   }
 }
 
