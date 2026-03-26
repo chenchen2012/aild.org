@@ -320,8 +320,8 @@ a {
 
 .home-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
-  gap: 1.1rem;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+  gap: 1.25rem;
   align-items: start;
 }
 
@@ -330,12 +330,13 @@ a {
 }
 
 .home-hero h1 {
-  max-width: none;
+  max-width: 15ch;
   margin: 0.38rem 0 0;
   font-size: clamp(1.62rem, 2.15vw, 2.24rem);
-  line-height: 1.06;
+  line-height: 1.08;
   letter-spacing: -0.05em;
-  white-space: nowrap;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 .home-hero .lead {
@@ -372,11 +373,22 @@ a {
   padding: 1rem 1.05rem;
   box-shadow: 0 10px 24px rgba(9, 38, 30, 0.06);
   max-width: 100%;
+  width: 100%;
   justify-self: stretch;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.28rem;
   align-items: start;
+}
+
+@media (max-width: 1180px) {
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero h1 {
+    max-width: 16ch;
+  }
 }
 
 .home-hero-aside::before {
