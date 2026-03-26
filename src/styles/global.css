@@ -340,11 +340,12 @@ a {
 }
 
 .home-hero .lead {
-  max-width: 56rem;
+  max-width: 32rem;
   margin-top: 0.78rem;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.02rem;
+  line-height: 1.45;
   color: #4b685f;
+  text-wrap: balance;
 }
 
 .home-hero-proofline {
