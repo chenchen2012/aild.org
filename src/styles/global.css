@@ -1748,6 +1748,10 @@ li {
 }
 
 @media (max-width: 760px) {
+  .wrapper {
+    padding: 0 1.05rem;
+  }
+
   .cases-grid,
   .case-kpi-row,
   .case-method-grid {
@@ -1794,6 +1798,14 @@ li {
 
   .page {
     padding-top: 1.35rem;
+  }
+
+  .section {
+    margin-top: 1.4rem;
+  }
+
+  .panel {
+    padding: 1.05rem;
   }
 
   .nav-links {
