@@ -1859,6 +1859,7 @@ li {
 
   .brand {
     gap: 0.38rem;
+    padding-left: 0.14rem;
   }
 
   .brand-mark {
