@@ -1748,6 +1748,11 @@ li {
 }
 
 @media (max-width: 760px) {
+  .site-header {
+    background: rgba(248, 251, 249, 0.94);
+    box-shadow: 0 10px 24px rgba(8, 34, 26, 0.05);
+  }
+
   .wrapper {
     padding: 0 1.05rem;
   }
@@ -1780,8 +1785,8 @@ li {
   .header-row {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 0.7rem 0.9rem;
-    padding: 0.7rem 0 0.82rem;
+    gap: 0.62rem 0.85rem;
+    padding: 0.68rem 0 0.76rem;
     grid-template-areas:
       "brand actions"
       "nav nav";
@@ -1813,10 +1818,15 @@ li {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-content: stretch;
-    gap: 0.35rem 0.75rem;
+    gap: 0.46rem 0.9rem;
     overflow: visible;
     flex-wrap: unset;
-    margin-top: 0.15rem;
+    margin-top: 0.18rem;
+    padding: 0.78rem 0.88rem;
+    border: 1px solid rgba(197, 214, 206, 0.95);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
   }
 
   .nav-links::-webkit-scrollbar {
@@ -1826,15 +1836,16 @@ li {
   .header-actions {
     width: auto;
     justify-content: flex-end;
-    gap: 0.45rem;
+    gap: 0.38rem;
     flex-wrap: nowrap;
   }
 
   .nav-links a {
     display: block;
-    font-size: 0.96rem;
-    padding: 0.18rem 0;
-    line-height: 1.35;
+    font-size: 0.92rem;
+    font-weight: 750;
+    padding: 0;
+    line-height: 1.28;
     border-radius: 0;
   }
 
@@ -1851,7 +1862,7 @@ li {
   }
 
   .brand-mark {
-    font-size: 1.9rem;
+    font-size: 1.62rem;
     line-height: 1;
   }
 
@@ -1861,13 +1872,13 @@ li {
   }
 
   .header-cta {
-    padding: 0.42rem 0.72rem;
-    font-size: 0.82rem;
+    padding: 0.38rem 0.68rem;
+    font-size: 0.79rem;
   }
 
   .lang-switch a {
-    padding: 0.34rem 0.48rem;
-    font-size: 0.8rem;
+    padding: 0.31rem 0.45rem;
+    font-size: 0.78rem;
   }
 
   .section-heading,
