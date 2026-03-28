@@ -603,6 +603,16 @@ a {
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.92fr);
 }
 
+.home-section:not(.panel):not(.split-callout) > .section-heading,
+.home-section:not(.panel):not(.split-callout) > .proof-grid,
+.home-section:not(.panel):not(.split-callout) > .article-list,
+.home-section:not(.panel):not(.split-callout) > .urgency-strip,
+.home-section:not(.panel):not(.split-callout) > .stack {
+  max-width: 1048px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section-heading .lead {
   margin: 0;
 }
