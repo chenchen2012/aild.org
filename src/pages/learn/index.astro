@@ -6,7 +6,16 @@ const allDocs = await getCollection('docs');
 const docs = allDocs
   .filter((doc) => !doc.data.tags.includes('weekly-brief'))
   .sort((a, b) => new Date(b.data.updatedDate ?? b.data.pubDate).getTime() - new Date(a.data.updatedDate ?? a.data.pubDate).getTime());
-const tags = Array.from(new Set(docs.flatMap((d) => d.data.tags))).sort();
+const tags = Array.from(
+  docs
+    .flatMap((doc) => doc.data.tags)
+    .reduce((map, tag) => {
+      const key = tag.toLowerCase();
+      if (!map.has(key)) map.set(key, tag);
+      return map;
+    }, new Map<string, string>())
+    .values(),
+).sort((a, b) => a.localeCompare(b));
 
 const implementationSlugs = [
   'ai-augmented-executive-workflow',
@@ -173,7 +182,7 @@ const pillarPages = [
     <div class="section-heading">
       <div>
         <p class="eyebrow">Implementation layer</p>
-        <h2>Supporting resources that feed the flagship pages</h2>
+        <h2>Supporting resources that feed the pillar pages</h2>
       </div>
       <p class="lead">Use these to move from framework understanding into operating cadence, rollout steps, and measurement.</p>
     </div>
