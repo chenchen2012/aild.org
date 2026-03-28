@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildCollectionPageSchema, buildItemListSchema } from '../lib/schema';
 
 const rolloutAssets = [
   { title: '90-Day AI Rollout Plan for Executive Teams', href: '/learn/90-day-ai-adoption-roadmap/', summary: 'Use a structured 90-day path to move beyond fragmented pilots.' },
@@ -30,6 +31,26 @@ const connectedPillars = [
   { href: '/ai-leadership-readiness-checklist/', title: 'AI Readiness Checklist for Leaders', summary: 'Use this before rollout if leadership readiness, reporting, or governance still looks uneven.' },
   { href: '/executive-reporting/', title: 'AI Executive Reporting and ROI Dashboard', summary: 'Use this when rollout now needs KPI design, board-ready updates, and scale or pause decisions.' },
 ];
+
+const rolloutCollectionSchema = buildCollectionPageSchema({
+  name: '90-Day AI Rollout Plan for Executive Teams',
+  description:
+    'Executive AI rollout hub covering phased adoption, implementation checkpoints, executive ownership, operating cadence, and rollout-supporting guides.',
+  url: '/90-day-rollout/',
+  items: rolloutAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+    description: asset.summary,
+  })),
+});
+
+const rolloutItemListSchema = buildItemListSchema({
+  name: 'AI Rollout Supporting Resources',
+  items: rolloutAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+  })),
+});
 ---
 
 <Layout
@@ -43,6 +64,7 @@ const connectedPillars = [
   ]}
   pageRoleLabel="Pillar page"
   pageRoleContext="Primary hub for rollout planning"
+  jsonLd={[rolloutCollectionSchema, rolloutItemListSchema]}
 >
   <section class="hero">
     <p class="eyebrow">90-Day Rollout</p>

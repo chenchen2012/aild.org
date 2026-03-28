@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildCollectionPageSchema, buildItemListSchema } from '../lib/schema';
 
 const reportingAssets = [
   { title: 'Executive Decision Memo Template', href: '/learn/executive-decision-memo-template/', summary: 'Use a memo structure built for decision review, action, and follow-through.' },
@@ -29,6 +30,26 @@ const connectedPillars = [
   { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when reporting now needs to support rollout sequencing and scale decisions.' },
   { href: '/ai-governance/', title: 'AI Governance Framework for Executive Teams', summary: 'Use this when reporting gaps reveal missing policy boundaries, decision rights, or trust rules.' },
 ];
+
+const reportingCollectionSchema = buildCollectionPageSchema({
+  name: 'AI Executive Reporting and ROI Dashboard',
+  description:
+    'Executive reporting hub covering AI ROI dashboards, decision memos, KPI design, board-ready updates, and meeting cadence.',
+  url: '/executive-reporting/',
+  items: reportingAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+    description: asset.summary,
+  })),
+});
+
+const reportingItemListSchema = buildItemListSchema({
+  name: 'Executive Reporting Supporting Resources',
+  items: reportingAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+  })),
+});
 ---
 
 <Layout
@@ -42,6 +63,7 @@ const connectedPillars = [
   ]}
   pageRoleLabel="Pillar page"
   pageRoleContext="Primary hub for reporting and ROI"
+  jsonLd={[reportingCollectionSchema, reportingItemListSchema]}
 >
   <section class="hero">
     <p class="eyebrow">Executive Reporting</p>

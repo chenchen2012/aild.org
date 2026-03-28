@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { absoluteUrl } from '../../lib/schema';
 
 export async function getStaticPaths() {
   const docs = await getCollection('docs');
@@ -70,6 +71,11 @@ const articleJsonLd = {
     '@type': 'Organization',
     name: 'AI Lab for Decisionmakers',
     logo: { '@type': 'ImageObject', url: 'https://aild.org/favicon.svg' },
+  },
+  isPartOf: {
+    '@type': 'CollectionPage',
+    name: isWeeklyBrief ? 'Weekly Brief' : pillarLabel ?? 'AILD Learn',
+    url: absoluteUrl(isWeeklyBrief ? '/weekly-brief/' : pillarHref ?? '/learn/'),
   },
 };
 ---

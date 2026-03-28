@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildCollectionPageSchema, buildItemListSchema } from '../lib/schema';
 
 const governanceAssets = [
   { title: 'AI Trust vs Override Framework', href: '/learn/trust-vs-override-framework/', summary: 'Define where AI can be trusted, where review is mandatory, and where leaders must override.' },
@@ -45,6 +46,26 @@ const connectedPillars = [
   { href: '/ai-leadership-readiness-checklist/', title: 'AI Readiness Checklist for Leaders', summary: 'Use this when you need to assess whether leadership systems are ready before scaling.' },
   { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when governance now needs to turn into a controlled rollout sequence.' },
 ];
+
+const governanceCollectionSchema = buildCollectionPageSchema({
+  name: 'AI Governance Framework for Executive Teams',
+  description:
+    'Executive AI governance hub covering decision rights, policy boundaries, trust and override rules, governance maturity, and implementation tools.',
+  url: '/ai-governance/',
+  items: governanceAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+    description: asset.summary,
+  })),
+});
+
+const governanceItemListSchema = buildItemListSchema({
+  name: 'AI Governance Supporting Resources',
+  items: governanceAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+  })),
+});
 ---
 
 <Layout
@@ -58,6 +79,7 @@ const connectedPillars = [
   ]}
   pageRoleLabel="Pillar page"
   pageRoleContext="Primary hub for AI governance"
+  jsonLd={[governanceCollectionSchema, governanceItemListSchema]}
 >
   <section class="hero">
     <p class="eyebrow">AI Governance</p>

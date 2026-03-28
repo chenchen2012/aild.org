@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import { buildCollectionPageSchema, buildItemListSchema } from '../lib/schema';
 
 const readinessSections = [
   {
@@ -24,6 +25,26 @@ const supportLinks = [
   { href: '/board-readiness/', title: 'Board AI Governance and Oversight', summary: 'Use this when readiness questions now need board-level framing and oversight.' },
   { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when the checklist is complete and leadership needs a controlled execution path.' },
 ];
+
+const readinessCollectionSchema = buildCollectionPageSchema({
+  name: 'AI Readiness Checklist for Leaders',
+  description:
+    'Executive AI readiness hub covering governance readiness, policy readiness, reporting readiness, board oversight readiness, and rollout preparation.',
+  url: '/ai-leadership-readiness-checklist/',
+  items: supportLinks.map((item) => ({
+    name: item.title,
+    url: item.href,
+    description: item.summary,
+  })),
+});
+
+const readinessItemListSchema = buildItemListSchema({
+  name: 'AI Readiness Supporting Resources',
+  items: supportLinks.map((item) => ({
+    name: item.title,
+    url: item.href,
+  })),
+});
 ---
 
 <Layout
@@ -37,6 +58,7 @@ const supportLinks = [
   ]}
   pageRoleLabel="Pillar page"
   pageRoleContext="Primary hub for AI readiness"
+  jsonLd={[readinessCollectionSchema, readinessItemListSchema]}
 >
   <section class="hero home-hero">
     <div class="home-hero-grid">

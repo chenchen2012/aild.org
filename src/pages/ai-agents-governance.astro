@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildCollectionPageSchema, buildItemListSchema } from '../lib/schema';
 
 const agentsAssets = [
   { title: 'AI Agents Governance Lessons from OpenClaw', href: '/learn/openclaw-ai-agents-leadership-actions/', summary: 'Use this executive analysis to frame why agent oversight matters now and how to start with bounded pilots.' },
@@ -29,6 +30,26 @@ const connectedPillars = [
   { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when agent governance now needs a phased adoption path and executive ownership model.' },
   { href: '/executive-reporting/', title: 'AI Executive Reporting and ROI Dashboard', summary: 'Use this when agents need reporting cadence, incident metrics, and board-ready oversight signals.' },
 ];
+
+const agentsCollectionSchema = buildCollectionPageSchema({
+  name: 'AI Agents Governance and Oversight',
+  description:
+    'Executive AI agents governance hub covering permission boundaries, human oversight, workflow controls, escalation, and supervision resources.',
+  url: '/ai-agents-governance/',
+  items: agentsAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+    description: asset.summary,
+  })),
+});
+
+const agentsItemListSchema = buildItemListSchema({
+  name: 'AI Agents Governance Supporting Resources',
+  items: agentsAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+  })),
+});
 ---
 
 <Layout
@@ -42,6 +63,7 @@ const connectedPillars = [
   ]}
   pageRoleLabel="Pillar page"
   pageRoleContext="Primary hub for AI agents governance"
+  jsonLd={[agentsCollectionSchema, agentsItemListSchema]}
 >
   <section class="hero">
     <p class="eyebrow">AI Agents Governance</p>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildCollectionPageSchema, buildItemListSchema } from '../lib/schema';
 
 const starterAssets = [
   { title: 'Board AI Governance Briefing Template', href: '/learn/board-ai-governance-briefing/', summary: 'Prepare board-level discussion, oversight framing, and accountability questions.' },
@@ -34,6 +35,26 @@ const connectedPillars = [
   { href: '/executive-reporting/', title: 'AI Executive Reporting and ROI Dashboard', summary: 'Use this when the board needs cleaner metrics, reporting structure, and recurring updates.' },
   { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when oversight questions are now affecting rollout sequencing and executive ownership.' },
 ];
+
+const boardCollectionSchema = buildCollectionPageSchema({
+  name: 'Board AI Governance and Oversight',
+  description:
+    'Executive board AI governance hub covering oversight scope, briefing structure, director questions, reporting expectations, and escalation cadence.',
+  url: '/board-readiness/',
+  items: starterAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+    description: asset.summary,
+  })),
+});
+
+const boardItemListSchema = buildItemListSchema({
+  name: 'Board AI Governance Supporting Resources',
+  items: starterAssets.map((asset) => ({
+    name: asset.title,
+    url: asset.href,
+  })),
+});
 ---
 
 <Layout
@@ -47,6 +68,7 @@ const connectedPillars = [
   ]}
   pageRoleLabel="Pillar page"
   pageRoleContext="Primary hub for board AI oversight"
+  jsonLd={[boardCollectionSchema, boardItemListSchema]}
 >
   <section class="hero">
     <p class="eyebrow">Board Readiness</p>

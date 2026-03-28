@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { buildCollectionPageSchema, buildItemListSchema } from '../../lib/schema';
 
 const allDocs = await getCollection('docs');
 const docs = allDocs
@@ -130,6 +131,34 @@ const pillarPages = [
     ],
   },
 ];
+
+const learnCollectionSchema = buildCollectionPageSchema({
+  name: 'Executive AI Governance Pillars and Evergreen Resources',
+  description:
+    "AILD's evergreen library for AI governance frameworks, board AI oversight, AI readiness checklists, 90-day rollout planning, executive reporting, and AI agents governance.",
+  url: '/learn/',
+  items: pillarPages.map((page) => ({
+    name: page.title,
+    url: page.href,
+    description: page.desc,
+  })),
+});
+
+const pillarItemListSchema = buildItemListSchema({
+  name: 'AILD Core Pillar Pages',
+  items: pillarPages.map((page) => ({
+    name: page.title,
+    url: page.href,
+  })),
+});
+
+const implementationItemListSchema = buildItemListSchema({
+  name: 'AILD Implementation Resources',
+  items: implementationDocs.map((doc) => ({
+    name: doc.data.title,
+    url: `/learn/${doc.slug}/`,
+  })),
+});
 ---
 
 <Layout
@@ -143,6 +172,7 @@ const pillarPages = [
   ]}
   pageRoleLabel="Evergreen hub"
   pageRoleContext="Cluster map and resource library"
+  jsonLd={[learnCollectionSchema, pillarItemListSchema, implementationItemListSchema]}
 >
   <section class="hero">
     <p class="eyebrow">Evergreen resource library</p>
