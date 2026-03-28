@@ -14,6 +14,9 @@ interface Props {
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
   ogType?: string;
   ogImage?: string;
+  breadcrumbItems?: { label: string; href?: string }[];
+  pageRoleLabel?: string;
+  pageRoleContext?: string;
 }
 
 const {
@@ -28,6 +31,9 @@ const {
   jsonLd,
   ogType = 'website',
   ogImage = 'https://aild.org/og-default.jpg',
+  breadcrumbItems = [],
+  pageRoleLabel = '',
+  pageRoleContext = '',
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -61,6 +67,7 @@ const formattedLastmod = visibleLastmod
     })
   : '';
 const footerLinks = [
+  { href: '/learn/', en: 'Learn', zh: '资源库' },
   { href: '/board-readiness/', en: 'Board Readiness', zh: '董事会准备' },
   { href: '/ai-governance/', en: 'AI Governance', zh: 'AI治理' },
   { href: '/executive-reporting/', en: 'Executive Reporting', zh: '高管汇报' },
@@ -110,7 +117,23 @@ const baseJsonLd: Array<Record<string, unknown>> = [
 ];
 
 const pageJsonLd = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
-const allJsonLd = [...baseJsonLd, ...pageJsonLd];
+const breadcrumbJsonLd =
+  breadcrumbItems.length > 1
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbItems.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: item.label,
+          item:
+            item.href
+              ? `${siteUrl}${item.href.startsWith('/') ? item.href : `/${item.href}`}`
+              : canonical ?? `${siteUrl}${pathname}`,
+        })),
+      }
+    : null;
+const allJsonLd = [...baseJsonLd, ...(breadcrumbJsonLd ? [breadcrumbJsonLd] : []), ...pageJsonLd];
 
 const nav = [
   { href: '/board-readiness/', en: 'Board Readiness', zh: '董事会准备', key: 'board-readiness' },
@@ -175,6 +198,27 @@ const nav = [
       </div>
     </header>
     <main class="page wrapper">
+      {
+        breadcrumbItems.length > 1 && (
+          <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+            <ol>
+              {breadcrumbItems.map((item, index) => (
+                <li>
+                  {item.href && index < breadcrumbItems.length - 1 ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )
+      }
+      {
+        pageRoleLabel && (
+          <p class="page-role-chip">
+            <span>{pageRoleLabel}</span>
+            {pageRoleContext && <strong>{pageRoleContext}</strong>}
+          </p>
+        )
+      }
       {
         showUpdatedStamp && formattedLastmod && (
           <p class="page-updated-stamp">

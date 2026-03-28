@@ -39,6 +39,23 @@ const siblingEntries = pillarHref
       )
       .slice(0, 4)
   : [];
+const breadcrumbItems = isWeeklyBrief
+  ? [
+      { label: 'Home', href: '/' },
+      { label: 'Weekly Brief', href: '/weekly-brief/' },
+      { label: entry.data.title },
+    ]
+  : pillarHref && pillarLabel
+    ? [
+        { label: 'Home', href: '/' },
+        { label: pillarLabel, href: pillarHref },
+        { label: entry.data.title },
+      ]
+    : [
+        { label: 'Home', href: '/' },
+        { label: 'Learn', href: '/learn/' },
+        { label: entry.data.title },
+      ];
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -55,15 +72,6 @@ const articleJsonLd = {
     logo: { '@type': 'ImageObject', url: 'https://aild.org/favicon.svg' },
   },
 };
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aild.org/' },
-    { '@type': 'ListItem', position: 2, name: 'Learn', item: 'https://aild.org/learn/' },
-    { '@type': 'ListItem', position: 3, name: entry.data.title, item: canonical },
-  ],
-};
 ---
 
 <Layout
@@ -73,7 +81,10 @@ const breadcrumbJsonLd = {
   active="learn"
   robots={isWeeklyBrief ? 'noindex,follow' : 'index,follow'}
   ogType="article"
-  jsonLd={[articleJsonLd, breadcrumbJsonLd]}
+  jsonLd={articleJsonLd}
+  breadcrumbItems={breadcrumbItems}
+  pageRoleLabel={isWeeklyBrief ? 'Editorial brief' : pillarHref ? 'Supporting page' : 'Evergreen guide'}
+  pageRoleContext={isWeeklyBrief ? 'Weekly Brief archive' : pillarLabel ?? 'AILD Learn library'}
 >
   <article class="article">
     <section class="article-hero">

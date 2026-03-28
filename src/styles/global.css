@@ -203,6 +203,65 @@ a {
   padding: 2.1rem 0 3.8rem;
 }
 
+.breadcrumb-trail {
+  margin: 0 0 0.8rem;
+}
+
+.breadcrumb-trail ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem;
+  padding: 0;
+  margin: 0;
+  color: #547065;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.breadcrumb-trail li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  color: #547065;
+}
+
+.breadcrumb-trail li:not(:last-child)::after {
+  content: "/";
+  color: #8aa398;
+}
+
+.breadcrumb-trail a {
+  color: #315247;
+  text-decoration: none;
+}
+
+.breadcrumb-trail a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.page-role-chip {
+  margin: 0 0 0.85rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid rgba(19, 56, 44, 0.14);
+  background: rgba(248, 251, 249, 0.98);
+  color: #2f4f45;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.34rem 0.74rem;
+}
+
+.page-role-chip strong {
+  color: #174739;
+  font-weight: 800;
+}
+
 .page-updated-stamp {
   margin: 0 0 1rem;
   display: inline-flex;
@@ -1896,6 +1955,11 @@ li {
 
   .page {
     padding-top: 1.35rem;
+  }
+
+  .breadcrumb-trail ol {
+    font-size: 0.84rem;
+    gap: 0.38rem;
   }
 
   .section {
