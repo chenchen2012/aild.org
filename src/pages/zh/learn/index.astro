@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { publicEntrySlug } from '../../../lib/content-slugs';
 
 const allDocs = await getCollection('zhdocs');
 const docs = allDocs
@@ -27,14 +28,14 @@ const implementationSlugs = [
 ];
 
 const flagshipDocs = flagshipSlugs
-  .map((slug) => docs.find((doc) => doc.slug === slug))
+  .map((slug) => docs.find((doc) => publicEntrySlug(doc) === slug))
   .filter(Boolean);
 
 const implementationDocs = implementationSlugs
-  .map((slug) => docs.find((doc) => doc.slug === slug))
+  .map((slug) => docs.find((doc) => publicEntrySlug(doc) === slug))
   .filter(Boolean);
 
-const featuredAnalysis = docs.find((doc) => doc.slug === 'openclaw-ai-agents-leadership-actions');
+const featuredAnalysis = docs.find((doc) => publicEntrySlug(doc) === 'openclaw-ai-agents-leadership-actions');
 
 const quickStarts = [
   {
@@ -111,7 +112,7 @@ const quickStarts = [
       </div>
       <article class="article-item">
         <p class="tag">{featuredAnalysis.data.tags.join(' | ')}</p>
-        <h2><a href={`/zh/learn/${featuredAnalysis.slug}/`}>{featuredAnalysis.data.title}</a></h2>
+        <h2><a href={`/zh/learn/${publicEntrySlug(featuredAnalysis)}/`}>{featuredAnalysis.data.title}</a></h2>
         <p>{featuredAnalysis.data.description}</p>
         <p class="kb-meta">
           {featuredAnalysis.data.readingTime ? `阅读时长：${featuredAnalysis.data.readingTime}` : ''}{featuredAnalysis.data.audience ? ` | 适用：${featuredAnalysis.data.audience}` : ''}
@@ -132,7 +133,7 @@ const quickStarts = [
       {flagshipDocs.map((doc) => (
         <article class="article-item">
           <p class="tag">{doc.data.tags.join(' | ')}</p>
-          <h2><a href={`/zh/learn/${doc.slug}/`}>{doc.data.title}</a></h2>
+          <h2><a href={`/zh/learn/${publicEntrySlug(doc)}/`}>{doc.data.title}</a></h2>
           <p>{doc.data.description}</p>
           <p class="kb-meta">
             {doc.data.readingTime ? `阅读时长：${doc.data.readingTime}` : ''}{doc.data.audience ? ` | 适用：${doc.data.audience}` : ''}
@@ -154,7 +155,7 @@ const quickStarts = [
       {implementationDocs.map((doc) => (
         <article class="article-item">
           <p class="tag">{doc.data.tags.join(' | ')}</p>
-          <h2><a href={`/zh/learn/${doc.slug}/`}>{doc.data.title}</a></h2>
+          <h2><a href={`/zh/learn/${publicEntrySlug(doc)}/`}>{doc.data.title}</a></h2>
           <p>{doc.data.description}</p>
         </article>
       ))}
@@ -182,7 +183,7 @@ const quickStarts = [
       docs.map((doc) => (
         <article class="article-item kb-item" data-tags={doc.data.tags.map((t) => t.toLowerCase()).join(',')}>
           <p class="tag">{doc.data.tags.join(' | ')}</p>
-          <h2><a href={`/zh/learn/${doc.slug}/`}>{doc.data.title}</a></h2>
+          <h2><a href={`/zh/learn/${publicEntrySlug(doc)}/`}>{doc.data.title}</a></h2>
           <p>{doc.data.description}</p>
           <p class="kb-meta">
             {doc.data.readingTime ? `阅读时长：${doc.data.readingTime}` : ''}{doc.data.audience ? ` | 适用：${doc.data.audience}` : ''}

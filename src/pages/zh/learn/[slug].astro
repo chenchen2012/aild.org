@@ -1,21 +1,22 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
+import { buildCollectionEntryId, publicEntrySlug } from '../../../lib/content-slugs';
 
 export async function getStaticPaths() {
   const docs = await getCollection('zhdocs');
-  return docs.map((doc) => ({ params: { slug: doc.slug } }));
+  return docs.map((doc) => ({ params: { slug: publicEntrySlug(doc) } }));
 }
 
 const { slug } = Astro.params;
 if (!slug) throw new Error('Missing slug');
 
-const entry = await getEntry('zhdocs', slug);
+const entry = await getEntry('zhdocs', buildCollectionEntryId('zh', slug));
 if (!entry) throw new Error(`Unknown zh doc: ${slug}`);
 const isWeeklyBrief = entry.data.tags.includes('weekly-brief');
 
 const { Content } = await render(entry);
-const canonical = `https://aild.org/zh/learn/${entry.slug}/`;
+const canonical = `https://aild.org/zh/learn/${publicEntrySlug(entry)}/`;
 const datePublished = new Date(entry.data.pubDate).toISOString();
 const dateModified = new Date(entry.data.updatedDate ?? entry.data.pubDate).toISOString();
 const articleJsonLd = {
