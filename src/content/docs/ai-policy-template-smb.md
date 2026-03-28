@@ -1,6 +1,9 @@
 ---
 title: AI Policy Template for SMB Teams
 description: A lightweight but practical policy baseline for data handling, approved tooling, human review, and incident response.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this policy template within AILD's main AI governance framework pillar.
 pubDate: '2026-02-24'
 updatedDate: '2026-03-22'
 tags: ['Governance', 'Cornerstone']

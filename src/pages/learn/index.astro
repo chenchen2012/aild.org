@@ -8,15 +8,6 @@ const docs = allDocs
   .sort((a, b) => new Date(b.data.updatedDate ?? b.data.pubDate).getTime() - new Date(a.data.updatedDate ?? a.data.pubDate).getTime());
 const tags = Array.from(new Set(docs.flatMap((d) => d.data.tags))).sort();
 
-const flagshipSlugs = [
-  'ai-leadership-maturity-model',
-  'ai-decision-intelligence-stack-executives',
-  'trust-vs-override-framework',
-  'board-ai-governance-briefing',
-  'executive-decision-memo-template',
-  'ai-signal-to-decision-operating-rhythm',
-];
-
 const implementationSlugs = [
   'ai-augmented-executive-workflow',
   'ai-assisted-strategic-review-playbook',
@@ -25,10 +16,6 @@ const implementationSlugs = [
   'ai-roi-dashboard-and-metrics',
   '90-day-ai-adoption-roadmap',
 ];
-
-const flagshipDocs = flagshipSlugs
-  .map((slug) => docs.find((doc) => doc.slug === slug))
-  .filter(Boolean);
 
 const implementationDocs = implementationSlugs
   .map((slug) => docs.find((doc) => doc.slug === slug))
@@ -39,51 +26,91 @@ const featuredAnalysis = docs.find((doc) => doc.slug === 'openclaw-ai-agents-lea
 const quickStarts = [
   {
     title: 'AI governance framework',
-    desc: 'Start here if your real question is how to govern AI use without stalling adoption.',
+    desc: 'Start here if your real question is how to govern AI use without slowing execution.',
     links: [
-      { href: '/learn/trust-vs-override-framework/', label: 'Trust vs Override Framework' },
-      { href: '/learn/board-ai-governance-briefing/', label: 'Board AI Governance Briefing' },
-      { href: '/learn/governance-lite-implementation/', label: 'Governance implementation guide' },
+      { href: '/ai-governance/', label: 'AI Governance Framework for Executive Teams' },
+      { href: '/learn/trust-vs-override-framework/', label: 'AI Trust vs Override Framework' },
+      { href: '/learn/governance-lite-implementation/', label: 'Governance-Lite implementation guide' },
     ],
   },
   {
     title: 'AI readiness checklist',
     desc: 'Use this path when you need to assess leadership readiness before a broader rollout.',
     links: [
-      { href: '/ai-leadership-readiness-checklist/', label: 'Leadership Readiness Checklist' },
-      { href: '/learn/ai-leadership-maturity-model/', label: 'Leadership maturity model' },
-      { href: '/learn/ai-literacy-baseline-assessment/', label: 'AI literacy baseline assessment' },
+      { href: '/ai-leadership-readiness-checklist/', label: 'AI Readiness Checklist for Leaders' },
+      { href: '/learn/ai-literacy-baseline-assessment/', label: 'AI readiness baseline assessment' },
+      { href: '/learn/ai-leadership-maturity-model/', label: 'AI governance maturity model' },
     ],
   },
   {
-    title: 'AI operating model for executives',
-    desc: 'Choose this path if you need a repeatable executive operating rhythm, not just one-off pilots.',
+    title: '90-day AI rollout plan',
+    desc: 'Choose this path if you need a phased adoption plan with ownership, governance checkpoints, and review cadence.',
     links: [
-      { href: '/learn/ai-decision-intelligence-stack-executives/', label: 'Decision intelligence stack' },
-      { href: '/learn/ai-signal-to-decision-operating-rhythm/', label: 'Signal-to-decision operating rhythm' },
-      { href: '/learn/executive-decision-memo-template/', label: 'Executive decision memo template' },
+      { href: '/90-day-rollout/', label: '90-Day AI Rollout Plan for Executive Teams' },
+      { href: '/learn/90-day-ai-adoption-roadmap/', label: 'Detailed 90-day rollout guide' },
+      { href: '/learn/ai-assisted-strategic-review-playbook/', label: 'AI-assisted strategic review playbook' },
     ],
+  },
+];
+
+const pillarPages = [
+  {
+    href: '/ai-governance/',
+    eyebrow: 'Pillar 1',
+    title: 'AI Governance Framework for Executive Teams',
+    desc: 'Own the AI governance framework cluster with decision rights, policy boundaries, trust and override rules, and maturity checkpoints.',
+  },
+  {
+    href: '/board-readiness/',
+    eyebrow: 'Pillar 2',
+    title: 'Board AI Governance and Oversight',
+    desc: 'Own the board AI governance cluster with briefing structure, oversight cadence, board questions, and reporting expectations.',
+  },
+  {
+    href: '/ai-leadership-readiness-checklist/',
+    eyebrow: 'Pillar 3',
+    title: 'AI Readiness Checklist for Leaders',
+    desc: 'Own the AI readiness checklist cluster with leadership assessment, rollout readiness, policy readiness, and reporting readiness.',
+  },
+  {
+    href: '/90-day-rollout/',
+    eyebrow: 'Pillar 4',
+    title: '90-Day AI Rollout Plan for Executive Teams',
+    desc: 'Own the AI rollout plan cluster with phased adoption, executive ownership, implementation checkpoints, and operating follow-through.',
+  },
+  {
+    href: '/executive-reporting/',
+    eyebrow: 'Pillar 5',
+    title: 'AI Executive Reporting and ROI Dashboard',
+    desc: 'Own the AI ROI dashboard cluster with executive reporting, decision-quality metrics, board reporting, and KPI design.',
+  },
+  {
+    href: '/ai-agents-governance/',
+    eyebrow: 'Pillar 6',
+    title: 'AI Agents Governance and Oversight',
+    desc: 'Own the AI agents governance cluster with permissions, human oversight, workflow controls, escalation, and supervision.',
   },
 ];
 ---
 
 <Layout
-  title="AI Governance Framework, AI Readiness Checklist, and AI Leadership Maturity Model | AILD"
-  description="Practical executive resources for AI governance frameworks, AI readiness checklists, AI leadership and governance maturity models, board oversight, and AI operating models."
+  title="Executive AI Governance Pillars and Evergreen Resources | AILD"
+  description="Explore AILD's evergreen pillar pages for AI governance frameworks, board AI oversight, AI readiness checklists, 90-day rollout planning, executive reporting, ROI dashboards, and AI agents governance."
   canonical="https://aild.org/learn/"
   active="learn"
 >
   <section class="hero">
     <p class="eyebrow">Evergreen resource library</p>
-    <h1>AI governance frameworks, readiness tools, and leadership models</h1>
+    <h1>Executive AI pillar pages, frameworks, and implementation guides</h1>
     <p class="lead">
-      Learn is AILD's evergreen library for executive AI search intent. Start here when you need a practical AI governance
-      framework, AI readiness checklist, AI leadership and governance maturity model, board AI oversight model, executive
-      decision template, or operating model guide.
+      Learn is AILD's evergreen library for the six executive AI topics the site is structured to own: AI governance
+      framework, board AI oversight, AI readiness checklist, 90-day AI rollout plan, AI executive reporting and ROI
+      dashboards, and AI agents governance. Start with the pillar that matches your question, then use the supporting
+      frameworks, templates, and implementation guides underneath it.
     </p>
     <div class="badge-row">
       <span class="badge">{docs.length} evergreen guides</span>
-      <span class="badge">Governance + readiness + operating model</span>
+      <span class="badge">Six ranking pillars</span>
       <span class="badge">Weekly brief archive is separated from this ranking layer</span>
     </div>
   </section>
@@ -126,20 +153,17 @@ const quickStarts = [
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Flagship pages</p>
-        <h2>Six pages that should carry the main search authority</h2>
+        <p class="eyebrow">Core pillar pages</p>
+        <h2>Six pages that carry the main executive AI search authority</h2>
       </div>
-      <p class="lead">These are the canonical assets for the core executive-intent topics AILD wants to own.</p>
+      <p class="lead">These top-level pages are the canonical destinations for AILD's highest-value evergreen search intents.</p>
     </div>
     <div class="article-list">
-      {flagshipDocs.map((doc) => (
+      {pillarPages.map((page) => (
         <article class="article-item">
-          <p class="tag">{doc.data.tags.join(' | ')}</p>
-          <h2><a href={`/learn/${doc.slug}/`}>{doc.data.title}</a></h2>
-          <p>{doc.data.description}</p>
-          <p class="kb-meta">
-            {doc.data.readingTime ? `Read time: ${doc.data.readingTime}` : ''}{doc.data.audience ? ` | Audience: ${doc.data.audience}` : ''}
-          </p>
+          <p class="tag">{page.eyebrow}</p>
+          <h2><a href={page.href}>{page.title}</a></h2>
+          <p>{page.desc}</p>
         </article>
       ))}
     </div>

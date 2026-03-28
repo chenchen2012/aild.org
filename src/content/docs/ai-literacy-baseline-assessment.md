@@ -1,6 +1,9 @@
 ---
 title: AI Readiness Baseline Assessment for Teams
 description: A practical assessment model to identify AI capability gaps before scaling leadership and execution workflows.
+pillarHref: /ai-leadership-readiness-checklist/
+pillarLabel: AI Readiness Checklist for Leaders
+pillarSummary: Use this assessment within AILD's AI readiness checklist pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Assessment', 'Leadership']
@@ -50,4 +53,3 @@ Do not scale across departments until at least three dimensions score 4+ for the
 - Treating literacy as one-off training instead of an operating capability.
 - Measuring completion rates but not decision quality improvements.
 - Leaving executives out of the learning loop while expecting cross-functional alignment.
-

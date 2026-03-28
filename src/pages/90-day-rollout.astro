@@ -6,6 +6,27 @@ const rolloutAssets = [
   { title: 'AI-Augmented Executive Workflow', href: '/learn/ai-augmented-executive-workflow/', summary: 'See how executive work changes when AI is built into operating flow.' },
   { title: 'AI-Assisted Strategic Review Playbook', href: '/learn/ai-assisted-strategic-review-playbook/', summary: 'Build a review sequence leadership teams can use during the rollout window.' },
 ];
+
+const rolloutPhases = [
+  {
+    title: 'Phase 1: choose and bound the work',
+    text: 'Pick a small number of workflows with clear owners, baseline metrics, and governance conditions before pilot activity multiplies.',
+  },
+  {
+    title: 'Phase 2: run controlled pilots',
+    text: 'Operate in short review loops with evidence logs, output checks, and named decisions on whether to continue, pause, or redesign.',
+  },
+  {
+    title: 'Phase 3: scale with operating rhythm',
+    text: 'Expand only after governance gates, executive reporting, and next-quarter ownership are working in practice.',
+  },
+];
+
+const connectedPillars = [
+  { href: '/ai-governance/', title: 'AI Governance Framework for Executive Teams', summary: 'Use this when rollout questions expose weak decision rights or policy boundaries.' },
+  { href: '/ai-leadership-readiness-checklist/', title: 'AI Readiness Checklist for Leaders', summary: 'Use this before rollout if leadership readiness, reporting, or governance still looks uneven.' },
+  { href: '/executive-reporting/', title: 'AI Executive Reporting and ROI Dashboard', summary: 'Use this when rollout now needs KPI design, board-ready updates, and scale or pause decisions.' },
+];
 ---
 
 <Layout
@@ -17,9 +38,18 @@ const rolloutAssets = [
   <section class="hero">
     <p class="eyebrow">90-Day Rollout</p>
     <h1>Build a 90-day AI rollout plan leadership can manage</h1>
-    <p class="lead">Use this path when leadership wants a practical rollout plan with clear priorities, sequencing, and operating ownership.</p>
+    <p class="lead">
+      A 90-day AI rollout plan gives executive teams a practical way to move from scattered pilots to controlled
+      adoption with clear ownership, governance checkpoints, review cadence, and next-quarter decisions. Use this page
+      when you need an AI rollout plan that reads like an operating plan, not a generic innovation roadmap.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Core topic: AI rollout plan</span>
+      <span class="badge">90-day sequencing + ownership</span>
+      <span class="badge">Governance checkpoints + review cadence</span>
+    </div>
     <div class="stack">
-      <a class="btn btn-primary" href="#rollout-assets">Open the 90-Day Rollout Plan</a>
+      <a class="btn btn-primary" href="#rollout-assets">Open the rollout tools</a>
       <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
     </div>
   </section>
@@ -27,6 +57,7 @@ const rolloutAssets = [
   <section class="section proof-grid">
     <article class="panel">
       <p class="eyebrow">What this solves</p>
+      <h2>Use this pillar when AI adoption needs sequencing instead of more pilots</h2>
       <ul class="mini-list">
         <li>Replaces scattered pilots with a structured rollout</li>
         <li>Clarifies leadership ownership</li>
@@ -36,6 +67,7 @@ const rolloutAssets = [
     </article>
     <article class="panel">
       <p class="eyebrow">Who this is for</p>
+      <h2>Built for operators accountable for the next quarter of execution</h2>
       <ul class="mini-list">
         <li>COOs</li>
         <li>Transformation leaders</li>
@@ -45,13 +77,31 @@ const rolloutAssets = [
     </article>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Rollout structure</p>
+        <h2>What a 90-day AI rollout plan should include</h2>
+      </div>
+      <p class="lead">A usable rollout plan answers what gets launched first, how it will be governed, and what leadership will review before scale.</p>
+    </div>
+    <div class="pillar-outline">
+      {rolloutPhases.map((phase) => (
+        <article class="card">
+          <h3>{phase.title}</h3>
+          <p>{phase.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section" id="rollout-assets">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Start with these assets</p>
-        <h2>The rollout path leadership can actually manage</h2>
+        <p class="eyebrow">Supporting guides</p>
+        <h2>The rollout assets leadership can actually use</h2>
       </div>
-      <p class="lead">Use these pages to sequence rollout decisions, review checkpoints, and operating responsibilities.</p>
+      <p class="lead">Use these supporting pages to sequence rollout decisions, operating responsibilities, and executive review moments.</p>
     </div>
     <div class="article-list">
       {rolloutAssets.map((asset) => (
@@ -63,20 +113,38 @@ const rolloutAssets = [
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Connected executive pathways</p>
+        <h2>Use adjacent pillars when rollout questions expand into governance, readiness, or reporting</h2>
+      </div>
+      <p class="lead">These links reduce duplication between planning pages and keep each pillar focused on one primary search intent.</p>
+    </div>
+    <div class="pillar-path-grid">
+      {connectedPillars.map((item) => (
+        <article class="pillar-link-card">
+          <strong><a href={item.href}>{item.title}</a></strong>
+          <p>{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div class="panel">
-      <p class="eyebrow">What a managed 90-day rollout includes</p>
+      <p class="eyebrow">Core keyword cluster</p>
       <ul class="mini-list">
-        <li>Use-case selection and ownership</li>
-        <li>Governance gates and review points</li>
-        <li>Reporting cadence and risk checks</li>
-        <li>Clear next-quarter decisions</li>
+        <li>AI rollout plan</li>
+        <li>90-day AI rollout plan</li>
+        <li>AI adoption roadmap</li>
+        <li>Executive AI implementation path</li>
       </ul>
     </div>
     <div>
       <p class="eyebrow">Next step</p>
-      <h2>Need help structuring the first 90 days?</h2>
-      <p>AILD can help leadership teams turn pilot activity into a controlled rollout sequence with clearer responsibility and decision flow.</p>
+      <h2>Need help structuring the first 90 days of rollout?</h2>
+      <p>AILD can help leadership teams turn pilot activity into a controlled rollout sequence with clearer responsibility, governance gates, and executive review flow.</p>
       <div class="stack">
         <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
       </div>

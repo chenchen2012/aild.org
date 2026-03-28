@@ -1,6 +1,9 @@
 ---
 title: Agent Workflows Practical Guide
 description: When to use AI agents, when not to, and how to keep agent workflows auditable and safe.
+pillarHref: /ai-agents-governance/
+pillarLabel: AI Agents Governance and Oversight
+pillarSummary: Use this guide within AILD's AI agents governance pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Agents', 'Automation']

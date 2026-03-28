@@ -2,10 +2,46 @@
 import Layout from '../layouts/Layout.astro';
 
 const governanceAssets = [
-  { title: 'AI Trust vs Override Framework', href: '/learn/trust-vs-override-framework/', summary: 'Define where AI can be trusted and where human override must remain explicit.' },
-  { title: 'Governance-Lite Implementation for AI Teams', href: '/learn/governance-lite-implementation/', summary: 'Translate governance intent into lightweight operating controls leadership can run.' },
-  { title: 'AI Leadership Maturity Model', href: '/learn/ai-leadership-maturity-model/', summary: 'Use governance maturity to assess readiness, accountability, and control posture.' },
-  { title: 'AI Data Privacy Checklist', href: '/learn/ai-data-privacy-checklist/', summary: 'Use a practical checklist to tighten governance around data exposure and review.' },
+  { title: 'AI Trust vs Override Framework', href: '/learn/trust-vs-override-framework/', summary: 'Define where AI can be trusted, where review is mandatory, and where leaders must override.' },
+  { title: 'Governance-Lite Implementation for AI Teams', href: '/learn/governance-lite-implementation/', summary: 'Translate governance intent into lightweight controls leadership can run in the next quarter.' },
+  { title: 'AI Governance Maturity Model for Leadership Teams', href: '/learn/ai-leadership-maturity-model/', summary: 'Assess how mature your governance, accountability, and control posture really are.' },
+  { title: 'AI Policy Template for SMB Teams', href: '/learn/ai-policy-template-smb/', summary: 'Use a practical policy baseline to set approved tools, review triggers, and incident rules.' },
+];
+
+const governanceModel = [
+  {
+    title: 'Decision rights',
+    text: 'Name who can approve new AI uses, who owns risk decisions, and who can pause or expand workflows.',
+  },
+  {
+    title: 'Policy boundaries',
+    text: 'Define approved tools, sensitive data rules, logging expectations, and non-negotiable review triggers.',
+  },
+  {
+    title: 'Trust and override',
+    text: 'Set explicit trust tiers so teams know when AI can assist, when approval is required, and when humans retain final control.',
+  },
+];
+
+const implementationSteps = [
+  {
+    label: 'Days 1-30',
+    text: 'Map the highest-impact workflows, classify decision risk, and publish minimum policy boundaries before usage spreads.',
+  },
+  {
+    label: 'Days 31-60',
+    text: 'Install trust and override rules, assign named owners, and review incidents or exceptions every week.',
+  },
+  {
+    label: 'Days 61-90',
+    text: 'Move governance into executive cadence with monthly reviews, maturity checks, and scale or pause decisions.',
+  },
+];
+
+const connectedPillars = [
+  { href: '/board-readiness/', title: 'Board AI Governance and Oversight', summary: 'Use this when board questions, director oversight, and board-ready reporting need to tighten.' },
+  { href: '/ai-leadership-readiness-checklist/', title: 'AI Readiness Checklist for Leaders', summary: 'Use this when you need to assess whether leadership systems are ready before scaling.' },
+  { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when governance now needs to turn into a controlled rollout sequence.' },
 ];
 ---
 
@@ -18,9 +54,19 @@ const governanceAssets = [
   <section class="hero">
     <p class="eyebrow">AI Governance</p>
     <h1>Build an AI governance framework before AI use scales</h1>
-    <p class="lead">Use this path when leadership needs clear control points, ownership, decision rights, and oversight rules for AI adoption.</p>
+    <p class="lead">
+      An AI governance framework gives executive teams a clear model for decision rights, policy boundaries, trust and
+      override rules, and review cadence before AI adoption spreads faster than leadership control. Use this page when
+      you need an executive-level answer to a practical question: how should we govern AI use without slowing execution
+      to a halt?
+    </p>
+    <div class="badge-row">
+      <span class="badge">Core topic: AI governance framework</span>
+      <span class="badge">Decision rights + policy boundaries</span>
+      <span class="badge">Trust vs override + maturity</span>
+    </div>
     <div class="stack">
-      <a class="btn btn-primary" href="#governance-assets">See the Governance Framework</a>
+      <a class="btn btn-primary" href="#governance-assets">Open the governance framework tools</a>
       <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
     </div>
   </section>
@@ -28,6 +74,7 @@ const governanceAssets = [
   <section class="section proof-grid">
     <article class="panel">
       <p class="eyebrow">What this solves</p>
+      <h2>Use this pillar when AI use is moving faster than management control</h2>
       <ul class="mini-list">
         <li>Defines decision rights</li>
         <li>Sets governance boundaries</li>
@@ -37,6 +84,7 @@ const governanceAssets = [
     </article>
     <article class="panel">
       <p class="eyebrow">Who this is for</p>
+      <h2>Built for executive teams that need a usable control model</h2>
       <ul class="mini-list">
         <li>Governance owners</li>
         <li>Transformation leaders</li>
@@ -46,13 +94,31 @@ const governanceAssets = [
     </article>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Core model</p>
+        <h2>What an executive AI governance framework should include</h2>
+      </div>
+      <p class="lead">A strong governance model is not a generic policy deck. It is a management system leaders can actually run.</p>
+    </div>
+    <div class="pillar-outline">
+      {governanceModel.map((item) => (
+        <article class="card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section" id="governance-assets">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Core frameworks</p>
-        <h2>The assets that define governance structure and control posture</h2>
+        <p class="eyebrow">Supporting tools and templates</p>
+        <h2>Use these pages to build the framework instead of describing it abstractly</h2>
       </div>
-      <p class="lead">Use these pages to define ownership, risk posture, review logic, and policy boundaries.</p>
+      <p class="lead">These supporting assets cover trust tiers, policy baselines, governance maturity, and lightweight implementation steps.</p>
     </div>
     <div class="article-list">
       {governanceAssets.map((asset) => (
@@ -64,20 +130,56 @@ const governanceAssets = [
     </div>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Implementation path</p>
+        <h2>How to put governance in place in the next 90 days</h2>
+      </div>
+      <p class="lead">The practical goal is not perfect governance. It is getting to a durable executive control system before AI use becomes unmanaged.</p>
+    </div>
+    <div class="pillar-step-list">
+      {implementationSteps.map((step) => (
+        <div class="pillar-step">
+          <strong>{step.label}</strong>
+          <p>{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Connected executive pathways</p>
+        <h2>Use adjacent pillars when governance questions expand into oversight, readiness, or rollout</h2>
+      </div>
+      <p class="lead">These pages keep the site architecture clear and reduce overlap between governance, readiness, board oversight, and execution planning.</p>
+    </div>
+    <div class="pillar-path-grid">
+      {connectedPillars.map((item) => (
+        <article class="pillar-link-card">
+          <strong><a href={item.href}>{item.title}</a></strong>
+          <p>{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div class="panel">
-      <p class="eyebrow">What leaders need answered</p>
+      <p class="eyebrow">Core keyword cluster</p>
       <ul class="mini-list">
-        <li>Who approves new AI uses</li>
-        <li>What requires human override</li>
-        <li>What must be logged and escalated</li>
-        <li>How governance changes as adoption expands</li>
+        <li>AI governance framework</li>
+        <li>AI governance model</li>
+        <li>AI governance for executive teams</li>
+        <li>Trust vs override framework</li>
       </ul>
     </div>
     <div>
       <p class="eyebrow">Next step</p>
-      <h2>Need a governance structure leadership can actually run?</h2>
-      <p>AILD can help turn policy intent into a usable governance model with practical checkpoints, ownership, and review discipline.</p>
+      <h2>Need a governance structure leadership can actually run this quarter?</h2>
+      <p>AILD can help turn policy intent into a usable governance model with practical checkpoints, board-ready escalation logic, and executive review discipline.</p>
       <div class="stack">
         <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
       </div>

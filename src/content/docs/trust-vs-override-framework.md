@@ -2,6 +2,9 @@
 title: AI Trust vs Override Framework
 seoTitle: "AI Governance Framework: Trust vs Override"
 description: Use this AI governance framework to decide when AI can be trusted, when human review is required, and when leaders should override model recommendations.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this supporting framework within AILD's main AI governance framework pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Risk', 'Decision']

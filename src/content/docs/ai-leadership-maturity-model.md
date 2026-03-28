@@ -1,6 +1,9 @@
 ---
 title: AI Governance Maturity Model for Leadership Teams
 description: A 4-stage AI governance maturity model for leadership teams assessing decision-making, governance, accountability, and execution readiness.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this maturity model within AILD's main AI governance framework pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Assessment', 'Decision']

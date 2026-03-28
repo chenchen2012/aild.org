@@ -2,6 +2,9 @@
 title: Executive Decision Memo Template for AI Initiatives
 seoTitle: Executive Decision Memo Template for AI Initiatives
 description: Use this executive decision memo template to document AI initiative decisions with clear options, evidence, risk, ownership, and follow-through.
+pillarHref: /executive-reporting/
+pillarLabel: AI Executive Reporting and ROI Dashboard
+pillarSummary: Use this memo template within AILD's executive reporting and ROI pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Template', 'Decision']

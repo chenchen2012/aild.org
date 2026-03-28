@@ -1,6 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+
+const readinessSections = [
+  {
+    title: 'Leadership readiness',
+    text: 'Check whether ownership, executive sponsorship, and governance decisions are explicit before rollout expands.',
+  },
+  {
+    title: 'Policy and control readiness',
+    text: 'Assess approved tools, data boundaries, review triggers, and escalation paths before teams normalize unsafe workarounds.',
+  },
+  {
+    title: 'Reporting and rollout readiness',
+    text: 'Confirm there is a 90-day plan, metric baseline, and board-ready reporting rhythm instead of isolated pilots.',
+  },
+];
+
+const supportLinks = [
+  { href: '/learn/ai-literacy-baseline-assessment/', title: 'AI Readiness Baseline Assessment for Teams', summary: 'Use this assessment when you need a deeper scorecard behind the checklist.' },
+  { href: '/learn/ai-leadership-maturity-model/', title: 'AI Governance Maturity Model for Leadership Teams', summary: 'See what readiness looks like across stages of governance and execution maturity.' },
+  { href: '/board-readiness/', title: 'Board AI Governance and Oversight', summary: 'Use this when readiness questions now need board-level framing and oversight.' },
+  { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when the checklist is complete and leadership needs a controlled execution path.' },
+];
 ---
 
 <Layout
@@ -15,13 +37,15 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
         <p class="eyebrow">Flagship executive tool</p>
         <h1>AI readiness checklist for leaders</h1>
         <p class="lead">
-          A practical executive tool for strategy leaders, transformation owners, and nontechnical leadership teams who
-          need to assess governance, oversight, and operating readiness before scaling AI across the organization.
+          An AI readiness checklist helps executive teams assess whether governance, board oversight, policy boundaries,
+          reporting, and rollout ownership are ready before AI adoption scales across the organization. Use this page
+          when the real question is not whether AI is interesting, but whether leadership is actually prepared to scale
+          it with control.
         </p>
         <div class="badge-row">
-          <span class="badge">Board-ready questions</span>
-          <span class="badge">Governance + decision rights</span>
-          <span class="badge">90-day action prompts</span>
+          <span class="badge">Core topic: AI readiness checklist</span>
+          <span class="badge">Governance + board oversight</span>
+          <span class="badge">90-day rollout readiness</span>
         </div>
         <div class="stack">
           <a class="btn btn-secondary" href="/downloads/ai-leadership-readiness-checklist.html" download>Preview the checklist</a>
@@ -67,6 +91,24 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
     </article>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Checklist structure</p>
+        <h2>What a practical AI readiness assessment should cover</h2>
+      </div>
+      <p class="lead">The highest-value readiness checks are concrete. They tell leadership whether the next quarter of rollout is likely to hold together operationally.</p>
+    </div>
+    <div class="pillar-outline">
+      {readinessSections.map((item) => (
+        <article class="card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div>
       <p class="eyebrow">What you download</p>
@@ -81,23 +123,41 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
       </div>
     </div>
     <div class="panel">
-      <p class="eyebrow">Included sections</p>
+      <p class="eyebrow">Core keyword cluster</p>
       <ul>
-        <li>Executive readiness scorecard</li>
-        <li>Decision-rights and governance checks</li>
-        <li>Evidence and KPI prompts</li>
-        <li>Board discussion questions</li>
-        <li>First 90 days action priorities</li>
+        <li>AI readiness checklist</li>
+        <li>AI readiness assessment</li>
+        <li>AI governance readiness</li>
+        <li>Leadership readiness for AI rollout</li>
+        <li>Reporting readiness and board oversight</li>
       </ul>
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Supporting pages</p>
+        <h2>Use these pages when you need a deeper readiness assessment or next-step plan</h2>
+      </div>
+      <p class="lead">This keeps the checklist page useful for search while giving executive teams a clear path into supporting evidence and implementation assets.</p>
+    </div>
+    <div class="pillar-path-grid">
+      {supportLinks.map((item) => (
+        <article class="pillar-link-card">
+          <strong><a href={item.href}>{item.title}</a></strong>
+          <p>{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section panel" id="checklist-form">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Request access</p>
-          <h2>Download the checklist and use it in your next leadership review</h2>
-        </div>
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Request access</p>
+        <h2>Download the checklist and use it in your next leadership or board-prep review</h2>
+      </div>
       <p class="lead">If you are evaluating AI readiness this quarter, this is the fastest AILD asset to start with.</p>
     </div>
     <LeadCaptureForm

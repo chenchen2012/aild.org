@@ -2,6 +2,9 @@
 title: "AI Agents Governance Lessons from OpenClaw"
 seoTitle: "AI Agents Governance and Oversight for Leaders"
 description: "Use this guide to assess AI agents governance, oversight boundaries, low-risk pilots, and executive controls as tools like OpenClaw move toward operational execution."
+pillarHref: /ai-agents-governance/
+pillarLabel: AI Agents Governance and Oversight
+pillarSummary: Use this analysis within AILD's AI agents governance pillar.
 pubDate: '2026-03-22'
 updatedDate: '2026-03-22'
 tags: ['leadership', 'ai-agents', 'governance']

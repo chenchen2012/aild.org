@@ -1,6 +1,9 @@
 ---
 title: Decision Quality Scorecard for AI-Enabled Teams
 description: A scorecard to evaluate whether AI-assisted decisions are actually improving leadership outcomes.
+pillarHref: /executive-reporting/
+pillarLabel: AI Executive Reporting and ROI Dashboard
+pillarSummary: Use this scorecard within AILD's executive AI reporting and ROI pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Measurement', 'Decision']

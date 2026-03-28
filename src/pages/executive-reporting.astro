@@ -6,6 +6,27 @@ const reportingAssets = [
   { title: 'AI ROI Dashboard for Executives', href: '/learn/ai-roi-dashboard-and-metrics/', summary: 'Track AI progress with reporting that connects activity to outcomes and accountability.' },
   { title: 'Decision Quality Scorecard for AI Teams', href: '/learn/decision-quality-scorecard-for-ai-teams/', summary: 'Assess decision quality, not just output volume or activity count.' },
 ];
+
+const reportingModel = [
+  {
+    title: 'Metrics that support decisions',
+    text: 'Track quality, savings, risk indicators, and unresolved management choices rather than vanity usage numbers.',
+  },
+  {
+    title: 'Reporting structure',
+    text: 'Use the same reporting spine across executive reviews: baseline, intervention, outcome, risk, and next decision.',
+  },
+  {
+    title: 'Cadence',
+    text: 'Match reporting frequency to operating reality with weekly workflow reviews, monthly executive reviews, and quarterly resets.',
+  },
+];
+
+const connectedPillars = [
+  { href: '/board-readiness/', title: 'Board AI Governance and Oversight', summary: 'Use this when executive reporting needs to become board-ready and oversight-oriented.' },
+  { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when reporting now needs to support rollout sequencing and scale decisions.' },
+  { href: '/ai-governance/', title: 'AI Governance Framework for Executive Teams', summary: 'Use this when reporting gaps reveal missing policy boundaries, decision rights, or trust rules.' },
+];
 ---
 
 <Layout
@@ -17,9 +38,19 @@ const reportingAssets = [
   <section class="hero">
     <p class="eyebrow">Executive Reporting</p>
     <h1>Build executive AI reporting leaders and boards can use</h1>
-    <p class="lead">Use this path when AI activity needs to be translated into clearer executive updates, decision support, and oversight materials.</p>
+    <p class="lead">
+      An AI ROI dashboard and executive reporting system should help leaders decide whether to scale, pause, redesign,
+      or escalate AI initiatives. Use this page when the core question is how to turn AI activity into usable executive
+      reporting, KPI design, board-ready updates, and recurring decision support instead of narrative-heavy status
+      reports.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Core topic: AI ROI dashboard</span>
+      <span class="badge">Executive AI reporting</span>
+      <span class="badge">Decision-quality metrics + board updates</span>
+    </div>
     <div class="stack">
-      <a class="btn btn-primary" href="#reporting-assets">Use the Executive Reporting Tools</a>
+      <a class="btn btn-primary" href="#reporting-assets">Open the reporting tools</a>
       <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
     </div>
   </section>
@@ -27,6 +58,7 @@ const reportingAssets = [
   <section class="section proof-grid">
     <article class="panel">
       <p class="eyebrow">What this solves</p>
+      <h2>Use this pillar when reporting needs to support action, not summary theater</h2>
       <ul class="mini-list">
         <li>Improves executive visibility</li>
         <li>Creates board-ready reporting</li>
@@ -36,6 +68,7 @@ const reportingAssets = [
     </article>
     <article class="panel">
       <p class="eyebrow">Who this is for</p>
+      <h2>Built for board-facing operators and executive teams</h2>
       <ul class="mini-list">
         <li>Board-facing operators</li>
         <li>CEOs</li>
@@ -45,13 +78,31 @@ const reportingAssets = [
     </article>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Reporting model</p>
+        <h2>What an executive AI reporting system should include</h2>
+      </div>
+      <p class="lead">Executive reporting is strongest when each metric and template helps leadership make a cleaner next decision.</p>
+    </div>
+    <div class="pillar-outline">
+      {reportingModel.map((item) => (
+        <article class="card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section" id="reporting-assets">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Core assets</p>
-        <h2>The reporting tools built for executive review</h2>
+        <p class="eyebrow">Supporting tools and templates</p>
+        <h2>The reporting assets built for executive review</h2>
       </div>
-      <p class="lead">Use these pages to turn AI activity into usable reporting, decision support, and board-ready materials.</p>
+      <p class="lead">Use these supporting pages to turn AI activity into decision support, KPI dashboards, and board-ready materials.</p>
     </div>
     <div class="article-list">
       {reportingAssets.map((asset) => (
@@ -63,20 +114,38 @@ const reportingAssets = [
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Connected executive pathways</p>
+        <h2>Use adjacent pillars when reporting questions expand into oversight, rollout, or governance</h2>
+      </div>
+      <p class="lead">These links keep reporting pages from absorbing too much rollout or board-governance intent.</p>
+    </div>
+    <div class="pillar-path-grid">
+      {connectedPillars.map((item) => (
+        <article class="pillar-link-card">
+          <strong><a href={item.href}>{item.title}</a></strong>
+          <p>{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div class="panel">
-      <p class="eyebrow">What executive reporting should show</p>
+      <p class="eyebrow">Core keyword cluster</p>
       <ul class="mini-list">
-        <li>Decisions made and owners accountable</li>
-        <li>Risks, escalations, and unresolved questions</li>
-        <li>Adoption, performance, and operating signals</li>
-        <li>Next actions and review dates</li>
+        <li>AI ROI dashboard</li>
+        <li>Executive AI reporting</li>
+        <li>AI reporting template</li>
+        <li>Board-ready AI reporting</li>
       </ul>
     </div>
     <div>
       <p class="eyebrow">Next step</p>
-      <h2>Need sharper reporting for leadership or board review?</h2>
-      <p>AILD can help tighten reporting structure so executive updates support better decisions rather than just summarizing activity.</p>
+      <h2>Need sharper reporting for executive or board review?</h2>
+      <p>AILD can help tighten reporting structure so AI updates support better decisions, cleaner escalation, and more disciplined scale or pause choices.</p>
       <div class="stack">
         <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
       </div>

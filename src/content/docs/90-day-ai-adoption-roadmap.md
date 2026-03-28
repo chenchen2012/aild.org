@@ -2,6 +2,9 @@
 title: 90-Day AI Rollout Plan for Executive Teams
 seoTitle: 90-Day AI Rollout Plan for Executive Teams
 description: Use this 90-day AI rollout plan to move from scattered pilots to controlled execution with governance checkpoints, ownership, and executive review.
+pillarHref: /90-day-rollout/
+pillarLabel: 90-Day AI Rollout Plan for Executive Teams
+pillarSummary: Use this detailed guide within AILD's 90-day AI rollout plan pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Roadmap', 'Leadership']

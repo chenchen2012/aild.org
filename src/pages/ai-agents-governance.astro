@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const agentsAssets = [
+  { title: 'AI Agents Governance Lessons from OpenClaw', href: '/learn/openclaw-ai-agents-leadership-actions/', summary: 'Use this executive analysis to frame why agent oversight matters now and how to start with bounded pilots.' },
+  { title: 'Agent Workflows Practical Guide', href: '/learn/agent-workflows-practical-guide/', summary: 'Use this guide to define permission boundaries, workflow controls, and rollback rules for agent workflows.' },
+  { title: 'AI Trust vs Override Framework', href: '/learn/trust-vs-override-framework/', summary: 'Apply trust tiers and override rules before agents act inside real operating workflows.' },
+  { title: 'Governance-Lite Implementation for AI Teams', href: '/learn/governance-lite-implementation/', summary: 'Use lightweight controls to add supervision, logging, and escalation without freezing experimentation.' },
+];
+
+const governanceModel = [
+  {
+    title: 'Permission boundaries',
+    text: 'Define exactly which systems, tools, and actions agents may access, and which actions remain off-limits without human approval.',
+  },
+  {
+    title: 'Human oversight',
+    text: 'Add checkpoints before external communication, financial actions, sensitive data use, or irreversible workflow steps.',
+  },
+  {
+    title: 'Escalation and supervision',
+    text: 'Require action logs, rollback triggers, and named owners so failures become management signals rather than hidden operational drift.',
+  },
+];
+
+const connectedPillars = [
+  { href: '/ai-governance/', title: 'AI Governance Framework for Executive Teams', summary: 'Use this when agent questions are really exposing broader governance, policy, or trust-boundary gaps.' },
+  { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when agent governance now needs a phased adoption path and executive ownership model.' },
+  { href: '/executive-reporting/', title: 'AI Executive Reporting and ROI Dashboard', summary: 'Use this when agents need reporting cadence, incident metrics, and board-ready oversight signals.' },
+];
+---
+
+<Layout
+  title="AI Agents Governance and Oversight | AILD"
+  description="Use AILD to define AI agents governance with permission boundaries, human oversight, workflow controls, escalation paths, and executive supervision."
+  canonical="https://aild.org/ai-agents-governance/"
+  active=""
+>
+  <section class="hero">
+    <p class="eyebrow">AI Agents Governance</p>
+    <h1>Build AI agents governance before agent workflows reach production</h1>
+    <p class="lead">
+      AI agents governance gives executive teams a practical model for controlling permission boundaries, human
+      oversight, escalation, and supervision as agentic systems move from assistance into operational execution. Use
+      this page when you need a clear answer to a high-stakes question: how should leaders govern AI agents before they
+      touch real workflows, tools, and approvals?
+    </p>
+    <div class="badge-row">
+      <span class="badge">Core topic: AI agents governance</span>
+      <span class="badge">Permissions + human oversight</span>
+      <span class="badge">Workflow controls + escalation</span>
+    </div>
+    <div class="stack">
+      <a class="btn btn-primary" href="#agents-assets">Open the agents governance tools</a>
+      <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
+    </div>
+  </section>
+
+  <section class="section proof-grid">
+    <article class="panel">
+      <p class="eyebrow">What this solves</p>
+      <h2>Use this pillar when agent systems can now act, not just recommend</h2>
+      <ul class="mini-list">
+        <li>Defines permission boundaries</li>
+        <li>Sets human oversight requirements</li>
+        <li>Creates logging and escalation rules</li>
+        <li>Reduces ungoverned workflow automation</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <p class="eyebrow">Who this is for</p>
+      <h2>Built for leaders governing operational autonomy</h2>
+      <ul class="mini-list">
+        <li>Transformation leaders</li>
+        <li>Operations and governance owners</li>
+        <li>CEOs and COOs</li>
+        <li>AI platform sponsors</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Governance model</p>
+        <h2>What an executive AI agents governance model should include</h2>
+      </div>
+      <p class="lead">Agent governance should read like an operating control system, not like a generic automation policy.</p>
+    </div>
+    <div class="pillar-outline">
+      {governanceModel.map((item) => (
+        <article class="card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" id="agents-assets">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Supporting tools and examples</p>
+        <h2>Use these pages to define bounded pilots, supervision rules, and agent oversight</h2>
+      </div>
+      <p class="lead">These supporting assets help translate agentic AI from trend language into concrete executive control mechanisms.</p>
+    </div>
+    <div class="article-list">
+      {agentsAssets.map((asset) => (
+        <article class="article-item">
+          <h2><a href={asset.href}>{asset.title}</a></h2>
+          <p>{asset.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Connected executive pathways</p>
+        <h2>Use adjacent pillars when agent questions expand into governance, rollout, or reporting</h2>
+      </div>
+      <p class="lead">These pathways keep the agents pillar focused on supervision and oversight rather than absorbing every AI operating topic.</p>
+    </div>
+    <div class="pillar-path-grid">
+      {connectedPillars.map((item) => (
+        <article class="pillar-link-card">
+          <strong><a href={item.href}>{item.title}</a></strong>
+          <p>{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-callout">
+    <div class="panel">
+      <p class="eyebrow">Core keyword cluster</p>
+      <ul class="mini-list">
+        <li>AI agents governance</li>
+        <li>Agentic AI governance</li>
+        <li>AI agents oversight</li>
+        <li>Human oversight for AI agents</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Next step</p>
+      <h2>Need a practical governance model for agent pilots and supervision?</h2>
+      <p>AILD can help leadership teams define permission boundaries, escalation logic, and review structure before agent workflows expand.</p>
+      <div class="stack">
+        <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
+      </div>
+    </div>
+  </section>
+</Layout>

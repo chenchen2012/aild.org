@@ -2,6 +2,9 @@
 title: AI ROI Dashboard for Executives
 seoTitle: AI ROI Dashboard for Executives
 description: Build an AI ROI dashboard for executives to track adoption quality, savings, risk indicators, and the next decisions leaders need to make.
+pillarHref: /executive-reporting/
+pillarLabel: AI Executive Reporting and ROI Dashboard
+pillarSummary: Use this dashboard guide within AILD's executive AI reporting and ROI pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['ROI', 'Measurement']

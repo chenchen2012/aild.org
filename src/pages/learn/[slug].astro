@@ -20,6 +20,9 @@ const canonical = `https://aild.org/learn/${entry.slug}/`;
 const pageTitle = entry.data.seoTitle ?? entry.data.title;
 const datePublished = new Date(entry.data.pubDate).toISOString();
 const dateModified = new Date(entry.data.updatedDate ?? entry.data.pubDate).toISOString();
+const pillarHref = entry.data.pillarHref;
+const pillarLabel = entry.data.pillarLabel;
+const pillarSummary = entry.data.pillarSummary;
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -61,6 +64,13 @@ const breadcrumbJsonLd = {
       <p class="tag">Updated {entry.data.updatedDate ?? entry.data.pubDate}</p>
       <h1>{entry.data.title}</h1>
       <p class="lead">{entry.data.description}</p>
+      {pillarHref && pillarLabel && (
+        <div class="article-callout">
+          <p class="tag">Core pillar</p>
+          <h2><a href={pillarHref}>{pillarLabel}</a></h2>
+          <p>{pillarSummary ?? `Use this page within the ${pillarLabel.toLowerCase()} pathway.`}</p>
+        </div>
+      )}
       <div class="badge-row">
         {entry.data.tags.map((tag) => <span class="badge">{tag}</span>)}
         {entry.data.readingTime && <span class="badge">{entry.data.readingTime}</span>}
@@ -92,6 +102,7 @@ const breadcrumbJsonLd = {
         <section class="panel section">
           <h2>{isWeeklyBrief ? 'Evergreen Pages to Use With This Brief' : 'Related Pages'}</h2>
           <ul>
+            {pillarHref && pillarLabel && <li><a href={pillarHref}>{pillarLabel}</a></li>}
             {relatedEntries.filter(Boolean).map((rel) => <li><a href={`/learn/${rel.slug}/`}>{rel.data.title}</a></li>)}
             <li><a href="/playbooks/">Role-based playbooks</a></li>
             <li><a href="/templates/">Template hub</a></li>

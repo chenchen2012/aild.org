@@ -2,6 +2,9 @@
 title: Governance-Lite Implementation for AI Teams
 seoTitle: Governance-Lite Implementation for AI Teams
 description: Use this governance-lite implementation guide to put lightweight AI controls, accountability, and review rules in place without slowing rollout.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this implementation guide within AILD's main AI governance framework pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Governance', 'Implementation']

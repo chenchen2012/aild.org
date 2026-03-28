@@ -4,7 +4,34 @@ import Layout from '../layouts/Layout.astro';
 const starterAssets = [
   { title: 'Board AI Governance Briefing Template', href: '/learn/board-ai-governance-briefing/', summary: 'Prepare board-level discussion, oversight framing, and accountability questions.' },
   { title: 'AI Readiness Checklist for Leaders', href: '/ai-leadership-readiness-checklist/', summary: 'Assess whether leadership systems are ready before adoption expands.' },
-  { title: 'Executive Decision Memo Template', href: '/learn/executive-decision-memo-template/', summary: 'Use a structured memo format for executive review and follow-through.' },
+  { title: 'AI Executive Reporting and ROI Dashboard', href: '/executive-reporting/', summary: 'Connect board oversight to the reporting cadence, metrics, and decisions leadership should surface.' },
+];
+
+const boardSections = [
+  {
+    title: 'Oversight scope',
+    text: 'Clarify which AI initiatives deserve recurring board review, which risks belong in committee discussions, and which management decisions should stay below the board line.',
+  },
+  {
+    title: 'Briefing structure',
+    text: 'Use a repeatable board AI governance briefing so directors see value, risk, control posture, and unresolved management decisions in one place.',
+  },
+  {
+    title: 'Cadence and escalation',
+    text: 'Define when the board should receive routine updates, when management should escalate, and what evidence quality directors should expect.',
+  },
+];
+
+const boardQuestions = [
+  'Where is AI creating measurable value, and where is governance visibility still weak?',
+  'Which high-risk workflows require human approval or board-level attention today?',
+  'What incidents, near misses, or policy gaps changed our control posture this quarter?',
+];
+
+const connectedPillars = [
+  { href: '/ai-governance/', title: 'AI Governance Framework for Executive Teams', summary: 'Start here if management still lacks core decision rights, policy boundaries, or trust rules.' },
+  { href: '/executive-reporting/', title: 'AI Executive Reporting and ROI Dashboard', summary: 'Use this when the board needs cleaner metrics, reporting structure, and recurring updates.' },
+  { href: '/90-day-rollout/', title: '90-Day AI Rollout Plan for Executive Teams', summary: 'Use this when oversight questions are now affecting rollout sequencing and executive ownership.' },
 ];
 ---
 
@@ -17,9 +44,19 @@ const starterAssets = [
   <section class="hero">
     <p class="eyebrow">Board Readiness</p>
     <h1>Prepare board AI governance and oversight before AI scales</h1>
-    <p class="lead">Use this path when the board needs clearer visibility, leadership needs sharper accountability, and AI activity is moving faster than governance discipline.</p>
+    <p class="lead">
+      Board AI governance gives directors a practical oversight structure for AI risk, value creation, management
+      accountability, and escalation cadence. Use this page when the board needs a clearer answer to the real question:
+      what should directors review, how often should they review it, and what reporting should management bring to the
+      table as AI adoption expands?
+    </p>
+    <div class="badge-row">
+      <span class="badge">Core topic: board AI governance</span>
+      <span class="badge">Oversight cadence + board briefing</span>
+      <span class="badge">Board AI risk oversight</span>
+    </div>
     <div class="stack">
-      <a class="btn btn-primary" href="#starter-assets">Review the Board Readiness Assets</a>
+      <a class="btn btn-primary" href="#starter-assets">Open the board oversight tools</a>
       <a class="btn btn-secondary" href="/advisory/">Request Executive Briefing</a>
     </div>
   </section>
@@ -27,6 +64,7 @@ const starterAssets = [
   <section class="section proof-grid">
     <article class="panel">
       <p class="eyebrow">What this solves</p>
+      <h2>Use this pillar when the board needs oversight, not just reassurance</h2>
       <ul class="mini-list">
         <li>Clarifies what the board should review</li>
         <li>Improves leadership accountability</li>
@@ -36,6 +74,7 @@ const starterAssets = [
     </article>
     <article class="panel">
       <p class="eyebrow">Who this is for</p>
+      <h2>Built for CEOs, governance leads, and board-facing operators</h2>
       <ul class="mini-list">
         <li>CEOs</li>
         <li>COOs</li>
@@ -45,13 +84,31 @@ const starterAssets = [
     </article>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Board oversight model</p>
+        <h2>What strong board AI governance should cover</h2>
+      </div>
+      <p class="lead">The board does not need every AI operational detail. It needs the right oversight structure, cadence, and evidence.</p>
+    </div>
+    <div class="pillar-outline">
+      {boardSections.map((item) => (
+        <article class="card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section" id="starter-assets">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Start here</p>
-        <h2>The key assets for board readiness</h2>
+        <p class="eyebrow">Supporting tools and templates</p>
+        <h2>The key pages supporting board AI governance and board AI oversight</h2>
       </div>
-      <p class="lead">Use these pages to structure board oversight, executive review, and leadership accountability.</p>
+      <p class="lead">Use these supporting assets to structure board briefings, readiness reviews, and recurring executive reporting.</p>
     </div>
     <div class="article-list">
       {starterAssets.map((asset) => (
@@ -63,19 +120,55 @@ const starterAssets = [
     </div>
   </section>
 
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Board questions</p>
+        <h2>Questions directors should be able to answer after each review</h2>
+      </div>
+      <p class="lead">If these questions remain fuzzy, the board does not yet have a strong AI oversight posture.</p>
+    </div>
+    <div class="pillar-step-list">
+      {boardQuestions.map((question) => (
+        <div class="pillar-step">
+          <p>{question}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Connected executive pathways</p>
+        <h2>Use adjacent pillars when the board discussion expands into governance, reporting, or rollout</h2>
+      </div>
+      <p class="lead">These links help directors and leadership teams move from oversight questions into the next layer of operating work.</p>
+    </div>
+    <div class="pillar-path-grid">
+      {connectedPillars.map((item) => (
+        <article class="pillar-link-card">
+          <strong><a href={item.href}>{item.title}</a></strong>
+          <p>{item.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <section class="section split-callout">
     <div class="panel">
-      <p class="eyebrow">What strong board readiness looks like</p>
+      <p class="eyebrow">Core keyword cluster</p>
       <ul class="mini-list">
-        <li>Board materials focus on oversight, risk, accountability, and decision points</li>
-        <li>Leadership review cadence is clear before adoption accelerates</li>
-        <li>Reporting highlights actions, escalations, and next decisions</li>
+        <li>Board AI governance</li>
+        <li>Board AI oversight</li>
+        <li>AI board briefing</li>
+        <li>Board AI risk oversight</li>
       </ul>
     </div>
     <div>
       <p class="eyebrow">Next step</p>
-      <h2>Need this in a live board or leadership context?</h2>
-      <p>Use AILD to sharpen the board narrative, review structure, and executive decision flow before AI adoption scales further.</p>
+      <h2>Need this in a live board or committee context?</h2>
+      <p>AILD can help sharpen board narrative, oversight cadence, and the reporting structure leadership brings into each AI review cycle.</p>
       <div class="stack">
         <a class="btn btn-primary" href="/advisory/">Discuss Advisory Support</a>
       </div>

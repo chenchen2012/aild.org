@@ -2,6 +2,9 @@
 title: Board AI Governance Briefing Template
 seoTitle: Board AI Governance Briefing Template
 description: Use this board AI governance briefing template to structure board oversight, AI risk review, value creation updates, and leadership accountability.
+pillarHref: /board-readiness/
+pillarLabel: Board AI Governance and Oversight
+pillarSummary: Use this briefing template within AILD's board AI governance and oversight pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Leadership', 'Governance', 'Risk']
