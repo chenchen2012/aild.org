@@ -17,6 +17,7 @@ const isWeeklyBrief = entry.data.tags.includes('weekly-brief');
 const relatedEntries = await Promise.all(entry.data.related.map((s) => getEntry('docs', s)));
 const { Content } = await render(entry);
 const canonical = `https://aild.org/learn/${entry.slug}/`;
+const pageTitle = entry.data.seoTitle ?? entry.data.title;
 const datePublished = new Date(entry.data.pubDate).toISOString();
 const dateModified = new Date(entry.data.updatedDate ?? entry.data.pubDate).toISOString();
 const articleJsonLd = {
@@ -47,7 +48,7 @@ const breadcrumbJsonLd = {
 ---
 
 <Layout
-  title={`${entry.data.title} | AILD.org`}
+  title={`${pageTitle} | AILD`}
   description={entry.data.description}
   canonical={canonical}
   active="learn"

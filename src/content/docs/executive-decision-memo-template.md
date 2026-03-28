@@ -1,6 +1,7 @@
 ---
-title: Executive AI Decision Memo Template
-description: A reusable memo template for high-stakes AI-assisted decisions with clear assumptions, risk, and accountability.
+title: Executive Decision Memo Template for AI Initiatives
+seoTitle: Executive Decision Memo Template for AI Initiatives
+description: Use this executive decision memo template to document AI initiative decisions with clear options, evidence, risk, ownership, and follow-through.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Template', 'Decision']

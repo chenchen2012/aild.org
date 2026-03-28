@@ -1,6 +1,7 @@
 ---
-title: Governance Lite Implementation Guide
-description: A lightweight AI governance model for teams that need speed, clear accountability, and minimum viable controls.
+title: Governance-Lite Implementation for AI Teams
+seoTitle: Governance-Lite Implementation for AI Teams
+description: Use this governance-lite implementation guide to put lightweight AI controls, accountability, and review rules in place without slowing rollout.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Governance', 'Implementation']

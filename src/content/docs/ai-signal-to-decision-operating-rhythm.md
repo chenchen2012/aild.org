@@ -1,6 +1,7 @@
 ---
-title: AI Signal-to-Decision Operating Rhythm
-description: A practical operating rhythm for turning AI signals into executive decisions, meeting priorities, and accountable execution.
+title: AI Signal-to-Decision Operating Rhythm for Executives
+seoTitle: AI Signal-to-Decision Operating Rhythm for Executives
+description: Use this AI operating rhythm to turn signals into executive decisions, review cadence, accountable follow-through, and clearer priorities.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Decision', 'Execution']

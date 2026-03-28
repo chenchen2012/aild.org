@@ -1,6 +1,7 @@
 ---
-title: Board AI Governance Briefing Framework
-description: A practical board-level AI governance briefing structure for AI risk, value creation, oversight, and leadership accountability.
+title: Board AI Governance Briefing Template
+seoTitle: Board AI Governance Briefing Template
+description: Use this board AI governance briefing template to structure board oversight, AI risk review, value creation updates, and leadership accountability.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Leadership', 'Governance', 'Risk']
@@ -73,4 +74,3 @@ If governance visibility is low but deployment speed is high, pause expansion un
 - Expanding usage before controls and ownership are stable.
 - Measuring activity without linking outputs to management outcomes.
 - Ignoring recurring defects instead of fixing workflow design.
-

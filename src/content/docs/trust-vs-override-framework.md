@@ -1,6 +1,7 @@
 ---
-title: When to Trust AI vs Override It
-description: A practical AI governance framework for deciding when leaders should trust AI recommendations, require human review, or override the model.
+title: AI Trust vs Override Framework
+seoTitle: "AI Governance Framework: Trust vs Override"
+description: Use this AI governance framework to decide when AI can be trusted, when human review is required, and when leaders should override model recommendations.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Risk', 'Decision']

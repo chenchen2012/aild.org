@@ -1,6 +1,7 @@
 ---
-title: AI ROI Dashboard and Metrics Guide
-description: Build an executive-friendly dashboard to track AI adoption quality, savings, and risk indicators.
+title: AI ROI Dashboard for Executives
+seoTitle: AI ROI Dashboard for Executives
+description: Build an AI ROI dashboard for executives to track adoption quality, savings, risk indicators, and the next decisions leaders need to make.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['ROI', 'Measurement']
@@ -58,4 +59,3 @@ For each workflow report:
 - Reporting activity metrics without tying them to management decisions.
 - Changing metric definitions every month and losing comparability.
 - Declaring ROI before quality thresholds are stable.
-

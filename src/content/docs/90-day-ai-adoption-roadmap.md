@@ -1,6 +1,7 @@
 ---
-title: 90-Day AI Adoption Roadmap for SMBs
-description: A phased roadmap for leadership teams to scale AI from pilot workflows to cross-functional execution.
+title: 90-Day AI Rollout Plan for Executive Teams
+seoTitle: 90-Day AI Rollout Plan for Executive Teams
+description: Use this 90-day AI rollout plan to move from scattered pilots to controlled execution with governance checkpoints, ownership, and executive review.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Roadmap', 'Leadership']

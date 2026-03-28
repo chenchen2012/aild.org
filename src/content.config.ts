@@ -4,6 +4,7 @@ const docs = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     description: z.string(),
     pubDate: z.string(),
     updatedDate: z.string().optional(),
@@ -20,6 +21,7 @@ const zhdocs = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     description: z.string(),
     pubDate: z.string(),
     updatedDate: z.string().optional(),

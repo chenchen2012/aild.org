@@ -1,6 +1,6 @@
 ---
-title: About AILD | AI Leadership and Development
-description: AI Leadership and Development (AILD) helps organizations build leadership capacity, governance, and decision discipline in the AI era.
+title: About AILD | AI Lab for Decisionmakers
+description: AILD helps organizations build practical executive capability around AI governance, readiness, board oversight, and operating discipline.
 updatedDate: '2026-03-07'
 heroEyebrow: About
 heroTitle: About AILD
@@ -11,7 +11,7 @@ The winners won't be the ones with the best tools, but the ones with the best le
 
 Most institutions are investing in AI. Far fewer are building the leadership capacity, governance, and decision discipline required to turn adoption into advantage. The result is a widening gap: AI is everywhere, but confident AI-ready leadership is not.
 
-AI Leadership and Development (AILD) is a global initiative focused on closing that gap.
+AILD is a global initiative focused on closing that gap.
 
 We translate fast-moving AI shifts into executive-level insight, develop practical frameworks leaders can apply immediately, and spotlight real-world cases across industries. Our work centers on the questions that increasingly define institutional success:
 
