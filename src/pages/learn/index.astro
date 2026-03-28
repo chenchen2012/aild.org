@@ -68,36 +68,66 @@ const pillarPages = [
     eyebrow: 'Pillar 1',
     title: 'AI Governance Framework for Executive Teams',
     desc: 'Own the AI governance framework cluster with decision rights, policy boundaries, trust and override rules, and maturity checkpoints.',
+    links: [
+      { href: '/learn/ai-policy-template-smb/', label: 'AI policy template' },
+      { href: '/learn/trust-vs-override-framework/', label: 'Trust vs Override Framework' },
+      { href: '/learn/governance-lite-implementation/', label: 'Governance-Lite implementation guide' },
+    ],
   },
   {
     href: '/board-readiness/',
     eyebrow: 'Pillar 2',
     title: 'Board AI Governance and Oversight',
     desc: 'Own the board AI governance cluster with briefing structure, oversight cadence, board questions, and reporting expectations.',
+    links: [
+      { href: '/learn/board-ai-governance-briefing/', label: 'Board AI governance briefing template' },
+      { href: '/learn/board-ai-oversight-checklist/', label: 'Board AI oversight checklist' },
+      { href: '/executive-reporting/', label: 'Executive AI reporting and ROI dashboard' },
+    ],
   },
   {
     href: '/ai-leadership-readiness-checklist/',
     eyebrow: 'Pillar 3',
     title: 'AI Readiness Checklist for Leaders',
     desc: 'Own the AI readiness checklist cluster with leadership assessment, rollout readiness, policy readiness, and reporting readiness.',
+    links: [
+      { href: '/learn/ai-literacy-baseline-assessment/', label: 'AI readiness assessment scoring guide' },
+      { href: '/learn/ai-leadership-maturity-model/', label: 'AI governance maturity model' },
+      { href: '/board-readiness/', label: 'Board AI governance and oversight' },
+    ],
   },
   {
     href: '/90-day-rollout/',
     eyebrow: 'Pillar 4',
     title: '90-Day AI Rollout Plan for Executive Teams',
     desc: 'Own the AI rollout plan cluster with phased adoption, executive ownership, implementation checkpoints, and operating follow-through.',
+    links: [
+      { href: '/learn/90-day-ai-adoption-roadmap/', label: '90-day AI adoption roadmap' },
+      { href: '/learn/30-day-ai-rollout/', label: '30-day AI rollout checklist' },
+      { href: '/learn/ai-assisted-strategic-review-playbook/', label: 'AI-assisted strategic review playbook' },
+    ],
   },
   {
     href: '/executive-reporting/',
     eyebrow: 'Pillar 5',
     title: 'AI Executive Reporting and ROI Dashboard',
     desc: 'Own the AI ROI dashboard cluster with executive reporting, decision-quality metrics, board reporting, and KPI design.',
+    links: [
+      { href: '/learn/ai-roi-dashboard-and-metrics/', label: 'AI ROI dashboard and metrics' },
+      { href: '/learn/executive-decision-memo-template/', label: 'Executive decision memo template' },
+      { href: '/learn/decision-quality-scorecard-for-ai-teams/', label: 'Decision-quality scorecard for AI teams' },
+    ],
   },
   {
     href: '/ai-agents-governance/',
     eyebrow: 'Pillar 6',
     title: 'AI Agents Governance and Oversight',
     desc: 'Own the AI agents governance cluster with permissions, human oversight, workflow controls, escalation, and supervision.',
+    links: [
+      { href: '/learn/human-oversight-for-ai-agents/', label: 'Human oversight for AI agents' },
+      { href: '/learn/agent-workflows-practical-guide/', label: 'Agent workflows practical guide' },
+      { href: '/learn/openclaw-ai-agents-leadership-actions/', label: 'OpenClaw and agent governance implications' },
+    ],
   },
 ];
 ---
@@ -173,6 +203,26 @@ const pillarPages = [
           <p class="tag">{page.eyebrow}</p>
           <h2><a href={page.href}>{page.title}</a></h2>
           <p>{page.desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section panel">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Cluster map</p>
+        <h2>Follow each pillar into its supporting topic cluster</h2>
+      </div>
+      <p class="lead">Use these links when you want the supporting framework, checklist, template, or implementation guide under a specific executive search intent.</p>
+    </div>
+    <div class="grid-3">
+      {pillarPages.map((page) => (
+        <article class="card">
+          <h3><a href={page.href}>{page.title}</a></h3>
+          <ul>
+            {page.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
         </article>
       ))}
     </div>

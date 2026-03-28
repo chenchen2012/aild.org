@@ -8,7 +8,7 @@ pillarSummary: Use this analysis within AILD's AI agents governance pillar.
 pubDate: '2026-03-22'
 updatedDate: '2026-03-22'
 tags: ['leadership', 'ai-agents', 'governance']
-related: ['ai-decision-intelligence-stack-executives', 'trust-vs-override-framework', 'ai-augmented-executive-workflow']
+related: ['human-oversight-for-ai-agents', 'agent-workflows-practical-guide', 'trust-vs-override-framework']
 audience: "CEO, strategy leaders, transformation owners, governance leads"
 readingTime: "9 min"
 keyTakeaways:

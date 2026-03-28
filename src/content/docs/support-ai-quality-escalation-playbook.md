@@ -1,10 +1,13 @@
 ---
 title: Support AI Quality and Escalation Playbook
 description: A support-team playbook for triage, draft responses, escalation summaries, and QA controls.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this escalation playbook within AILD's AI governance framework cluster.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Support', 'Playbook']
-related: ['rag-for-business-teams', '5-minute-ai-quality-check', 'ai-policy-template-smb']
+related: ['5-minute-ai-quality-check', 'ai-policy-template-smb', 'governance-lite-implementation']
 audience: Support managers and QA leads
 readingTime: 10 min
 outcomes:
@@ -52,4 +55,3 @@ outcomes:
 - Letting AI handle sensitive cases without identity/context verification.
 - Measuring only response speed while customer trust metrics decline.
 - Treating escalation as failure instead of a safety control.
-

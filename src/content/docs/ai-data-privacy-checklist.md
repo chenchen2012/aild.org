@@ -1,10 +1,13 @@
 ---
 title: AI Data Privacy Checklist for SMB Teams
 description: A practical data handling checklist to reduce privacy and compliance risk during AI adoption.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this checklist within AILD's AI governance framework pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Privacy', 'Risk']
-related: ['ai-policy-template-smb', 'governance-lite-implementation', 'tool-evaluation-scorecard']
+related: ['ai-policy-template-smb', 'governance-lite-implementation', 'trust-vs-override-framework']
 audience: Leadership, IT generalists, workflow owners
 readingTime: 8 min
 outcomes:

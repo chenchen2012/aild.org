@@ -1,13 +1,14 @@
 ---
-title: AI Readiness Baseline Assessment for Teams
-description: A practical assessment model to identify AI capability gaps before scaling leadership and execution workflows.
+title: AI Readiness Assessment Scoring Guide
+seoTitle: AI Readiness Assessment Scoring Guide
+description: A practical AI readiness assessment scoring guide to identify governance, rollout, and capability gaps before leaders scale adoption.
 pillarHref: /ai-leadership-readiness-checklist/
 pillarLabel: AI Readiness Checklist for Leaders
 pillarSummary: Use this assessment within AILD's AI readiness checklist pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Assessment', 'Leadership']
-related: ['30-day-ai-rollout', 'ai-policy-template-smb', 'ai-roi-dashboard-and-metrics']
+related: ['ai-leadership-maturity-model', '30-day-ai-rollout', 'ai-roi-dashboard-and-metrics']
 ---
 
 ## Why run a baseline first

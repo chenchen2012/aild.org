@@ -1,10 +1,13 @@
 ---
 title: Executive AI Meeting Protocol
 description: A meeting protocol for leadership teams to use AI without losing ownership, focus, or execution discipline.
+pillarHref: /executive-reporting/
+pillarLabel: AI Executive Reporting and ROI Dashboard
+pillarSummary: Use this protocol within AILD's executive reporting cluster when review cadence and decision follow-through need structure.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Leadership', 'Workflow', 'Execution']
-related: ['ai-augmented-executive-workflow', 'executive-decision-memo-template', 'decision-quality-scorecard-for-ai-teams']
+related: ['executive-decision-memo-template', 'decision-quality-scorecard-for-ai-teams', 'ai-signal-to-decision-operating-rhythm']
 audience: Executive teams, chiefs of staff, business leaders
 readingTime: 7 min
 outcomes:
@@ -46,4 +49,3 @@ Publish one decision memo and one action board after each meeting.
 - Turning AI summaries into agenda noise instead of decision input.
 - Ending meetings without owner-level accountability and deadlines.
 - Accepting AI recommendations without risk and dependency review.
-

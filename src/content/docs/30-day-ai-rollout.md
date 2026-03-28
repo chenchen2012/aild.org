@@ -1,10 +1,14 @@
 ---
-title: 30-Day AI Rollout Plan for SMB Teams
-description: A practical 30-day implementation path to choose workflows, install policy controls, run QA checks, and prove ROI.
+title: 30-Day AI Rollout Checklist for Teams
+seoTitle: 30-Day AI Rollout Checklist for Teams
+description: A practical 30-day AI rollout checklist to choose workflows, install policy controls, run QA checks, and prove early value.
+pillarHref: /90-day-rollout/
+pillarLabel: 90-Day AI Rollout Plan for Executive Teams
+pillarSummary: Use this checklist within AILD's 90-day AI rollout plan pillar.
 pubDate: '2026-02-24'
 updatedDate: '2026-03-22'
 tags: ['Rollout', 'Cornerstone']
-related: ['ai-policy-template-smb', '25-high-roi-workflows', '5-minute-ai-quality-check']
+related: ['90-day-ai-adoption-roadmap', 'ai-policy-template-smb', '5-minute-ai-quality-check']
 audience: Operations leaders and functional managers
 readingTime: 12 min
 outcomes:

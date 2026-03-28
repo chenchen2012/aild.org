@@ -1,10 +1,13 @@
 ---
 title: 25 High-ROI AI Workflows for SMB Teams
 description: A prioritized use-case list for operations, marketing, and support teams with practical launch criteria.
+pillarHref: /90-day-rollout/
+pillarLabel: 90-Day AI Rollout Plan for Executive Teams
+pillarSummary: Use this workflow list within AILD's 90-day AI rollout cluster when leaders need candidate use cases for rollout.
 pubDate: '2026-02-24'
 updatedDate: '2026-02-24'
 tags: ['Use Cases', 'Cornerstone']
-related: ['30-day-ai-rollout', 'ai-policy-template-smb', '5-minute-ai-quality-check']
+related: ['30-day-ai-rollout', '90-day-ai-adoption-roadmap', 'ai-policy-template-smb']
 ---
 
 ## Operations workflows
@@ -47,4 +50,3 @@ Choose a workflow that is frequent, predictable, and has a measurable quality st
 - Reporting activity metrics without tying them to management decisions.
 - Changing metric definitions every month and losing comparability.
 - Declaring ROI before quality thresholds are stable.
-

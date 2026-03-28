@@ -1,10 +1,13 @@
 ---
 title: AI Decision Intelligence Stack for Executives
 description: A practical executive framework for AI decision-making, AI governance, and combining human judgment with AI analysis in high-impact business decisions.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this framework within AILD's AI governance pillar when decision quality and accountability need a clearer operating structure.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Decision']
-related: ['trust-vs-override-framework', 'cognitive-augmentation-for-leaders', 'ai-augmented-executive-workflow']
+related: ['trust-vs-override-framework', 'ai-leadership-maturity-model', 'executive-decision-memo-template']
 audience: CEOs, COOs, department heads
 readingTime: 12 min
 keyTakeaways:

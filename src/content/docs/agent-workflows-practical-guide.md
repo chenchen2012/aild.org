@@ -7,7 +7,7 @@ pillarSummary: Use this guide within AILD's AI agents governance pillar.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Agents', 'Automation']
-related: ['prompt-engineering-operating-framework', 'governance-lite-implementation', '90-day-ai-adoption-roadmap']
+related: ['human-oversight-for-ai-agents', 'trust-vs-override-framework', 'openclaw-ai-agents-leadership-actions']
 ---
 
 ## Why this matters now

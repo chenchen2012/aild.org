@@ -1,10 +1,13 @@
 ---
 title: AI-Assisted Strategic Review Playbook
 description: A step-by-step playbook for running weekly and monthly strategic reviews with AI support, better decision quality, and stronger follow-through.
+pillarHref: /90-day-rollout/
+pillarLabel: 90-Day AI Rollout Plan for Executive Teams
+pillarSummary: Use this playbook within AILD's 90-day AI rollout cluster when rollout needs a recurring executive review sequence.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Decision', 'Playbook']
-related: ['ai-decision-intelligence-stack-executives', 'ai-roi-dashboard-and-metrics', '90-day-ai-adoption-roadmap']
+related: ['90-day-ai-adoption-roadmap', 'ai-signal-to-decision-operating-rhythm', 'executive-decision-memo-template']
 audience: Leadership teams and PMO/operations strategy functions
 readingTime: 13 min
 keyTakeaways:

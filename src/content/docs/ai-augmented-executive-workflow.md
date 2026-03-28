@@ -1,10 +1,13 @@
 ---
 title: AI-Augmented Executive Workflow Design
 description: Build an executive AI workflow for daily briefing, weekly decision-making, prioritization, and leadership follow-through.
+pillarHref: /90-day-rollout/
+pillarLabel: 90-Day AI Rollout Plan for Executive Teams
+pillarSummary: Use this workflow guide within AILD's 90-day AI rollout cluster when executive routines need to absorb AI in a controlled way.
 pubDate: '2026-02-25'
 updatedDate: '2026-03-22'
 tags: ['Leadership', 'Decision', 'Workflow']
-related: ['cognitive-augmentation-for-leaders', 'ai-assisted-strategic-review-playbook', 'trust-vs-override-framework']
+related: ['ai-assisted-strategic-review-playbook', 'ai-signal-to-decision-operating-rhythm', 'executive-ai-meeting-protocol']
 audience: Executives and chiefs of staff
 readingTime: 12 min
 keyTakeaways:

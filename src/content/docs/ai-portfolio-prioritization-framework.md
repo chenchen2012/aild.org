@@ -1,10 +1,13 @@
 ---
 title: AI Portfolio Prioritization Framework for Leaders
 description: A practical AI portfolio prioritization framework for leaders using strategic value, execution feasibility, and governance risk.
+pillarHref: /90-day-rollout/
+pillarLabel: 90-Day AI Rollout Plan for Executive Teams
+pillarSummary: Use this prioritization framework within AILD's 90-day AI rollout cluster.
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Leadership', 'Strategy', 'Decision']
-related: ['ai-decision-intelligence-stack-executives', 'ai-leadership-maturity-model', 'board-ai-governance-briefing']
+related: ['90-day-ai-adoption-roadmap', 'ai-leadership-maturity-model', 'board-ai-governance-briefing']
 audience: CEOs, strategy leaders, PMO teams
 readingTime: 9 min
 keyTakeaways:
@@ -67,4 +70,3 @@ Most organizations have more AI ideas than leadership bandwidth. Without a portf
 - Expanding usage before controls and ownership are stable.
 - Measuring activity without linking outputs to management outcomes.
 - Ignoring recurring defects instead of fixing workflow design.
-

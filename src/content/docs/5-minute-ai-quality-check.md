@@ -1,10 +1,13 @@
 ---
 title: 5-Minute AI Output Quality Check
 description: A fast five-point review framework for validating AI outputs before internal or external distribution.
+pillarHref: /ai-governance/
+pillarLabel: AI Governance Framework for Executive Teams
+pillarSummary: Use this review framework within AILD's AI governance framework pillar.
 pubDate: '2026-02-24'
 updatedDate: '2026-02-25'
 tags: ['Quality', 'Cornerstone']
-related: ['ai-policy-template-smb', '30-day-ai-rollout', 'support-ai-quality-escalation-playbook']
+related: ['ai-policy-template-smb', 'governance-lite-implementation', 'support-ai-quality-escalation-playbook']
 audience: Team leads and individual contributors
 readingTime: 7 min
 outcomes:
@@ -52,4 +55,3 @@ outcomes:
 - Expanding usage before controls and ownership are stable.
 - Measuring activity without linking outputs to management outcomes.
 - Ignoring recurring defects instead of fixing workflow design.
-

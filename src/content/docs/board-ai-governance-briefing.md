@@ -8,7 +8,7 @@ pillarSummary: Use this briefing template within AILD's board AI governance and 
 pubDate: '2026-02-25'
 updatedDate: '2026-02-25'
 tags: ['Leadership', 'Governance', 'Risk']
-related: ['trust-vs-override-framework', 'ai-policy-template-smb', 'ai-leadership-maturity-model']
+related: ['board-ai-oversight-checklist', 'ai-roi-dashboard-and-metrics', 'executive-decision-memo-template']
 audience: Board members, CEOs, governance committees
 readingTime: 10 min
 keyTakeaways:

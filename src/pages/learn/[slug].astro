@@ -13,6 +13,7 @@ if (!slug) throw new Error('Missing slug');
 const entry = await getEntry('docs', slug);
 if (!entry) throw new Error(`Unknown doc: ${slug}`);
 const isWeeklyBrief = entry.data.tags.includes('weekly-brief');
+const allDocs = await getCollection('docs');
 
 const relatedEntries = await Promise.all(entry.data.related.map((s) => getEntry('docs', s)));
 const { Content } = await render(entry);
@@ -23,6 +24,21 @@ const dateModified = new Date(entry.data.updatedDate ?? entry.data.pubDate).toIS
 const pillarHref = entry.data.pillarHref;
 const pillarLabel = entry.data.pillarLabel;
 const pillarSummary = entry.data.pillarSummary;
+const siblingEntries = pillarHref
+  ? allDocs
+      .filter(
+        (doc) =>
+          doc.slug !== entry.slug &&
+          !doc.data.tags.includes('weekly-brief') &&
+          doc.data.pillarHref === pillarHref,
+      )
+      .sort(
+        (a, b) =>
+          new Date(b.data.updatedDate ?? b.data.pubDate).getTime() -
+          new Date(a.data.updatedDate ?? a.data.pubDate).getTime(),
+      )
+      .slice(0, 4)
+  : [];
 const articleJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -98,6 +114,15 @@ const breadcrumbJsonLd = {
         )}
 
         <Content />
+
+        {siblingEntries.length > 0 && (
+          <section class="panel section">
+            <h2>More in This Topic Cluster</h2>
+            <ul>
+              {siblingEntries.map((item) => <li><a href={`/learn/${item.slug}/`}>{item.data.title}</a></li>)}
+            </ul>
+          </section>
+        )}
 
         <section class="panel section">
           <h2>{isWeeklyBrief ? 'Evergreen Pages to Use With This Brief' : 'Related Pages'}</h2>
