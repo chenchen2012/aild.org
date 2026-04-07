@@ -46,7 +46,7 @@ const quickStarts = [
   },
   {
     title: 'AI readiness checklist',
-    desc: 'Use this path when you need to assess leadership readiness before a broader rollout.',
+    desc: 'Use this path when you need to assess governance, reporting, and operating readiness before a broader rollout.',
     links: [
       { href: '/ai-leadership-readiness-checklist/', label: 'AI Readiness Checklist for Leaders' },
       { href: '/learn/ai-literacy-baseline-assessment/', label: 'AI readiness baseline assessment' },
@@ -134,9 +134,9 @@ const pillarPages = [
 ];
 
 const learnCollectionSchema = buildCollectionPageSchema({
-  name: 'Executive AI Governance Pillars and Evergreen Resources',
+  name: 'Executive AI Governance, Rollout, and Oversight Resources',
   description:
-    "AILD's evergreen library for AI governance frameworks, board AI oversight, AI readiness checklists, 90-day rollout planning, executive reporting, and AI agents governance.",
+    "AILD's executive decision hub for AI governance frameworks, board AI oversight, AI readiness checklists, 90-day rollout planning, executive reporting, and AI agents governance.",
   url: '/learn/',
   items: pillarPages.map((page) => ({
     name: page.title,
@@ -146,7 +146,7 @@ const learnCollectionSchema = buildCollectionPageSchema({
 });
 
 const pillarItemListSchema = buildItemListSchema({
-  name: 'AILD Core Pillar Pages',
+  name: 'AILD Core Resources',
   items: pillarPages.map((page) => ({
     name: page.title,
     url: page.href,
@@ -163,38 +163,36 @@ const implementationItemListSchema = buildItemListSchema({
 ---
 
 <Layout
-  title="Executive AI Governance Pillars and Evergreen Resources | AILD"
-  description="Explore AILD's evergreen pillar pages for AI governance frameworks, board AI oversight, AI readiness checklists, 90-day rollout planning, executive reporting, ROI dashboards, and AI agents governance."
+  title="Executive AI Governance, Rollout, and Oversight Resources | AILD"
+  description="Start with the executive question you need to solve across AI governance, board oversight, readiness, rollout, reporting, or AI agents."
   canonical="https://aild.org/learn/"
   active="learn"
   breadcrumbItems={[
     { label: 'Home', href: '/' },
-    { label: 'Learn' },
+    { label: 'Start Here' },
   ]}
-  pageRoleLabel="Evergreen hub"
-  pageRoleContext="Cluster map and resource library"
+  pageRoleLabel="Executive decision hub"
+  pageRoleContext="Pathways, frameworks, and working tools"
   jsonLd={[learnCollectionSchema, pillarItemListSchema, implementationItemListSchema]}
 >
   <section class="hero">
-    <p class="eyebrow">Evergreen resource library</p>
-    <h1>Executive AI pillar pages, frameworks, and implementation guides</h1>
+    <p class="eyebrow">Start with the decision you need to make</p>
+    <h1>Executive AI governance, rollout, and oversight resources</h1>
     <p class="lead">
-      Learn is AILD's evergreen library for the six executive AI topics the site is structured to own: AI governance
-      framework, board AI oversight, AI readiness checklist, 90-day AI rollout plan, AI executive reporting and ROI
-      dashboards, and AI agents governance. Start with the pillar that matches your question, then use the supporting
-      frameworks, templates, and implementation guides underneath it.
+      Start with the executive question you need to solve: governance, board oversight, readiness, rollout, reporting,
+      or AI agents. Then use the frameworks, templates, and implementation guides underneath that path.
     </p>
     <div class="badge-row">
       <span class="badge">{docs.length} evergreen guides</span>
-      <span class="badge">Six ranking pillars</span>
-      <span class="badge">Weekly brief archive is separated from this ranking layer</span>
+      <span class="badge">Six core decision paths</span>
+      <span class="badge">Weekly Brief maintained separately</span>
     </div>
   </section>
 
   <section class="section grid-3">
     {quickStarts.map((item) => (
       <article class="panel">
-        <p class="eyebrow">Popular search intent</p>
+        <p class="eyebrow">Start with this question</p>
         <h2>{item.title}</h2>
         <p>{item.desc}</p>
         <ul>
@@ -229,10 +227,10 @@ const implementationItemListSchema = buildItemListSchema({
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Core pillar pages</p>
-        <h2>Six pages that carry the main executive AI search authority</h2>
-      </div>
-      <p class="lead">These top-level pages are the canonical destinations for AILD's highest-value evergreen search intents.</p>
+          <p class="eyebrow">Core resources</p>
+          <h2>Six pages that carry the main executive AI decisions</h2>
+        </div>
+      <p class="lead">These top-level pages are the canonical destinations for AILD's highest-value governance, oversight, rollout, reporting, and operating questions.</p>
     </div>
     <div class="article-list">
       {pillarPages.map((page) => (
@@ -248,10 +246,10 @@ const implementationItemListSchema = buildItemListSchema({
   <section class="section panel">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Cluster map</p>
-        <h2>Follow each pillar into its supporting topic cluster</h2>
+        <p class="eyebrow">Practical pathways</p>
+        <h2>Follow each core page into supporting guides</h2>
       </div>
-      <p class="lead">Use these links when you want the supporting framework, checklist, template, or implementation guide under a specific executive search intent.</p>
+      <p class="lead">Use these links when you want the supporting framework, checklist, template, or implementation guide under a specific executive question.</p>
     </div>
     <div class="grid-3">
       {pillarPages.map((page) => (
@@ -269,7 +267,7 @@ const implementationItemListSchema = buildItemListSchema({
     <div class="section-heading">
       <div>
         <p class="eyebrow">Implementation layer</p>
-        <h2>Supporting resources that feed the pillar pages</h2>
+        <h2>Supporting resources that feed the core pages</h2>
       </div>
       <p class="lead">Use these to move from framework understanding into operating cadence, rollout steps, and measurement.</p>
     </div>
@@ -286,7 +284,7 @@ const implementationItemListSchema = buildItemListSchema({
 
   <section class="section panel">
     <h2>Find Exactly What You Need</h2>
-    <p class="lead">Search and filter the evergreen library. Weekly Brief issues live on a separate editorial path.</p>
+    <p class="lead">Search and filter the core resources. Weekly Brief issues live on a separate editorial path.</p>
     <div class="kb-toolbar">
       <input id="kb-search" class="kb-search" type="search" placeholder="Search evergreen guides (e.g., governance, board, checklist, ROI)..." />
       <div class="kb-filters" id="kb-filters">
@@ -297,7 +295,7 @@ const implementationItemListSchema = buildItemListSchema({
       </div>
       <p class="kb-count"><span id="kb-count">{docs.length}</span> guides shown</p>
     </div>
-    <p class="signal-note">Need the recurring editorial product instead? Use the <a href="/weekly-brief/">Weekly Brief archive</a>.</p>
+    <p class="signal-note">Need the recurring briefing product instead? Use the <a href="/weekly-brief/">Weekly Brief archive</a>.</p>
   </section>
 
   <section class="section article-list" id="kb-list">

@@ -49,11 +49,11 @@ const quickStarts = [
   },
   {
     title: 'AI 准备度清单',
-    desc: '如果你需要先判断管理层准备度，再决定 rollout 节奏，走这条路径。',
+    desc: '如果你需要先判断治理、汇报与运营准备度，再决定 rollout 节奏，走这条路径。',
     links: [
-      { href: '/zh/ai-leadership-readiness-checklist/', label: '领导力准备度清单' },
-      { href: '/zh/learn/ai-leadership-maturity-model/', label: '领导力成熟度模型' },
-      { href: '/zh/learn/ai-literacy-baseline-assessment/', label: 'AI 素养基线评估' },
+      { href: '/zh/ai-leadership-readiness-checklist/', label: 'AI 治理准备度清单' },
+      { href: '/zh/learn/ai-leadership-maturity-model/', label: 'AI 治理成熟度模型' },
+      { href: '/zh/learn/ai-literacy-baseline-assessment/', label: 'AI 应用准备度基线评估' },
     ],
   },
   {
@@ -77,19 +77,19 @@ const quickStarts = [
 >
   <section class="hero">
     <p class="eyebrow">常青资源库</p>
-    <h1>围绕真实管理问题组织的 AI 领导力资源</h1>
-    <p class="lead">这里是 AILD 面向搜索意图的常青内容层。适合查找 AI 治理框架、AI 准备度清单、董事会 AI 监督模型、高管决策模板与 AI 运营模型指南。</p>
+    <h1>围绕真实管理问题组织的 AI 治理与决策支持资源</h1>
+    <p class="lead">这里汇集了 AILD 最值得优先使用的常青页面，适合从 AI 治理、准备度评估、董事会监督、高管决策模板与运营机制这些真实管理问题进入。</p>
     <div class="badge-row">
       <span class="badge">{docs.length} 篇常青指南</span>
-      <span class="badge">治理 + 准备度 + 运营模型</span>
-      <span class="badge">每周简报归档已与常青排名层分开</span>
+      <span class="badge">治理、准备度与运营机制</span>
+      <span class="badge">每周简报单独维护</span>
     </div>
   </section>
 
   <section class="section grid-3">
     {quickStarts.map((item) => (
       <article class="panel">
-        <p class="eyebrow">常见搜索意图</p>
+        <p class="eyebrow">从这个问题开始</p>
         <h2>{item.title}</h2>
         <p>{item.desc}</p>
         <ul>
@@ -124,10 +124,10 @@ const quickStarts = [
   <section class="section">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">旗舰页面</p>
-        <h2>六个应该承载主要搜索权重的核心页面</h2>
+        <p class="eyebrow">核心页面</p>
+        <h2>六个最值得优先使用的核心页面</h2>
       </div>
-      <p class="lead">这些页面是 AILD 最值得强化的管理层搜索资产。</p>
+      <p class="lead">这些页面承载了 AILD 最核心的治理、监督、汇报、落地与运营机制问题。</p>
     </div>
     <div class="article-list">
       {flagshipDocs.map((doc) => (
